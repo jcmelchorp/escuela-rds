@@ -6,5 +6,418 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "classroom-rds": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/classroom-rds",
+      "sourceRoot": "projects/classroom-rds/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/classroom-rds",
+            "index": "projects/classroom-rds/src/index.html",
+            "main": "projects/classroom-rds/src/main.ts",
+            "polyfills": "projects/classroom-rds/src/polyfills.ts",
+            "tsConfig": "projects/classroom-rds/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/classroom-rds/src/favicon.ico",
+              "projects/classroom-rds/src/assets"
+            ],
+            "styles": [
+              "projects/classroom-rds/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/classroom-rds/src/environments/environment.ts",
+                  "with": "projects/classroom-rds/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "classroom-rds:build:production"
+            },
+            "development": {
+              "browserTarget": "classroom-rds:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "classroom-rds:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/classroom-rds/src/test.ts",
+            "polyfills": "projects/classroom-rds/src/polyfills.ts",
+            "tsConfig": "projects/classroom-rds/tsconfig.spec.json",
+            "karmaConfig": "projects/classroom-rds/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/classroom-rds/src/favicon.ico",
+              "projects/classroom-rds/src/assets"
+            ],
+            "styles": [
+              "projects/classroom-rds/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "envivo-rds": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/envivo-rds",
+      "sourceRoot": "projects/envivo-rds/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/envivo-rds",
+            "index": "projects/envivo-rds/src/index.html",
+            "main": "projects/envivo-rds/src/main.ts",
+            "polyfills": "projects/envivo-rds/src/polyfills.ts",
+            "tsConfig": "projects/envivo-rds/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/envivo-rds/src/favicon.ico",
+              "projects/envivo-rds/src/assets"
+            ],
+            "styles": [
+              "projects/envivo-rds/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/envivo-rds/src/environments/environment.ts",
+                  "with": "projects/envivo-rds/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "envivo-rds:build:production"
+            },
+            "development": {
+              "browserTarget": "envivo-rds:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "envivo-rds:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/envivo-rds/src/test.ts",
+            "polyfills": "projects/envivo-rds/src/polyfills.ts",
+            "tsConfig": "projects/envivo-rds/tsconfig.spec.json",
+            "karmaConfig": "projects/envivo-rds/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/envivo-rds/src/favicon.ico",
+              "projects/envivo-rds/src/assets"
+            ],
+            "styles": [
+              "projects/envivo-rds/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "sistema-rds": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/sistema-rds",
+      "sourceRoot": "projects/sistema-rds/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sistema-rds",
+            "index": "projects/sistema-rds/src/index.html",
+            "main": "projects/sistema-rds/src/main.ts",
+            "polyfills": "projects/sistema-rds/src/polyfills.ts",
+            "tsConfig": "projects/sistema-rds/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/sistema-rds/src/favicon.ico",
+              "projects/sistema-rds/src/assets"
+            ],
+            "styles": [
+              "projects/sistema-rds/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/sistema-rds/src/environments/environment.ts",
+                  "with": "projects/sistema-rds/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "sistema-rds:build:production"
+            },
+            "development": {
+              "browserTarget": "sistema-rds:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sistema-rds:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sistema-rds/src/test.ts",
+            "polyfills": "projects/sistema-rds/src/polyfills.ts",
+            "tsConfig": "projects/sistema-rds/tsconfig.spec.json",
+            "karmaConfig": "projects/sistema-rds/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/sistema-rds/src/favicon.ico",
+              "projects/sistema-rds/src/assets"
+            ],
+            "styles": [
+              "projects/sistema-rds/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "sitio-rds": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/sitio-rds",
+      "sourceRoot": "projects/sitio-rds/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sitio-rds",
+            "index": "projects/sitio-rds/src/index.html",
+            "main": "projects/sitio-rds/src/main.ts",
+            "polyfills": "projects/sitio-rds/src/polyfills.ts",
+            "tsConfig": "projects/sitio-rds/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/sitio-rds/src/favicon.ico",
+              "projects/sitio-rds/src/assets"
+            ],
+            "styles": [
+              "projects/sitio-rds/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/sitio-rds/src/environments/environment.ts",
+                  "with": "projects/sitio-rds/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "sitio-rds:build:production"
+            },
+            "development": {
+              "browserTarget": "sitio-rds:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sitio-rds:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sitio-rds/src/test.ts",
+            "polyfills": "projects/sitio-rds/src/polyfills.ts",
+            "tsConfig": "projects/sitio-rds/tsconfig.spec.json",
+            "karmaConfig": "projects/sitio-rds/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/sitio-rds/src/favicon.ico",
+              "projects/sitio-rds/src/assets"
+            ],
+            "styles": [
+              "projects/sitio-rds/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "classroom-rds"
 }

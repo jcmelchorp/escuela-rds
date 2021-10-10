@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+/projects/classroom-rds/src/environments/*
+/projects/envivo-rds/src/environments/*
+/projects/sistema-rds/src/environments/*
+/projects/sitio-rds/src/environments/*
 # compiled output
 /dist
 /tmp
