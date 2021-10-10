@@ -3,16 +3,62 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@rds-modules/*":[
+        "projects/classroom-rds/src/app/modules/*"
+      ],
+      "@rds-shared/*": [
+        "projects/classroom-rds/src/app/shared/*"
+      ],
+      "@rds-core/*": [
+        "projects/classroom-rds/src/app/core/*"
+      ],
+      "@rds-auth/*": [
+        "projects/classroom-rds/src/app/auth/*"
+      ],
+      "@rds-store/*": [
+        "projects/classroom-rds/src/app/store/*"
+      ],
+      "@rds-classroom/*": [
+        "projects/classroom-rds/src/app/classroom/*"
+      ],
+      "@rds-admin/*": [
+        "projects/classroom-rds/src/app/admin/*"
+      ],
+      "@rds-user/*": [
+        "projects/classroom-rds/src/app/user/*"
+      ],
+      "@rds-school/*": [
+        "projects/classroom-rds/src/app/school/*"
+      ],
+      "@rds-subjects/*": [
+        "projects/classroom-rds/src/app/subjects/*"
+      ],
+      "@rds-rooms/*": [
+        "projects/classroom-rds/src/app/rooms/*"
+      ],
+      "@rds-sistema/*": [
+        "projects/sistema-rds/src/*"
+      ],
+      "@rds-env/*": [
+        "projects/classroom-rds/src/environments/*"
+      ],
+      "@rds-root/*": [
+        "projects/classroom-rds/src/*"
+      ],
+    },
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": false,//true,
+    "strict": false,//true,
+    "noImplicitReturns": false,//true,
+    "noFallthroughCasesInSwitch":false,// true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
@@ -23,8 +69,8 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictInjectionParameters": false,//true,
+    "strictInputAccessModifiers": false,//true,
+    "strictTemplates": false//true
   }
 }

@@ -1,0 +1,83 @@
+<div *ngIf="!user$|async" style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
+  <mat-spinner strokeWidth="3" [diameter]="50">
+  </mat-spinner>
+  <span>Buscando ...</span><br>
+</div>
+<div *ngIf="(user$|async) as user">
+  <form [formGroup]="teachersForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card>
+      <mat-card-content class="card m-n3 bg-transparent">
+        <h2 class="card-header">
+          <fa-icon mat-icon-button routerLink="/escuela/profesores" [icon]="faChevronLeft"></fa-icon>
+          &nbsp;&nbsp;{{user.name.fullName}}&nbsp;&nbsp;<small class="text-muted">{{user.id}}</small>
+        </h2>
+        <div class="card-body">
+          <mat-accordion togglePosition="before">
+            <mat-expansion-panel appMaterialElevation [raisedElevation]="raisedElev">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Datos personales
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+
+              <div fxLayout="row wrap" fxLayout.lt-lg="column" fxLayoutGap="5px">
+                <mat-form-field fxFlex="0 1 calc(33% - 5px)" fxFlex.lt-lg="100%" appearance="outline">
+                  <mat-label>CURP</mat-label>
+                  <input matInput placeholder="CURP" formControlName="curp">
+                </mat-form-field>
+                <mat-form-field fxFlex="0 1 calc(33% - 5px)" fxFlex.lt-lg="100%" appearance="outline">
+                  <mat-label>RFC</mat-label>
+                  <input matInput placeholder="RFC" formControlName="rfc">
+                </mat-form-field>
+                <mat-form-field fxFlex="0 1 calc(33% - 5px)" fxFlex.lt-lg="100%" appearance="outline">
+                  <mat-label>Fecha de nacimiento</mat-label>
+                  <input matInput [matDatepicker]="picker" (focus)="picker.open()" placeholder="Fecha de nacimiento"
+                    color="primary" name="dob" formControlName="dob">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+              <div fxLayout="row wrap" fxLayout.lt-lg="column" fxLayoutGap="5px">
+                <mat-form-field fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-lg="100%" appearance="outline">
+                  <mat-label>Nombre(s)</mat-label>
+                  <input matInput placeholder="Nombre(s)" formControlName="givenName">
+                  <mat-error *ngIf="teachersForm.controls['givenName'].hasError('required')">
+                    First name is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-lg="100%" appearance="outline">
+                  <mat-label>Apellido(s)</mat-label>
+                  <input matInput placeholder="Apellido(s)" formControlName="familyName">
+                  <mat-error *ngIf="teachersForm.controls['familyName'].hasError('required')">
+                    Last name is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayout="row wrap" fxLayout.lt-lg="column" fxLayoutGap="5px">
+                <mat-form-field fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-lg="100%" appearance="outline">
+                  <mat-label>Usuario Institucional</mat-label>
+                  <input type="email" matInput placeholder="E-mail" formControlName="primaryEmail">
+                  <mat-error *ngIf="teachersForm.controls['primaryEmail'].hasError('required')">
+                    First name is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                <mat-label for="gender">Genero: </mat-label>
+                <mat-radio-group fxLayout="row wrap" fxLayoutAlign="cener center" name="gender" color="primary"
+                  formControlName="gender">
+                  <mat-radio-button class="mx-2" value="Hombre">
+                    Hombre
+                  </mat-radio-button>
+                  <mat-radio-button class="mx-2" value="Mujer">
+                    Mujer
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <button mat-button type="submit">Actualizar datos</button>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

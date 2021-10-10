@@ -2,8 +2,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "generateCpuProfile": "profile.cpuprofile",
     "outDir": "../../out-tsc/app",
-    "types": []
+    "types": [
+      "gapi",
+      "gapi.auth2",
+      "gapi.client",
+      "gapi.client.classroom",
+      "gapi.client.admin",
+    ]
   },
   "files": [
     "src/main.ts",
@@ -11,5 +18,5 @@
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
 }

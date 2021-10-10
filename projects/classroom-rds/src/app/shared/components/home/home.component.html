@@ -1,0 +1,13 @@
+<!-- <div *ngFor="let alert of alerts">
+  <alert [ngClass]="{'hidden':!alert.visible }" [type]="alert.type" [dismissible]="alert.dismissible">
+    <span [routerLink]="alert.link" [innerHtml]="alert.msg"></span>
+  </alert>
+</div> -->
+
+<!-- <alert [ngClass]="{'hidden':!streaming.visible }" [type]="streaming.type" [dismissible]="streaming.dismissible">
+  <a target="_blank" [href]='streaming.link' [innerHtml]="streaming.msg"></a>
+</alert> -->
+<app-parallax-space *ngIf="!(isOnline$|async)"></app-parallax-space>
+<app-dashboard *ngIf="(isOnline$|async) && (user$|async)" [user]="user$|async" [isTeacher$]="isTeacher$"
+  [isAdmin$]="isAdmin$" [isOnline$]="(isOnline$)">
+</app-dashboard>

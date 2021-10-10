@@ -1,0 +1,10 @@
+<div *ngIf="user$|async as user" class="card bg-transparent">
+  <h2 class="card-header">Consulta tu información escolar</h2>
+  <div class="card-body">
+    <p class="card-text">En esta sección podrás consultar las clases en las que estás inscrito, tu boleta de
+      calificaciones del ciclo escolar en curso en tiempo real y podrás actualizar tus datos personales.</p>
+  </div>
+  <div class="card-footer text-muted">
+    Última visita: {{user.lastLoginTime}}
+  </div>
+</div>

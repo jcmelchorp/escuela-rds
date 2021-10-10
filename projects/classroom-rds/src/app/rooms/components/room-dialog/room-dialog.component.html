@@ -1,0 +1,54 @@
+  <form [formGroup]="formData" (ngSubmit)="saveData()">
+    <div class="color-rds" matDialogTitle fxLayout="row wrap" fxLayoutAlign="space-between start">
+      <h2>{{(data.isNew) ? 'Crea' : 'Modifica'}} un
+        grupo</h2>
+      <mat-icon matDialogClose mat-icon-button>cancel</mat-icon>
+    </div>
+    <mat-dialog-content>
+      <mat-form-field class="d-block" appearance="outline">
+        <mat-label for="name">Nombre del grupo</mat-label>
+        <input placeholder="Nombre" matInput formControlName="name" #name required />
+        <mat-error *ngIf="formData.controls.name.hasError('required')">Se requiere de un nombre.</mat-error>
+      </mat-form-field>
+      <mat-form-field class="d-block" appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input placeholder="Descripción" matInput formControlName="description" />
+      </mat-form-field>
+      <div class="d-block" fxLayout="row" fxLayoutGap="5px">
+        <mat-form-field appearance="outline">
+          <mat-label for="grade">Grado</mat-label>
+          <mat-select formControlName="grade" #grade placeholder="Selecciona el grado escolar">
+            <mat-option value="">Sin seleccionar</mat-option>
+            <mat-option *ngFor="let skey of slevelKeys" value="{{skey}}">
+              {{skey}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="formData.controls.grade.hasError('required')">Se requiere de un grado.</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Estado</mat-label>
+          <mat-select formControlName="status" placeholder="Selecciona el estado">
+            <mat-option value="">Sin seleccionar</mat-option>
+            <mat-option *ngFor="let key of keys" [value]="states[key]">
+              {{states[key]|titlecase}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Ciclo escolar</mat-label>
+        <mat-select formControlName="cicle">
+          <mat-option *ngFor="let period of periods$|async" [value]="period.id">
+            {{period.cicle|lowercase}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="m-2">
+      <button mat-stroked-button color="accent" type="reset" (click)="resetData()">Limpiar</button>
+      <button mat-stroked-button color="primary" type="submit" (click)="saveData()"
+        [disabled]="!formData.dirty || formData.untouched || formData.invalid || formData.pristine">
+        {{ data.isNew ? 'Crear' : 'Modificar' }}
+      </button>
+    </mat-dialog-actions>
+  </form>

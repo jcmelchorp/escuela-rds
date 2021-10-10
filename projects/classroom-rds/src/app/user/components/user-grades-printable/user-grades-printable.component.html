@@ -1,0 +1,53 @@
+<div *ngIf="user$|async as user" class="container-fluid">
+  <div fxLayout="row" fxLayoutAlign="space-around top">
+    <div class="col">
+      <img src="assets/images/rds-newlogo-transparent.png" alt="logotipo" class="logotipo">
+    </div>
+
+    <div class="col">
+      <h2>Escuela Rafael Díaz Serdán</h2>
+      <p>+52 (229) 922-3746 <img class="img-icon"
+          src="https://cdn1.iconfinder.com/data/icons/network-and-communication-2-13/48/97-512.png"></p>
+      <div class="address">
+        <p class="my-n1">Calle Invernadero Lts. 1 y 2</p>
+        <p class="my-n1">Fraccionamiento Jardines del Virginia. C.P. 94294</p>
+        <p class="my-n1">Boca del Río, Veracruz de Ignacio de la Llave, México.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters items-group">
+    <div class="col-3 label">
+      <p>Fecha de emisión:</p>
+      <p>Ciclo escolar:</p>
+      <p>Nivel:</p>
+      <p>Grado:</p>
+    </div>
+
+    <div class="col-9">
+      <p>{{today}}</p>
+      <p>2020-21</p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="row no-gutters items-group">
+    <div class="col-3 label">
+      <p>No. de usuario:</p>
+      <p>Nombre del Alumno:</p>
+      <p>NIEV:</p>
+      <p>CURP:</p>
+      <p>Correo electrónico:</p>
+    </div>
+
+    <div class="col-9">
+      <p>{{user.id}}</p>
+      <p>{{user.name}}</p>
+      <p>xXxXxXx</p>
+      <p>XXXX000000ZZZYYY99</p>
+      <p>{{user.primaryEmail}}</p>
+    </div>
+  </div>
+  <div *ngIf="(scores|async)"></div>
+</div>

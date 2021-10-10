@@ -1,0 +1,1455 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  UsersTableComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-users-table</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./users-table.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./users-table.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#courseName" >courseName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#creationTimeSearch" >creationTimeSearch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource" >dataSource</a>
+                            </li>
+                            <li>
+                                <a href="#displayedColumns" >displayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#expandedElement" >expandedElement</a>
+                            </li>
+                            <li>
+                                <a href="#faBan" >faBan</a>
+                            </li>
+                            <li>
+                                <a href="#faCheck" >faCheck</a>
+                            </li>
+                            <li>
+                                <a href="#faEdit" >faEdit</a>
+                            </li>
+                            <li>
+                                <a href="#faExclamation" >faExclamation</a>
+                            </li>
+                            <li>
+                                <a href="#faFileArchive" >faFileArchive</a>
+                            </li>
+                            <li>
+                                <a href="#faScrewdriver" >faScrewdriver</a>
+                            </li>
+                            <li>
+                                <a href="#faStudents" >faStudents</a>
+                            </li>
+                            <li>
+                                <a href="#faTeachers" >faTeachers</a>
+                            </li>
+                            <li>
+                                <a href="#faTimes" >faTimes</a>
+                            </li>
+                            <li>
+                                <a href="#faUserPlus" >faUserPlus</a>
+                            </li>
+                            <li>
+                                <a href="#isExpansionDetailRow" >isExpansionDetailRow</a>
+                            </li>
+                            <li>
+                                <a href="#paginator" >paginator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#searchForm" >searchForm</a>
+                            </li>
+                            <li>
+                                <a href="#searching" >searching</a>
+                            </li>
+                            <li>
+                                <a href="#select" >select</a>
+                            </li>
+                            <li>
+                                <a href="#sort" >sort</a>
+                            </li>
+                            <li>
+                                <a href="#table" >table</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDetails" >onDetails</a>
+                            </li>
+                            <li>
+                                <a href="#searchFormInit" >searchFormInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Entradas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="88" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:88</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Entradas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <b>data</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>UserDomain[]</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="58" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:58</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngAfterViewInit"></a>
+                    <span class="name">
+                        <span ><b>ngAfterViewInit</b></span>
+                        <a href="#ngAfterViewInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngAfterViewInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="95"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="90"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:90</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDetails"></a>
+                    <span class="name">
+                        <span ><b>onDetails</b></span>
+                        <a href="#onDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDetails(id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="100"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchFormInit"></a>
+                    <span class="name">
+                        <span ><b>searchFormInit</b></span>
+                        <a href="#searchFormInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>searchFormInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="102"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:102</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="courseName"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>courseName</b></span>
+                        <a href="#courseName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="74" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:74</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="creationTimeSearch"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>creationTimeSearch</b></span>
+                        <a href="#creationTimeSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="73" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dataSource"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dataSource</b></span>
+                        <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>MatTableDataSource&lt;UserDomain&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="62" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayedColumns"></a>
+                    <span class="name">
+                        <span ><b>displayedColumns</b></span>
+                        <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>[
+    /* &#x27;id&#x27;,  */ &#x27;photo&#x27;,
+    &#x27;name&#x27;,
+    &#x27;primaryEmail&#x27;,
+    &#x27;org&#x27;,
+    &#x27;acciones&#x27;,
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="64" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Columns displayed in the table. Columns IDs can be added, removed, or reordered.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="expandedElement"></a>
+                    <span class="name">
+                        <span ><b>expandedElement</b></span>
+                        <a href="#expandedElement"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="71" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faBan"></a>
+                    <span class="name">
+                        <span ><b>faBan</b></span>
+                        <a href="#faBan"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faBan</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="85" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faCheck"></a>
+                    <span class="name">
+                        <span ><b>faCheck</b></span>
+                        <a href="#faCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faCheck</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="80" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faEdit"></a>
+                    <span class="name">
+                        <span ><b>faEdit</b></span>
+                        <a href="#faEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faEdit</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="76" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faExclamation"></a>
+                    <span class="name">
+                        <span ><b>faExclamation</b></span>
+                        <a href="#faExclamation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faExclamation</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="79" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:79</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faFileArchive"></a>
+                    <span class="name">
+                        <span ><b>faFileArchive</b></span>
+                        <a href="#faFileArchive"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faArchive</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="81" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faScrewdriver"></a>
+                    <span class="name">
+                        <span ><b>faScrewdriver</b></span>
+                        <a href="#faScrewdriver"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faScrewdriver</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="82" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faStudents"></a>
+                    <span class="name">
+                        <span ><b>faStudents</b></span>
+                        <a href="#faStudents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserGraduate</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="77" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faTeachers"></a>
+                    <span class="name">
+                        <span ><b>faTeachers</b></span>
+                        <a href="#faTeachers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserTie</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="78" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faTimes"></a>
+                    <span class="name">
+                        <span ><b>faTimes</b></span>
+                        <a href="#faTimes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faTimes</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="83" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faUserPlus"></a>
+                    <span class="name">
+                        <span ><b>faUserPlus</b></span>
+                        <a href="#faUserPlus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserPlus</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="84" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:84</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isExpansionDetailRow"></a>
+                    <span class="name">
+                        <span ><b>isExpansionDetailRow</b></span>
+                        <a href="#isExpansionDetailRow"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>() &#x3D;&gt; {...}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="87" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paginator"></a>
+                    <span class="name">
+                        <span ><b>paginator</b></span>
+                        <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>MatPaginator</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decoradores : </b>
+                        <br />
+                        <code>
+                            @ViewChild(MatPaginator)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="59" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchForm"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>searchForm</b></span>
+                        <a href="#searchForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="72" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searching"></a>
+                    <span class="name">
+                        <span ><b>searching</b></span>
+                        <a href="#searching"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="86" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:86</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="select"></a>
+                    <span class="name">
+                        <span ><b>select</b></span>
+                        <a href="#select"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="75" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sort"></a>
+                    <span class="name">
+                        <span ><b>sort</b></span>
+                        <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>MatSort</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decoradores : </b>
+                        <br />
+                        <code>
+                            @ViewChild(MatSort)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="60" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="table"></a>
+                    <span class="name">
+                        <span ><b>table</b></span>
+                        <a href="#table"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>MatTable&lt;UserDomain&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decoradores : </b>
+                        <br />
+                        <code>
+                            @ViewChild(MatTable)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="61" class="link-to-prism">projects/classroom-rds/src/app/admin/components/users-table/users-table.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from &#x27;@angular/animations&#x27;;
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnInit,
+  ViewChild,
+} from &#x27;@angular/core&#x27;;
+import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { MatPaginator } from &#x27;@angular/material/paginator&#x27;;
+import { MatSort } from &#x27;@angular/material/sort&#x27;;
+import { MatTable, MatTableDataSource } from &#x27;@angular/material/table&#x27;;
+
+import {
+  faBan,
+  faExclamation,
+  faTimes,
+  faUserGraduate,
+  faUserTie,
+  faCheck,
+  faScrewdriver,
+  faArchive,
+  faUserPlus,
+} from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { faEdit } from &#x27;@fortawesome/free-regular-svg-icons&#x27;;
+
+import { AdminFireService } from &#x27;@rds-admin/services/admin-fire.service&#x27;;
+
+import { UserDomain } from &#x27;@rds-admin/models/users-domain.model&#x27;;
+
+const { keys } &#x3D; Object;
+const SELECTED_SLICE_KEY &#x3D; &#x27;SELECTED_SLICE_KEY&#x27;;
+@Component({
+  selector: &#x27;app-users-table&#x27;,
+  templateUrl: &#x27;./users-table.component.html&#x27;,
+  styleUrls: [&#x27;./users-table.component.scss&#x27;],
+  animations: [
+    trigger(&#x27;detailExpand&#x27;, [
+      state(
+        &#x27;collapsed&#x27;,
+        style({ height: &#x27;0px&#x27;, minHeight: &#x27;0&#x27;, visibility: &#x27;hidden&#x27; })
+      ),
+      state(&#x27;expanded&#x27;, style({ height: &#x27;*&#x27;, visibility: &#x27;visible&#x27; })),
+      transition(
+        &#x27;expanded &lt;&#x3D;&gt; collapsed&#x27;,
+        animate(&#x27;225ms cubic-bezier(0.4, 0.0, 0.2, 1)&#x27;)
+      ),
+    ]),
+  ],
+})
+export class UsersTableComponent implements AfterViewInit, OnInit {
+  @Input() data: UserDomain[];
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatTable) table: MatTable&lt;UserDomain&gt;;
+  public dataSource: MatTableDataSource&lt;UserDomain&gt;;
+  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
+  displayedColumns &#x3D; [
+    /* &#x27;id&#x27;,  */ &#x27;photo&#x27;,
+    &#x27;name&#x27;,
+    &#x27;primaryEmail&#x27;,
+    &#x27;org&#x27;,
+    &#x27;acciones&#x27;,
+  ];
+  expandedElement: any;
+  public searchForm: FormGroup;
+  public creationTimeSearch &#x3D; &#x27;&#x27;;
+  public courseName &#x3D; &#x27;&#x27;;
+  select;
+  faEdit &#x3D; faEdit;
+  faStudents &#x3D; faUserGraduate;
+  faTeachers &#x3D; faUserTie;
+  faExclamation &#x3D; faExclamation;
+  faCheck &#x3D; faCheck;
+  faFileArchive &#x3D; faArchive;
+  faScrewdriver &#x3D; faScrewdriver;
+  faTimes &#x3D; faTimes;
+  faUserPlus &#x3D; faUserPlus;
+  faBan &#x3D; faBan;
+  searching &#x3D; false;
+  isExpansionDetailRow &#x3D; (i: number, row: UserDomain) &#x3D;&gt;
+    row.hasOwnProperty(&#x27;detailRow&#x27;);
+  constructor() {}
+  ngOnInit() {
+    this.dataSource &#x3D; new MatTableDataSource(this.data);
+    this.searchFormInit();
+    //this.dataSource.filterPredicate &#x3D; this.getFilterPredicate();
+  }
+  ngAfterViewInit() {
+    this.dataSource.sort &#x3D; this.sort;
+    this.dataSource.paginator &#x3D; this.paginator;
+    this.table.dataSource &#x3D; this.dataSource;
+  }
+  onDetails(id) {}
+
+  searchFormInit() {
+    this.searchForm &#x3D; new FormGroup({
+      courseName: new FormControl(&#x27;&#x27;, Validators.pattern(&#x27;^[a-zA-Z ]+$&#x27;)),
+      creationTimeSearch: new FormControl(&#x27;&#x27;),
+    });
+  }
+
+  /* this method well be called for each row in table  */
+  /* getFilterPredicate() {
+    return (row: UserDomain, filters: string) &#x3D;&gt; {
+      // split string per &#x27;$&#x27; to array
+      const filterArray &#x3D; filters.split(&#x27;$&#x27;);
+      const departureDate &#x3D; filterArray[0];
+      const usersName &#x3D; filterArray[1];
+
+      const matchFilter &#x3D; [];
+
+      // Fetch data from row
+      const columnDepartureDate &#x3D; new Date(row.creationTime).toLocaleDateString();
+      const columnCourseWorkTitle &#x3D; row.name;
+
+      // verify fetching data by our searching values
+      const customFilterDD &#x3D; columnDepartureDate.toLowerCase().includes(departureDate);
+      const customFilterCW &#x3D; columnCourseWorkTitle.toLowerCase().includes(usersName);
+
+      // push boolean values into array
+      matchFilter.push(customFilterDD);
+      matchFilter.push(customFilterCW);
+
+      // return true if all values in array is true
+      // else return false
+      return matchFilter.every(Boolean);
+    };
+  } */
+  /* applyFilter() {
+    const date &#x3D; this.searchForm.get(&#x27;creationTimeSearch&#x27;).value;
+    const as &#x3D; this.searchForm.get(&#x27;courseName&#x27;).value;
+    // const ds &#x3D; this.searchForm.get(&#x27;departureStation&#x27;).value;
+    const fixedDate &#x3D; new Date(date);
+    this.creationTimeSearch &#x3D; (date &#x3D;&#x3D;&#x3D; null || date &#x3D;&#x3D;&#x3D; &#x27;&#x27;) ? &#x27;&#x27; : fixedDate.toLocaleDateString();
+    this.courseName &#x3D; as &#x3D;&#x3D;&#x3D; null ? &#x27;&#x27; : as;
+
+    // create string of our searching values and split if by &#x27;$&#x27;
+    const filterValue &#x3D; this.creationTimeSearch + &#x27;$&#x27; + this.courseName;
+    this.dataSource.filter &#x3D; filterValue.trim().toLowerCase();
+  }
+ * /
+
+  /*
+    unavailableSeats(seats: Seat[]): number {
+      return seats.filter(seat &#x3D;&gt; seat.status &#x3D;&#x3D;&#x3D; SeatStatus.UNAVAILABLE).length;
+    }
+
+    soldSeats(seats: Seat[]): number {
+      return seats.filter(seat &#x3D;&gt; seat.status &#x3D;&#x3D;&#x3D; SeatStatus.SOLD).length;
+    }
+
+    reserveSeats(seats: Seat[]): number {
+      return seats.filter(seat &#x3D;&gt; seat.status &#x3D;&#x3D;&#x3D; SeatStatus.RESERVE).length;
+    } */
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;table mat-table class&#x3D;&quot;full-width-table table-hover&quot; matSort aria-label&#x3D;&quot;Course work table&quot;&gt;
+  &lt;!-- Id Column --&gt;
+  &lt;!--  &lt;ng-container matColumnDef&#x3D;&quot;id&quot;&gt;
+    &lt;th mat-header-cell class&#x3D;&quot;medium-th&quot; *matHeaderCellDef mat-sort-header&gt;Id&lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let row&quot;&gt;{{row.id}}&lt;/td&gt;
+  &lt;/ng-container&gt; --&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;photo&quot;&gt;
+    &lt;th mat-header-cell class&#x3D;&quot;medium-th&quot; *matHeaderCellDef mat-sort-header&gt;&lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let row&quot;&gt;&lt;img class&#x3D;&quot;img-small rounded-circle&quot; [src]&#x3D;&quot;row.thumbnailPhotoUrl&quot;&gt;&lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;!-- Name Column --&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;name&quot;&gt;
+    &lt;th mat-header-cell class&#x3D;&quot;large-th&quot; *matHeaderCellDef mat-sort-header&gt;Nombre&lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let row&quot; [routerLink]&#x3D;&quot;[row.id]&quot;&gt;{{row.name.fullName}}
+    &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;primaryEmail&quot;&gt;
+    &lt;th mat-header-cell class&#x3D;&quot;large-th&quot; *matHeaderCellDef mat-sort-header&gt;Email&lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let row&quot;&gt; {{row.primaryEmail}} &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;org&quot;&gt;
+    &lt;th mat-header-cell class&#x3D;&quot;large-th&quot; *matHeaderCellDef mat-sort-header&gt;org&lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let row&quot;&gt; {{row.orgUnitPath}} &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;!-- Buttons column --&gt;
+  &lt;ng-container matColumnDef&#x3D;&quot;acciones&quot;&gt;
+    &lt;th mat-header-cell class&#x3D;&quot;medium-th&quot; *matHeaderCellDef&gt; Acciones &lt;/th&gt;
+    &lt;td mat-cell *matCellDef&#x3D;&quot;let row&quot;&gt;
+      &lt;fa-icon mat-icon-button (click)&#x3D;&quot;onDetails(row)&quot; matTooltip&#x3D;&quot;Información&quot; matTooltipPosition&#x3D;&quot;above&quot;
+        [icon]&#x3D;&quot;faEdit&quot;&gt;&lt;/fa-icon&gt;
+    &lt;/td&gt;
+  &lt;/ng-container&gt;
+  &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+  &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns;&quot;&gt;&lt;/tr&gt;
+  &lt;!-- Row shown when there is no matching data.--&gt;
+  &lt;tr class&#x3D;&quot;mat-row&quot; *matNoDataRow&gt;
+    &lt;td class&#x3D;&quot;mat-cell&quot; colspan&#x3D;&quot;4&quot;&gt;No hay actividades que coincidan con la búsqueda &quot;{{courseName}}&quot;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;mat-paginator [ngStyle]&#x3D;&quot;{&#x27;background-color&#x27;:&#x27;inherit&#x27;}&quot; #paginator [length]&#x3D;&quot;dataSource?.data.length&quot; [pageIndex]&#x3D;&quot;0&quot;
+  [pageSize]&#x3D;&quot;10&quot; [pageSizeOptions]&#x3D;&quot;[10, 25, 50, 100, 250]&quot;&gt;
+&lt;/mat-paginator&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./users-table.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.img-small {
+  height: 30px;
+  width: auto;
+}
+.full-width-table {
+  width: 100%;
+  background-color: inherit;
+
+}
+table {
+  height: 40px;
+  .large-th {
+    min-width: 200px;
+    min-height: 10px;
+  }
+
+  .medium-th {
+    min-width: 100px;
+    min-height: 10px;
+  }
+
+  .small-th {
+    min-width: 20px;
+    min-height: 10px;
+  }
+}
+tr.mat-header-row, tr.mat-row {
+  min-height: 10px;
+  max-height: 30px;
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-content></ng-content><table mat-table class="full-width-table table-hover" matSort aria-label="Course work table">  <!-- Id Column -->  <!--  <ng-container matColumnDef="id">    <th mat-header-cell class="medium-th" *matHeaderCellDef mat-sort-header>Id</th>    <td mat-cell *matCellDef="let row">{{row.id}}</td>  </ng-container> -->  <ng-container matColumnDef="photo">    <th mat-header-cell class="medium-th" *matHeaderCellDef mat-sort-header></th>    <td mat-cell *matCellDef="let row"><img class="img-small rounded-circle" [src]="row.thumbnailPhotoUrl"></td>  </ng-container>  <!-- Name Column -->  <ng-container matColumnDef="name">    <th mat-header-cell class="large-th" *matHeaderCellDef mat-sort-header>Nombre</th>    <td mat-cell *matCellDef="let row" [routerLink]="[row.id]">{{row.name.fullName}}    </td>  </ng-container>  <ng-container matColumnDef="primaryEmail">    <th mat-header-cell class="large-th" *matHeaderCellDef mat-sort-header>Email</th>    <td mat-cell *matCellDef="let row"> {{row.primaryEmail}} </td>  </ng-container>  <ng-container matColumnDef="org">    <th mat-header-cell class="large-th" *matHeaderCellDef mat-sort-header>org</th>    <td mat-cell *matCellDef="let row"> {{row.orgUnitPath}} </td>  </ng-container>  <!-- Buttons column -->  <ng-container matColumnDef="acciones">    <th mat-header-cell class="medium-th" *matHeaderCellDef> Acciones </th>    <td mat-cell *matCellDef="let row">      <fa-icon mat-icon-button (click)="onDetails(row)" matTooltip="Información" matTooltipPosition="above"        [icon]="faEdit"></fa-icon>    </td>  </ng-container>  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>  <!-- Row shown when there is no matching data.-->  <tr class="mat-row" *matNoDataRow>    <td class="mat-cell" colspan="4">No hay actividades que coincidan con la búsqueda "{{courseName}}"</td>  </tr></table><mat-paginator [ngStyle]="{\'background-color\':\'inherit\'}" #paginator [length]="dataSource?.data.length" [pageIndex]="0"  [pageSize]="10" [pageSizeOptions]="[10, 25, 50, 100, 250]"></mat-paginator></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AddUserGroupComponent', 'selector': 'app-add-user-group'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminCoursesComponent', 'selector': 'app-admin-courses'},{'name': 'AdminWellcomeComponent', 'selector': 'app-admin-wellcome'},{'name': 'AnimatedTextComponent', 'selector': 'app-animated-text'},{'name': 'AnnouncementDialogComponent', 'selector': ''},{'name': 'AnnouncementResultComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssigmentsDashboardComponent', 'selector': 'app-assigments-dashboard'},{'name': 'AssignmentsComponent', 'selector': 'app-assignments'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'CodeConductComponent', 'selector': 'app-code-conduct'},{'name': 'CodeConductSchoolComponent', 'selector': 'app-code-conduct-school'},{'name': 'ConfirmDialogComponent', 'selector': ''},{'name': 'CourseAnnouncementsComponent', 'selector': 'app-course-announcements'},{'name': 'CourseComponent', 'selector': 'app-course'},{'name': 'CourseDialogComponent', 'selector': ''},{'name': 'CourseRoomsComponent', 'selector': 'app-course-rooms'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CoursesListComponent', 'selector': 'app-courses-list'},{'name': 'CourseStudentsComponent', 'selector': 'app-course-students'},{'name': 'CourseTeachersComponent', 'selector': 'app-course-teachers'},{'name': 'CourseUserDialogComponent', 'selector': ''},{'name': 'CourseWorkComponent', 'selector': 'app-course-work'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteButtonComponent', 'selector': 'app-delete-button'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GradeCourseComponent', 'selector': 'app-grade-course'},{'name': 'GradeRecomendationComponent', 'selector': 'app-grade-recomendation'},{'name': 'GradesBarChartComponent', 'selector': 'app-grades-bar-chart'},{'name': 'GradesComponent', 'selector': 'app-grades'},{'name': 'GradesListComponent', 'selector': 'app-grades-list'},{'name': 'GradesTableComponent', 'selector': 'app-grades-table'},{'name': 'GradesWellcomeComponent', 'selector': 'app-grades-wellcome'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupDialogComponent', 'selector': 'app-group-dialog'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'GroupTableComponent', 'selector': 'app-group-table'},{'name': 'GuardiansListDialogComponent', 'selector': ''},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LicenseComponent', 'selector': 'app-license'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'LoginDialogComponent', 'selector': ''},{'name': 'LogoAnimateComponent', 'selector': 'app-logo-animate'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'NewCicleDialogComponent', 'selector': ''},{'name': 'NotesEditComponent', 'selector': 'app-notes-edit'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ParallaxComponent', 'selector': 'app-parallax'},{'name': 'ParallaxSpaceComponent', 'selector': 'app-parallax-space'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'ProfileUserComponent', 'selector': 'app-profile-user'},{'name': 'RemoteLearningComponent', 'selector': 'app-remote-learning'},{'name': 'RemoveConfirmComponent', 'selector': ''},{'name': 'ReopenningComponent', 'selector': 'app-reopenning'},{'name': 'RoomComponent', 'selector': 'app-room'},{'name': 'RoomCourseDialogComponent', 'selector': ''},{'name': 'RoomDialogComponent', 'selector': ''},{'name': 'RoomsComponent', 'selector': 'app-rooms'},{'name': 'SaveUserComponent', 'selector': ''},{'name': 'SaveUserConfirmComponent', 'selector': ''},{'name': 'SaveUserErrorComponent', 'selector': 'save-user-error'},{'name': 'SchoolComponent', 'selector': 'app-school'},{'name': 'SchoolDashboardComponent', 'selector': 'app-school-dashboard'},{'name': 'SchoolHomeComponent', 'selector': 'app-school-home'},{'name': 'SchoolStudentsComponent', 'selector': 'app-school-students'},{'name': 'SchoolTeachersComponent', 'selector': 'app-school-teachers'},{'name': 'SchoolUserComponent', 'selector': 'app-school-user'},{'name': 'SchoolUsersComponent', 'selector': 'app-school-users'},{'name': 'ScoresEditComponent', 'selector': 'app-scores-edit'},{'name': 'SelectCourseComponent', 'selector': 'app-select-course'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SnackbarComponent', 'selector': 'app-snackbar'},{'name': 'SnackComponent', 'selector': ''},{'name': 'SubjectDialogComponent', 'selector': ''},{'name': 'TeacherCoursesComponent', 'selector': 'app-teacher-courses'},{'name': 'TeachersComponent', 'selector': 'app-teachers'},{'name': 'TeachersDashboardComponent', 'selector': 'app-teachers-dashboard'},{'name': 'TeachersFormComponent', 'selector': 'app-teachers-form'},{'name': 'TeachersGradeComponent', 'selector': 'app-teachers-grade'},{'name': 'TermsComponent', 'selector': 'app-terms'},{'name': 'UnderConstructionComponent', 'selector': 'app-under-construction'},{'name': 'UserCardComponent', 'selector': 'app-user-card'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UserGradesComponent', 'selector': 'app-user-grades'},{'name': 'UserGradesPrintableComponent', 'selector': 'app-user-grades-printable'},{'name': 'UserHomeComponent', 'selector': 'app-user-home'},{'name': 'UserInfoComponent', 'selector': 'app-user-info'},{'name': 'UserMenuComponent', 'selector': 'app-user-menu'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRoomDialogComponent', 'selector': ''},{'name': 'UsersDomainComponent', 'selector': 'app-users-domain'},{'name': 'UsersGroupsComponent', 'selector': 'app-users-groups'},{'name': 'UsersTableComponent', 'selector': 'app-users-table'},{'name': 'WellcomeComponent', 'selector': 'app-wellcome'},{'name': 'WorkingOnGradesComponent', 'selector': 'app-working-on-grades'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
+    var DIRECTIVES = [{'name': 'MaterialElevationDirective', 'selector': '[appMaterialElevation]'},{'name': 'ParallaxDirective', 'selector': '[appParallax]'}];
+    var ACTUAL_COMPONENT = {'name': 'UsersTableComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UsersTableComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

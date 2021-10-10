@@ -1,0 +1,130 @@
+<form [formGroup]="saveForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="color-rds" matDialogTitle fxLayout="row wrap" fxLayoutAlign="space-between start">
+    <h2>{{data.action|titlecase}}r Usuario</h2>
+    <mat-icon matDialogClose mat-icon-button>cancel</mat-icon>
+  </div>
+  <mat-dialog-content>
+    <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2px">
+      <mat-form-field fxFlex="0 1 calc(50% - 2px)" appearance="outline">
+        <mat-label>Nombre(s)</mat-label>
+        <input matInput type="text" formControlName="givenName">
+      </mat-form-field>
+      <mat-form-field fxFlex="0 1 calc(50% - 2px)" appearance="outline">
+        <mat-label>Apellido(s)</mat-label>
+        <input matInput type="text" formControlName="familyName">
+      </mat-form-field>
+    </div>
+    <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2px">
+      <mat-form-field fxFlex="0 1 calc(50% - 2px)" appearance="outline">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput type="text" formControlName="primaryEmail">
+      </mat-form-field>
+      <mat-form-field fxFlex="0 1 calc(50% - 2px)" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="d-block">
+      <mat-label for="role">Rol de usuario: </mat-label>
+      <mat-radio-group fxLayout="column" name="role" color="primary" formControlName="role">
+        <mat-radio-button class="mx-2" value="alumnos">
+          <span>Alumno</span>
+          <mat-icon class="text-secondary"
+            matTooltip="Participa en Google Classroom como alumno y su expediente personal se ajustara a este rol.">
+            help_outline</mat-icon>
+        </mat-radio-button>
+        <mat-radio-button class="mx-2" value="profesores">
+          <span>Docente</span>
+          <mat-icon class="text-secondary"
+            matTooltip="Participa en Google Classroom como alumno o profesor y su expediente personal contiene datos laborales.">
+            help_outline</mat-icon>
+        </mat-radio-button>
+        <mat-radio-button class="mx-2" value="administrativos">
+          <span>Administrativo</span>
+          <mat-icon class="text-secondary"
+            matTooltip="Participa a Google Classroom como alumno o profesor, pero no podrá iniciar clases virtuales a través de Google Meet. Su expediente personal contiene datos laborales.">
+            help_outline</mat-icon>
+        </mat-radio-button>
+        <mat-radio-button class="mx-2" value="otros">
+          <span>Otros</span>
+          <mat-icon class="text-secondary" matTooltip="Rol general sin distinción.">
+            help_outline</mat-icon>
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div fxLayout="row" fxLayoutGap="2px" fxLayoutAlign="end">
+      <mat-checkbox color="primary" formControlName="isHuman">
+        <span>{{data.action|titlecase}}ción de usuario humano.</span>
+        <mat-icon *ngIf="data.action=='Crea'" class="text-secondary"
+          matTooltip="Selecciona esta opción si el usuario es una persona. Si es una cuenta asociada a un puesto o función dentro de la institución, asegúrate que esta opción esté desactivada">
+          help_outline</mat-icon>
+      </mat-checkbox>
+    </div>
+    <div *ngIf="saveForm.controls['isHuman'].value">
+      <div fxLayout="row" fxLayoutGap="2px">
+        <div fxFlex="0 1 calc(50% - 2px)">
+          <mat-label for="gender">Género: </mat-label>
+          <mat-radio-group fxLayout="row wrap" fxLayoutAlign="center center" name="gender" color="primary"
+            formControlName="gender">
+            <mat-radio-button class="mx-2" value="hombre">
+              Hombre
+            </mat-radio-button>
+            <mat-radio-button class="mx-2" value="mujer">
+              Mujer
+            </mat-radio-button>
+            <mat-radio-button class="mx-2" value="inespecífico">
+              Prefiero no decir
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div fxFlex="0 1 calc(50% - 2px)">
+          <mat-form-field class="d-block" appearance="outline">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker" (focus)="picker.open()" placeholder="Fecha de nacimiento"
+              color="primary" name="dob" formControlName="dob">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2px">
+        <mat-form-field *ngIf="saveForm.controls['role'].value=='alumnos'" fxFlex="0 1 calc(50% - 2px)"
+          appearance="outline">
+          <mat-label>Grupo</mat-label>
+          <mat-select formControlName="grade">
+            <mat-option value="">Sin seleccionar</mat-option>
+            <mat-option *ngFor="let key of slevelKeys" [value]="key">
+              {{key}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field *ngIf="saveForm.controls['role'].value=='alumnos'" fxFlex="0 1 calc(50% - 2px)"
+          appearance="outline">
+          <mat-label>Nivel</mat-label>
+          <mat-select formControlName="level">
+            <mat-option value="">Sin seleccionar</mat-option>
+            <mat-option *ngFor="let key of clevelKeys" [value]="clevels[key]">
+              {{clevels[key]}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end">
+      <mat-checkbox color="primary" formControlName="isInGoogle">
+        <span>Omitir {{data.action}}ción de usuario en Google.</span>
+        <mat-icon *ngIf="data.action=='Crea'" class="text-secondary"
+          matTooltip="Utiliza esta opción si el usuario ya tiene una cuenta @rafaeldiazserdan, pero no se encuentra en la base de datos.">
+          help_outline</mat-icon>
+      </mat-checkbox>
+    </div>
+
+  </mat-dialog-content>
+  <mat-dialog-actions class="m-2">
+    <button mat-stroked-button color="warn" (click)="onClose()" [matDialogClose]="">Cancelar</button>
+    <button mat-stroked-button color="primary" type="submit" [disabled]="!saveForm.dirty">{{data.action}}r</button>
+  </mat-dialog-actions>
+</form>

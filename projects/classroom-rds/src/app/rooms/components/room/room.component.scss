@@ -1,0 +1,76 @@
+@import "./../../../../assets/themes/colors";
+.drop-list {
+  margin: 0px -20px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  min-height: 50px;
+  overflow: hidden;
+}
+.drag-box {
+  border-bottom: solid 1px #ccc;
+  box-sizing: border-box;
+  cursor: move;
+}
+.drag-box:last-child {
+  border: none;
+}
+.drag-list.cdk-drop-list-dragging .drag-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.drag-custom-placeholder {
+  background: $rds-logo-color;
+  border: dotted 2px #999;
+  min-height: 50px;
+  opacity: 0.5;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.img-select {
+  width: 30px;
+  height: auto;
+}
+
+.header {
+  height: 50px;
+  box-sizing: border-box;
+  .title {
+    margin-right: auto;
+    font-weight: 400;
+  }
+}
+.mat-title-panel {
+  width: 100%;
+}
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.text-smaller {
+  font-size: 0.9rem;
+}
+
+.blue {
+  color: $rds-logo-color;
+}
+.green {
+  color: $success-color;
+}
+.yellow {
+  color: $gold-color;
+}
+.purple {
+  color: $purple-color;
+}
+.red {
+  color: $punch-color;
+}
+
+.gray {
+  background: $gray-chateau-color;
+  text-decoration: line-through;
+}

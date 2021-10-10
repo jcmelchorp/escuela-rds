@@ -1,0 +1,14 @@
+<div class="m-n4 card bg-transparent">
+  <div class="card-header bg-danger" mat-dialog-title fxLayout="row wrap" fxLayoutAlign="space-between">
+    <h2 class="text-light">{{data.action|titlecase}} {{data.subject}}</h2>
+    <fa-icon mat-icon-button [icon]="faTimes" size="lg" (click)="close()" [matDialogClose]=""></fa-icon>
+  </div>
+  <mat-dialog-content class="m-2" fxLayout="column" fxLayoutAlign="center center">
+    <h3>{{data.description}}</h3>
+  </mat-dialog-content>
+  <mat-dialog-actions class="m-2" align="end">
+    <button mat-stroked-button (click)="data.confirm=false" [matDialogClose]="data">Cancelar</button>
+    <button mat-stroked-button color="warn" (click)="data.confirm=true" [matDialogClose]="data"
+      cdkFocusInitial>{{data.action|titlecase}}</button>
+  </mat-dialog-actions>
+</div>

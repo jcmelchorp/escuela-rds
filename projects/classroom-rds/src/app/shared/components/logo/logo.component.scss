@@ -1,0 +1,142 @@
+@import "./../../../../assets/themes/colors.scss";
+.container {
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  display: block;
+  position: absolute;
+  max-width: 225px;
+}
+
+h1 span {
+  font-family: "Fredoka One";
+  font-size: 1.8em;
+  height: 200px;
+  position: absolute;
+  width: 30px;
+  transform-origin: bottom center;
+  color: $rds-logo-color;
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    height: 150px;
+    font-size: 1.3em;
+    width: 20px;
+  }
+  @media (max-width: 767.98px) {
+    height: 100px;
+    font-size: 0.8em;
+    width: 10px;
+  }
+}
+.img-casa {
+  position: absolute;
+  height: 200px;
+  width: auto;
+  margin-top: 50px;
+  margin-left: -80px;
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    height: 160px;
+    margin-left: -70px;
+    margin-top: 30px;
+  }
+  @media (max-width: 767.98px) {
+    height: 95px;
+    margin-left: -40px;
+    margin-top: 20px;
+  }
+}
+.img-personas {
+  position: absolute;
+  height: 220px;
+  width: auto;
+  margin-top: 190px;
+  margin-left: -180px;
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    height: 170px;
+    margin-left: -140px;
+    margin-top: 140px;
+  }
+  @media (max-width: 767.98px) {
+    height: 110px;
+    margin-left: -90px;
+    margin-top: 80px;
+  }
+}
+
+.char01 {
+  transform: rotate(300deg);
+}
+.char02 {
+  transform: rotate(309deg);
+}
+.char03 {
+  transform: rotate(316deg);
+}
+.char04 {
+  transform: rotate(323deg);
+}
+.char05 {
+  transform: rotate(331deg);
+}
+.char06 {
+  transform: rotate(339deg);
+}
+.char07 {
+  transform: rotate(343deg);
+}
+.char08 {
+  transform: rotate(350deg);
+}
+.char09 {
+  transform: rotate(356deg);
+}
+.char10 {
+  transform: rotate(4deg);
+}
+.char11 {
+  transform: rotate(12deg);
+}
+.char12 {
+  transform: rotate(18deg);
+}
+.char13 {
+  transform: rotate(26deg);
+}
+.char14 {
+  transform: rotate(34deg);
+}
+.char15 {
+  transform: rotate(36deg);
+}
+.char16 {
+  transform: rotate(42deg);
+}
+.char17 {
+  transform: rotate(51deg);
+}
+.char18 {
+  transform: rotate(54deg);
+}
+.char19 {
+  transform: rotate(62deg);
+}
+.char20 {
+  transform: rotate(67deg);
+}
+.char21 {
+  transform: rotate(73deg);
+}
+.char22 {
+  transform: rotate(81deg);
+}
+.char23 {
+  transform: rotate(89deg);
+}
+.char24 {
+  transform: rotate(95deg);
+}
+.char25 {
+  transform: rotate(103deg);
+}
+.char26 {
+  transform: rotate(111deg);
+}

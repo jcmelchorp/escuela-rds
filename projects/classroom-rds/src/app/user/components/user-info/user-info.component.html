@@ -1,0 +1,67 @@
+<div *ngIf="!(user$|async)" style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
+  <mat-spinner strokeWidth="3" [diameter]="50">
+  </mat-spinner>
+  <span>Buscando ...</span><br>
+</div>
+<mat-card *ngIf="user$|async as user">
+  <mat-card-content class="card border-primary m-n2 bg-transparent">
+    <h1 class="mat-h1 card-header text-light">Tus datos personales
+    </h1>
+    <!--  <div class="float-right">
+      <button mat-button (click)="printPage()">
+        <fa-icon class="rds-icon" [icon]="faPrint"></fa-icon>&nbsp;Imprimir
+      </button>
+      <button mat-button (click)="printPage()">
+        <fa-icon class="rds-icon" [icon]="faFilePdf"></fa-icon>&nbsp;Descargar
+      </button>
+    </div> -->
+    <div class="card bg-transparent mb-3">
+      <div class="card-body">
+        <h3 class="card-title">Alumno</h3>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">No. de usuario:&nbsp;</p>
+          <p class="text-monospace">{{user.id}}</p>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">Nombre del Alumno:&nbsp;</p>
+          <p class="text-monospace">{{user.name?.fullName}}</p>
+        </div>
+        <!--  <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">NIEV:&nbsp;</p>
+          <p class="text-monospace">
+             {{user.niev}}
+          </p>
+        </div> -->
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">CURP:&nbsp;</p>
+          <p class="text-monospace">{{user.curp}}</p>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">Correo electrónico:&nbsp;</p>
+          <p class="text-monospace">{{user.primaryEmail}}</p>
+        </div>
+      </div>
+    </div>
+    <!--   <div class="card bg-transparent  mb-3">
+      <div class="card-body">
+        <h3 class="card-title">Tutor</h3>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">Nombre del Tutor:&nbsp;</p>
+          <p class="text-monospace">{{user.parents[0]?.name.fullName}}</p>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">CURP:&nbsp;</p>
+          <p class="text-monospace">{{user.parentCurp||null}}</p>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">Correo electrónico personal:&nbsp;</p>
+          <p class="text-monospace">{{user.primaryEmail||null}}</p>
+        </div>
+        <div fxLayout="row" fxLayout.lt-sm="column">
+          <p class="card-text">Dirección:&nbsp;</p>
+          <p class="text-monospace">{{user.parentAddresses||null}}</p>
+        </div>
+      </div>
+    </div> -->
+  </mat-card-content>
+</mat-card>

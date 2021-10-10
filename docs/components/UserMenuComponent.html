@@ -1,0 +1,919 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  UserMenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-menu</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-menu.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-menu.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#canLogout" >canLogout</a>
+                            </li>
+                            <li>
+                                <a href="#faAward" >faAward</a>
+                            </li>
+                            <li>
+                                <a href="#faSignOutAlt" >faSignOutAlt</a>
+                            </li>
+                            <li>
+                                <a href="#faUserCheck" >faUserCheck</a>
+                            </li>
+                            <li>
+                                <a href="#faUserEdit" >faUserEdit</a>
+                            </li>
+                            <li>
+                                <a href="#faUserTimes" >faUserTimes</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cancel" >cancel</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onLogout" >onLogout</a>
+                            </li>
+                            <li>
+                                <a href="#prepareForLogout" >prepareForLogout</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Entradas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isAdmin" >isAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#isOnline" >isOnline</a>
+                            </li>
+                            <li>
+                                <a href="#isTeacher" >isTeacher</a>
+                            </li>
+                            <li>
+                                <a href="#user" >user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Salidas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#logout" >logout</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="43" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Entradas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isAdmin"></a>
+                        <b>isAdmin</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="34" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:34</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isOnline"></a>
+                        <b>isOnline</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="32" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:32</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isTeacher"></a>
+                        <b>isTeacher</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="36" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:36</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <b>user</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="30" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:30</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Salidas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="logout"></a>
+                        <b>logout</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="37" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:37</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancel"></a>
+                    <span class="name">
+                        <span ><b>cancel</b></span>
+                        <a href="#cancel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancel()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="51"
+                            class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="46"
+                            class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onLogout"></a>
+                    <span class="name">
+                        <span ><b>onLogout</b></span>
+                        <a href="#onLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onLogout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="47"
+                            class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareForLogout"></a>
+                    <span class="name">
+                        <span ><b>prepareForLogout</b></span>
+                        <a href="#prepareForLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>prepareForLogout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="54"
+                            class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="canLogout"></a>
+                    <span class="name">
+                        <span ><b>canLogout</b></span>
+                        <a href="#canLogout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="43" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faAward"></a>
+                    <span class="name">
+                        <span ><b>faAward</b></span>
+                        <a href="#faAward"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faAward</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="38" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faSignOutAlt"></a>
+                    <span class="name">
+                        <span ><b>faSignOutAlt</b></span>
+                        <a href="#faSignOutAlt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faSignOutAlt</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="40" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faUserCheck"></a>
+                    <span class="name">
+                        <span ><b>faUserCheck</b></span>
+                        <a href="#faUserCheck"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserCheck</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="41" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faUserEdit"></a>
+                    <span class="name">
+                        <span ><b>faUserEdit</b></span>
+                        <a href="#faUserEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserEdit</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="39" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faUserTimes"></a>
+                    <span class="name">
+                        <span ><b>faUserTimes</b></span>
+                        <a href="#faUserTimes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserTimes</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">projects/classroom-rds/src/app/user/components/user-menu/user-menu.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+} from &#x27;@angular/core&#x27;;
+
+import {
+  faAward,
+  faUserEdit,
+  faSignOutAlt,
+  faCheck,
+  faTimes,
+  faUserCheck,
+  faUserTimes,
+} from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+
+import { User } from &#x27;@rds-auth/models/user.model&#x27;;
+
+@Component({
+  selector: &#x27;app-user-menu&#x27;,
+  templateUrl: &#x27;./user-menu.component.html&#x27;,
+  styleUrls: [&#x27;./user-menu.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class UserMenuComponent implements OnInit {
+  @Input()
+  user!: User;
+  @Input()
+  isOnline!: boolean;
+  @Input()
+  isAdmin!: boolean;
+  @Input()
+  isTeacher!: boolean;
+  @Output() logout &#x3D; new EventEmitter&lt;User&gt;();
+  faAward &#x3D; faAward;
+  faUserEdit &#x3D; faUserEdit;
+  faSignOutAlt &#x3D; faSignOutAlt;
+  faUserCheck &#x3D; faUserCheck;
+  faUserTimes &#x3D; faUserTimes;
+  canLogout!: boolean;
+  constructor() {}
+
+  ngOnInit(): void {}
+  onLogout(): void {
+    this.logout.emit(this.user);
+    this.canLogout &#x3D; false;
+  }
+  cancel(): void {
+    this.canLogout &#x3D; false;
+  }
+  prepareForLogout(): void {
+    this.canLogout &#x3D; true;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;py-2&quot; *ngIf&#x3D;&quot;user&quot; fxLayout&#x3D;&quot;row wrap&quot; fxLayout.lt-sm&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;space-around&quot;&gt;
+  &lt;mat-card class&#x3D;&quot;mb-2 dashboard-cards d-block&quot; fxFlex&#x3D;&quot;0 1 calc(50% - 5px)&quot; fxFlex.lt-sm&#x3D;&quot;100%&quot;&gt;
+    &lt;mat-card-content&gt;
+      &lt;div class&#x3D;&quot;text-right&quot;&gt;
+        &lt;div style&#x3D;&quot;margin-top: -40px&quot;&gt;
+          &lt;img height&#x3D;&quot;72&quot; width&#x3D;&quot;72&quot; class&#x3D;&quot;img-fluid rounded-circle d-print-none&quot; alt&#x3D;&quot;avatar image&quot;
+            src&#x3D;&quot;{{user.photoUrl?user.photoUrl:user.thumbnailPhotoUrl}}&quot; /&gt;
+        &lt;/div&gt;
+        &lt;h2 *ngIf&#x3D;&quot;user.name&quot;&gt;{{ user.name.fullName }}&lt;/h2&gt;
+        &lt;h3 class&#x3D;&quot;mt-n3&quot;&gt;{{ user.primaryEmail }}&lt;/h3&gt;
+        &lt;h4 class&#x3D;&quot;mat-h4 mt-n3 text-success&quot;&gt;&lt;strong&gt;{{ user.role |titlecase}}&lt;/strong&gt;&lt;/h4&gt;
+        &lt;h4 *ngIf&#x3D;&quot;user.isAdmin&quot; class&#x3D;&quot;mat-h4 mt-n3 text-warning&quot;&gt;&lt;strong&gt;Administrador&lt;/strong&gt;&lt;/h4&gt;
+        &lt;button class&#x3D;&quot;d-print-none&quot; *ngIf&#x3D;&quot;user.role&#x3D;&#x3D;&#x27;alumnos&#x27;&quot; mat-button [routerLink]&#x3D;&quot;[&#x27;grades&#x27;]&quot;
+          routerLinkActive&#x3D;&quot;active&quot; appMaterialElevation&gt;
+          &lt;fa-icon size&#x3D;&quot;lg&quot; [icon]&#x3D;&quot;faAward&quot;&gt;&lt;/fa-icon&gt;&amp;nbsp;Calificaciones
+        &lt;/button&gt;
+        &lt;button class&#x3D;&quot;d-print-none&quot; *ngIf&#x3D;&quot;user.isTeacher || user.isAdmin&quot; mat-button
+          [routerLink]&#x3D;&quot;[&#x27;/&#x27;,&#x27;escuela&#x27;,&#x27;usuarios&#x27;,user.id]&quot; routerLinkActive&#x3D;&quot;active&quot; appMaterialElevation&gt;
+          &lt;mat-icon&gt;how_to_reg&lt;/mat-icon&gt;&amp;nbsp;Actualiza tus datos
+        &lt;/button&gt;
+        &lt;button class&#x3D;&quot;d-print-none&quot; mat-button (click)&#x3D;&quot;canLogout ? onLogout() : prepareForLogout()&quot;
+          appMaterialElevation&gt;
+          &lt;fa-icon size&#x3D;&quot;lg&quot; [icon]&#x3D;&quot;faSignOutAlt&quot; *ngIf&#x3D;&quot;!canLogout&quot;&gt;&lt;/fa-icon&gt;&amp;nbsp;&lt;span *ngIf&#x3D;&quot;!canLogout&quot;&gt;Cerrar
+            sesión&lt;/span&gt;
+          &lt;span class&#x3D;&quot;text-danger&quot; *ngIf&#x3D;&quot;canLogout&quot;&gt;¿Deseas salir?&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button *ngIf&#x3D;&quot;canLogout&quot; mat-button (click)&#x3D;&quot;cancel()&quot;&gt;
+          Cancelar
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/mat-card-content&gt;
+  &lt;/mat-card&gt;
+  &lt;mat-card class&#x3D;&quot;mb-2 d-print-none&quot; fxFlex&#x3D;&quot;0 1 calc(50% - 5px)&quot; fxFlex.lt-sm&#x3D;&quot;100%&quot;&gt;
+    &lt;mat-card-content&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; *ngIf&#x3D;&quot;user.role&#x3D;&#x3D;&#x27;alumnos&#x27;&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;NIEV:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.niev}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; *ngIf&#x3D;&quot;user.role&#x3D;&#x3D;&#x27;profesores&#x27;&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;RFC:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.rfc}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;CURP:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.curp}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; *ngIf&#x3D;&quot;user.role&#x3D;&#x3D;&#x27;alumnos&#x27;&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;Nivel:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.level}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; *ngIf&#x3D;&quot;user.role&#x3D;&#x3D;&#x27;alumnos&#x27;&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;Grado:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.grade}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;Genero:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.gender}}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-n2&quot; fxLayout&#x3D;&quot;row&quot;&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;Fecha de nacimiento:&amp;nbsp;&lt;/p&gt;
+        &lt;p class&#x3D;&quot;col-6&quot;&gt;{{user.dob|date}}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/mat-card-content&gt;
+  &lt;/mat-card&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user-menu.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;./../../../../assets/themes/colors.scss&quot;;
+.active {
+  color: $rds-logo-color;
+}
+
+.confirm {
+  min-width: 200px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="py-2" *ngIf="user" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-around">  <mat-card class="mb-2 dashboard-cards d-block" fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-sm="100%">    <mat-card-content>      <div class="text-right">        <div style="margin-top: -40px">          <img height="72" width="72" class="img-fluid rounded-circle d-print-none" alt="avatar image"            src="{{user.photoUrl?user.photoUrl:user.thumbnailPhotoUrl}}" />        </div>        <h2 *ngIf="user.name">{{ user.name.fullName }}</h2>        <h3 class="mt-n3">{{ user.primaryEmail }}</h3>        <h4 class="mat-h4 mt-n3 text-success"><strong>{{ user.role |titlecase}}</strong></h4>        <h4 *ngIf="user.isAdmin" class="mat-h4 mt-n3 text-warning"><strong>Administrador</strong></h4>        <button class="d-print-none" *ngIf="user.role==\'alumnos\'" mat-button [routerLink]="[\'grades\']"          routerLinkActive="active" appMaterialElevation>          <fa-icon size="lg" [icon]="faAward"></fa-icon>&nbsp;Calificaciones        </button>        <button class="d-print-none" *ngIf="user.isTeacher || user.isAdmin" mat-button          [routerLink]="[\'/\',\'escuela\',\'usuarios\',user.id]" routerLinkActive="active" appMaterialElevation>          <mat-icon>how_to_reg</mat-icon>&nbsp;Actualiza tus datos        </button>        <button class="d-print-none" mat-button (click)="canLogout ? onLogout() : prepareForLogout()"          appMaterialElevation>          <fa-icon size="lg" [icon]="faSignOutAlt" *ngIf="!canLogout"></fa-icon>&nbsp;<span *ngIf="!canLogout">Cerrar            sesión</span>          <span class="text-danger" *ngIf="canLogout">¿Deseas salir?</span>        </button>        <button *ngIf="canLogout" mat-button (click)="cancel()">          Cancelar        </button>      </div>    </mat-card-content>  </mat-card>  <mat-card class="mb-2 d-print-none" fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-sm="100%">    <mat-card-content>      <div class="mb-n2" *ngIf="user.role==\'alumnos\'" fxLayout="row">        <p class="col-6">NIEV:&nbsp;</p>        <p class="col-6">{{user.niev}}</p>      </div>      <div class="mb-n2" *ngIf="user.role==\'profesores\'" fxLayout="row">        <p class="col-6">RFC:&nbsp;</p>        <p class="col-6">{{user.rfc}}</p>      </div>      <div class="mb-n2" fxLayout="row">        <p class="col-6">CURP:&nbsp;</p>        <p class="col-6">{{user.curp}}</p>      </div>      <div class="mb-n2" *ngIf="user.role==\'alumnos\'" fxLayout="row">        <p class="col-6">Nivel:&nbsp;</p>        <p class="col-6">{{user.level}}</p>      </div>      <div class="mb-n2" *ngIf="user.role==\'alumnos\'" fxLayout="row">        <p class="col-6">Grado:&nbsp;</p>        <p class="col-6">{{user.grade}}</p>      </div>      <div class="mb-n2" fxLayout="row">        <p class="col-6">Genero:&nbsp;</p>        <p class="col-6">{{user.gender}}</p>      </div>      <div class="mb-n2" fxLayout="row">        <p class="col-6">Fecha de nacimiento:&nbsp;</p>        <p class="col-6">{{user.dob|date}}</p>      </div>    </mat-card-content>  </mat-card></div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AddUserGroupComponent', 'selector': 'app-add-user-group'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminCoursesComponent', 'selector': 'app-admin-courses'},{'name': 'AdminWellcomeComponent', 'selector': 'app-admin-wellcome'},{'name': 'AnimatedTextComponent', 'selector': 'app-animated-text'},{'name': 'AnnouncementDialogComponent', 'selector': ''},{'name': 'AnnouncementResultComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssigmentsDashboardComponent', 'selector': 'app-assigments-dashboard'},{'name': 'AssignmentsComponent', 'selector': 'app-assignments'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'CodeConductComponent', 'selector': 'app-code-conduct'},{'name': 'CodeConductSchoolComponent', 'selector': 'app-code-conduct-school'},{'name': 'ConfirmDialogComponent', 'selector': ''},{'name': 'CourseAnnouncementsComponent', 'selector': 'app-course-announcements'},{'name': 'CourseComponent', 'selector': 'app-course'},{'name': 'CourseDialogComponent', 'selector': ''},{'name': 'CourseRoomsComponent', 'selector': 'app-course-rooms'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CoursesListComponent', 'selector': 'app-courses-list'},{'name': 'CourseStudentsComponent', 'selector': 'app-course-students'},{'name': 'CourseTeachersComponent', 'selector': 'app-course-teachers'},{'name': 'CourseUserDialogComponent', 'selector': ''},{'name': 'CourseWorkComponent', 'selector': 'app-course-work'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteButtonComponent', 'selector': 'app-delete-button'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GradeCourseComponent', 'selector': 'app-grade-course'},{'name': 'GradeRecomendationComponent', 'selector': 'app-grade-recomendation'},{'name': 'GradesBarChartComponent', 'selector': 'app-grades-bar-chart'},{'name': 'GradesComponent', 'selector': 'app-grades'},{'name': 'GradesListComponent', 'selector': 'app-grades-list'},{'name': 'GradesTableComponent', 'selector': 'app-grades-table'},{'name': 'GradesWellcomeComponent', 'selector': 'app-grades-wellcome'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupDialogComponent', 'selector': 'app-group-dialog'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'GroupTableComponent', 'selector': 'app-group-table'},{'name': 'GuardiansListDialogComponent', 'selector': ''},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LicenseComponent', 'selector': 'app-license'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'LoginDialogComponent', 'selector': ''},{'name': 'LogoAnimateComponent', 'selector': 'app-logo-animate'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'NewCicleDialogComponent', 'selector': ''},{'name': 'NotesEditComponent', 'selector': 'app-notes-edit'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ParallaxComponent', 'selector': 'app-parallax'},{'name': 'ParallaxSpaceComponent', 'selector': 'app-parallax-space'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'ProfileUserComponent', 'selector': 'app-profile-user'},{'name': 'RemoteLearningComponent', 'selector': 'app-remote-learning'},{'name': 'RemoveConfirmComponent', 'selector': ''},{'name': 'ReopenningComponent', 'selector': 'app-reopenning'},{'name': 'RoomComponent', 'selector': 'app-room'},{'name': 'RoomCourseDialogComponent', 'selector': ''},{'name': 'RoomDialogComponent', 'selector': ''},{'name': 'RoomsComponent', 'selector': 'app-rooms'},{'name': 'SaveUserComponent', 'selector': ''},{'name': 'SaveUserConfirmComponent', 'selector': ''},{'name': 'SaveUserErrorComponent', 'selector': 'save-user-error'},{'name': 'SchoolComponent', 'selector': 'app-school'},{'name': 'SchoolDashboardComponent', 'selector': 'app-school-dashboard'},{'name': 'SchoolHomeComponent', 'selector': 'app-school-home'},{'name': 'SchoolStudentsComponent', 'selector': 'app-school-students'},{'name': 'SchoolTeachersComponent', 'selector': 'app-school-teachers'},{'name': 'SchoolUserComponent', 'selector': 'app-school-user'},{'name': 'SchoolUsersComponent', 'selector': 'app-school-users'},{'name': 'ScoresEditComponent', 'selector': 'app-scores-edit'},{'name': 'SelectCourseComponent', 'selector': 'app-select-course'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SnackbarComponent', 'selector': 'app-snackbar'},{'name': 'SnackComponent', 'selector': ''},{'name': 'SubjectDialogComponent', 'selector': ''},{'name': 'TeacherCoursesComponent', 'selector': 'app-teacher-courses'},{'name': 'TeachersComponent', 'selector': 'app-teachers'},{'name': 'TeachersDashboardComponent', 'selector': 'app-teachers-dashboard'},{'name': 'TeachersFormComponent', 'selector': 'app-teachers-form'},{'name': 'TeachersGradeComponent', 'selector': 'app-teachers-grade'},{'name': 'TermsComponent', 'selector': 'app-terms'},{'name': 'UnderConstructionComponent', 'selector': 'app-under-construction'},{'name': 'UserCardComponent', 'selector': 'app-user-card'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UserGradesComponent', 'selector': 'app-user-grades'},{'name': 'UserGradesPrintableComponent', 'selector': 'app-user-grades-printable'},{'name': 'UserHomeComponent', 'selector': 'app-user-home'},{'name': 'UserInfoComponent', 'selector': 'app-user-info'},{'name': 'UserMenuComponent', 'selector': 'app-user-menu'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRoomDialogComponent', 'selector': ''},{'name': 'UsersDomainComponent', 'selector': 'app-users-domain'},{'name': 'UsersGroupsComponent', 'selector': 'app-users-groups'},{'name': 'UsersTableComponent', 'selector': 'app-users-table'},{'name': 'WellcomeComponent', 'selector': 'app-wellcome'},{'name': 'WorkingOnGradesComponent', 'selector': 'app-working-on-grades'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
+    var DIRECTIVES = [{'name': 'MaterialElevationDirective', 'selector': '[appMaterialElevation]'},{'name': 'ParallaxDirective', 'selector': '[appParallax]'}];
+    var ACTUAL_COMPONENT = {'name': 'UserMenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserMenuComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

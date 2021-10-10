@@ -1,0 +1,9 @@
+<div *ngIf="!(loading$|async)" class="p-4">
+  <p class="view-title d-print-none">Alumnos</p>
+  <p class="view-subtitle d-print-none">Accede a toda tu información como alumno</p>
+  <div class="container">
+    <app-user-menu *ngIf="(user$|async) as user" [user]="user" [isAdmin]="(isAdmin$|async)!"
+      [isTeacher]="(isTeacher$|async)!" [isOnline]="(isOnline$|async)!" (logout)="logoutUser($event)"></app-user-menu>
+    <router-outlet></router-outlet>
+  </div>
+</div>

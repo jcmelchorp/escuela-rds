@@ -1,0 +1,187 @@
+@import "./../../../../assets/themes/colors.scss";
+#content {
+  overflow: visible;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.container {
+  width: 100%;
+}
+
+#girl {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 30vh;
+  background: url("/assets/images/bg-kid2.png") no-repeat left bottom;
+  min-width: 100%;
+  min-height: 100%;
+  box-shadow: 10px;
+}
+
+#boy {
+  position: fixed;
+  z-index: -2;
+  bottom: 0;
+  left: 0;
+  background: url("/assets/images/bg-kid.png") no-repeat left bottom;
+  min-width: 100%;
+  min-height: 100%;
+}
+#house {
+  position: fixed;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+  background: url("/assets/images/background.png") no-repeat bottom;
+  min-width: 100%;
+  min-height: 100%;
+}
+.container {
+  transform: translate(-50%, -50%);
+  top: 350px;
+  left: 50%;
+  position: absolute;
+}
+h1 span {
+  font-family: "Fredoka One";
+  font-size: 2.8rem;
+  height: 220px;
+  position: absolute;
+  width: 30px;
+  transform-origin: bottom center;
+  color: $rds-logo-color;
+  text-shadow: 3px 3px 1px $text-shadow-color;
+}
+.emblem {
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: -40px;
+  margin: 0 auto;
+  width: 60vh;
+  height: 50vh;
+  font-weight: bold;
+  color: $rds-logo-color;
+  animation: spinZ 1s cubic-bezier(0.98, 0, 0.65, 1.65) alternate;
+  text-align: center;
+  display: inline-block;
+}
+.image-container {
+  display: block;
+}
+.img-casa {
+  padding-left: 50px;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 220px;
+  width: auto;
+  animation: createBox 0.8s cubic-bezier(0.8, 0, 0.5, 1.85);
+}
+
+.img-personas {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -60px;
+  height: 260px;
+  width: auto;
+  animation: createBox 0.8s cubic-bezier(0.2, 0, 0.9, 0.95);
+}
+.char01 {
+  transform: rotate(301deg);
+}
+.char02 {
+  transform: rotate(309deg);
+}
+.char03 {
+  transform: rotate(316deg);
+}
+.char04 {
+  transform: rotate(323deg);
+}
+.char05 {
+  transform: rotate(331deg);
+}
+.char06 {
+  transform: rotate(337deg);
+}
+.char07 {
+  transform: rotate(343deg);
+}
+.char08 {
+  transform: rotate(350deg);
+}
+.char09 {
+  transform: rotate(356deg);
+}
+.char10 {
+  transform: rotate(4deg);
+}
+.char11 {
+  transform: rotate(11deg);
+}
+.char12 {
+  transform: rotate(18deg);
+}
+.char13 {
+  transform: rotate(26deg);
+}
+.char14 {
+  transform: rotate(32deg);
+}
+.char15 {
+  transform: rotate(36deg);
+}
+.char16 {
+  transform: rotate(42deg);
+}
+.char17 {
+  transform: rotate(48deg);
+}
+.char18 {
+  transform: rotate(54deg);
+}
+.char19 {
+  transform: rotate(62deg);
+}
+.char20 {
+  transform: rotate(67deg);
+}
+.char21 {
+  transform: rotate(73deg);
+}
+.char22 {
+  transform: rotate(81deg);
+}
+.char23 {
+  transform: rotate(88deg);
+}
+.char24 {
+  transform: rotate(95deg);
+}
+.char25 {
+  transform: rotate(103deg);
+}
+.char26 {
+  transform: rotate(111deg);
+}
+
+@keyframes spinZ {
+  0% {
+    transform: rotateZ(360deg) scale(0);
+    //transform: scale(0);
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1);
+    //transform: scale(1);
+  }
+}
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

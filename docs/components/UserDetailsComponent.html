@@ -1,0 +1,1105 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  UserDetailsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-user-details</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./user-details.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./user-details.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#faIdBadge" >faIdBadge</a>
+                            </li>
+                            <li>
+                                <a href="#hasUnitNumber" >hasUnitNumber</a>
+                            </li>
+                            <li>
+                                <a href="#phoneKeys" >phoneKeys</a>
+                            </li>
+                            <li>
+                                <a href="#phones" >phones</a>
+                            </li>
+                            <li>
+                                <a href="#raisedElev" >raisedElev</a>
+                            </li>
+                            <li>
+                                <a href="#states" >states</a>
+                            </li>
+                            <li>
+                                <a href="#userDetailsForm" >userDetailsForm</a>
+                            </li>
+                            <li>
+                                <a href="#userSub" >userSub</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#initForm" >initForm</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                            <li>
+                                <a href="#updateUser" >updateUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Entradas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#user" >user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Salidas</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#updatedUser" >updatedUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="83" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:83</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Entradas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="user"></a>
+                        <b>user</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="43" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:43</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Salidas</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updatedUser"></a>
+                        <b>updatedUser</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido en <a href="" data-line="41" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:41</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initForm"></a>
+                    <span class="name">
+                        <span ><b>initForm</b></span>
+                        <a href="#initForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initForm(defaultUser?: <a href="../interfaces/User.html" target="_self">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="88"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>defaultUser</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        Si
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="87"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="101"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateUser"></a>
+                    <span class="name">
+                        <span ><b>updateUser</b></span>
+                        <a href="#updateUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="106"
+                            class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:106</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faIdBadge"></a>
+                    <span class="name">
+                        <span ><b>faIdBadge</b></span>
+                        <a href="#faIdBadge"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faIdBadge</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="46" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasUnitNumber"></a>
+                    <span class="name">
+                        <span ><b>hasUnitNumber</b></span>
+                        <a href="#hasUnitNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="45" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="phoneKeys"></a>
+                    <span class="name">
+                        <span ><b>phoneKeys</b></span>
+                        <a href="#phoneKeys"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="81" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="phones"></a>
+                    <span class="name">
+                        <span ><b>phones</b></span>
+                        <a href="#phones"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../miscellaneous/enumerations.html#PhoneType" target="_self" >PhoneType</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="82" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="raisedElev"></a>
+                    <span class="name">
+                        <span ><b>raisedElev</b></span>
+                        <a href="#raisedElev"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>10</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="44" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="states"></a>
+                    <span class="name">
+                        <span ><b>states</b></span>
+                        <a href="#states"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>[
+    { clave: &#x27;Ags&#x27;, nombre: &#x27;Aguascalientes&#x27; },
+    { clave: &#x27;Bc&#x27;, nombre: &#x27;Baja California&#x27; },
+    { clave: &#x27;Bcs&#x27;, nombre: &#x27;Baja California Sur&#x27; },
+    { clave: &#x27;Chi&#x27;, nombre: &#x27;Chihuahua&#x27; },
+    { clave: &#x27;Chs&#x27;, nombre: &#x27;Chiapas&#x27; },
+    { clave: &#x27;Cmp&#x27;, nombre: &#x27;Campeche&#x27; },
+    { clave: &#x27;Cmx&#x27;, nombre: &#x27;Ciudad De Mexico&#x27; },
+    { clave: &#x27;Coa&#x27;, nombre: &#x27;Coahuila&#x27; },
+    { clave: &#x27;Col&#x27;, nombre: &#x27;Colima&#x27; },
+    { clave: &#x27;Dgo&#x27;, nombre: &#x27;Durango&#x27; },
+    { clave: &#x27;Gro&#x27;, nombre: &#x27;Guerrero&#x27; },
+    { clave: &#x27;Gto&#x27;, nombre: &#x27;Guanajuato&#x27; },
+    { clave: &#x27;Hgo&#x27;, nombre: &#x27;Hidalgo&#x27; },
+    { clave: &#x27;Jal&#x27;, nombre: &#x27;Jalisco&#x27; },
+    { clave: &#x27;Mch&#x27;, nombre: &#x27;Michoacan&#x27; },
+    { clave: &#x27;Mex&#x27;, nombre: &#x27;Estado De Mexico&#x27; },
+    { clave: &#x27;Mor&#x27;, nombre: &#x27;Morelos&#x27; },
+    { clave: &#x27;Nay&#x27;, nombre: &#x27;Nayarit&#x27; },
+    { clave: &#x27;Nl&#x27;, nombre: &#x27;Nuevo Leon&#x27; },
+    { clave: &#x27;Oax&#x27;, nombre: &#x27;Oaxaca&#x27; },
+    { clave: &#x27;Pue&#x27;, nombre: &#x27;Puebla&#x27; },
+    { clave: &#x27;Qr&#x27;, nombre: &#x27;Quintana Roo&#x27; },
+    { clave: &#x27;Qro&#x27;, nombre: &#x27;Queretaro&#x27; },
+    { clave: &#x27;Sin&#x27;, nombre: &#x27;Sinaloa&#x27; },
+    { clave: &#x27;Slp&#x27;, nombre: &#x27;San Luis Potosi&#x27; },
+    { clave: &#x27;Son&#x27;, nombre: &#x27;Sonora&#x27; },
+    { clave: &#x27;Tab&#x27;, nombre: &#x27;Tabasco&#x27; },
+    { clave: &#x27;Tlx&#x27;, nombre: &#x27;Tlaxcala&#x27; },
+    { clave: &#x27;Tms&#x27;, nombre: &#x27;Tamaulipas&#x27; },
+    { clave: &#x27;Ver&#x27;, nombre: &#x27;Veracruz&#x27; },
+    { clave: &#x27;Yuc&#x27;, nombre: &#x27;Yucatan&#x27; },
+    { clave: &#x27;Zac&#x27;, nombre: &#x27;Zacatecas&#x27; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="47" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userDetailsForm"></a>
+                    <span class="name">
+                        <span ><b>userDetailsForm</b></span>
+                        <a href="#userDetailsForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userSub"></a>
+                    <span class="name">
+                        <span ><b>userSub</b></span>
+                        <a href="#userSub"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="83" class="link-to-prism">projects/classroom-rds/src/app/admin/components/user-details/user-details.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  ChangeDetectionStrategy,
+  Output,
+  EventEmitter,
+  AfterViewInit,
+  OnInit,
+  Input,
+} from &#x27;@angular/core&#x27;;
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+
+import { faIdBadge } from &#x27;@fortawesome/free-regular-svg-icons&#x27;;
+
+import { select, Store } from &#x27;@ngrx/store&#x27;;
+
+import { AppState } from &#x27;@rds-store/app.state&#x27;;
+
+import { User } from &#x27;@rds-auth/models/user.model&#x27;;
+import { selectUser } from &#x27;@rds-auth/state/auth.selectors&#x27;;
+
+import { UserDomain } from &#x27;@rds-admin/models/users-domain.model&#x27;;
+
+import { Observable, Subscription } from &#x27;rxjs&#x27;;
+import { map, concatMap } from &#x27;rxjs/operators&#x27;;
+
+import { PhoneType } from &#x27;@rds-auth/models/user-parent.model&#x27;;
+
+@Component({
+  selector: &#x27;app-user-details&#x27;,
+  templateUrl: &#x27;./user-details.component.html&#x27;,
+  styleUrls: [&#x27;./user-details.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class UserDetailsComponent implements OnInit {
+  @Output() updatedUser &#x3D; new EventEmitter&lt;any&gt;();
+  userDetailsForm: FormGroup;
+  @Input() user: User;
+  raisedElev: number &#x3D; 10;
+  hasUnitNumber &#x3D; false;
+  faIdBadge &#x3D; faIdBadge;
+  states &#x3D; [
+    { clave: &#x27;Ags&#x27;, nombre: &#x27;Aguascalientes&#x27; },
+    { clave: &#x27;Bc&#x27;, nombre: &#x27;Baja California&#x27; },
+    { clave: &#x27;Bcs&#x27;, nombre: &#x27;Baja California Sur&#x27; },
+    { clave: &#x27;Chi&#x27;, nombre: &#x27;Chihuahua&#x27; },
+    { clave: &#x27;Chs&#x27;, nombre: &#x27;Chiapas&#x27; },
+    { clave: &#x27;Cmp&#x27;, nombre: &#x27;Campeche&#x27; },
+    { clave: &#x27;Cmx&#x27;, nombre: &#x27;Ciudad De Mexico&#x27; },
+    { clave: &#x27;Coa&#x27;, nombre: &#x27;Coahuila&#x27; },
+    { clave: &#x27;Col&#x27;, nombre: &#x27;Colima&#x27; },
+    { clave: &#x27;Dgo&#x27;, nombre: &#x27;Durango&#x27; },
+    { clave: &#x27;Gro&#x27;, nombre: &#x27;Guerrero&#x27; },
+    { clave: &#x27;Gto&#x27;, nombre: &#x27;Guanajuato&#x27; },
+    { clave: &#x27;Hgo&#x27;, nombre: &#x27;Hidalgo&#x27; },
+    { clave: &#x27;Jal&#x27;, nombre: &#x27;Jalisco&#x27; },
+    { clave: &#x27;Mch&#x27;, nombre: &#x27;Michoacan&#x27; },
+    { clave: &#x27;Mex&#x27;, nombre: &#x27;Estado De Mexico&#x27; },
+    { clave: &#x27;Mor&#x27;, nombre: &#x27;Morelos&#x27; },
+    { clave: &#x27;Nay&#x27;, nombre: &#x27;Nayarit&#x27; },
+    { clave: &#x27;Nl&#x27;, nombre: &#x27;Nuevo Leon&#x27; },
+    { clave: &#x27;Oax&#x27;, nombre: &#x27;Oaxaca&#x27; },
+    { clave: &#x27;Pue&#x27;, nombre: &#x27;Puebla&#x27; },
+    { clave: &#x27;Qr&#x27;, nombre: &#x27;Quintana Roo&#x27; },
+    { clave: &#x27;Qro&#x27;, nombre: &#x27;Queretaro&#x27; },
+    { clave: &#x27;Sin&#x27;, nombre: &#x27;Sinaloa&#x27; },
+    { clave: &#x27;Slp&#x27;, nombre: &#x27;San Luis Potosi&#x27; },
+    { clave: &#x27;Son&#x27;, nombre: &#x27;Sonora&#x27; },
+    { clave: &#x27;Tab&#x27;, nombre: &#x27;Tabasco&#x27; },
+    { clave: &#x27;Tlx&#x27;, nombre: &#x27;Tlaxcala&#x27; },
+    { clave: &#x27;Tms&#x27;, nombre: &#x27;Tamaulipas&#x27; },
+    { clave: &#x27;Ver&#x27;, nombre: &#x27;Veracruz&#x27; },
+    { clave: &#x27;Yuc&#x27;, nombre: &#x27;Yucatan&#x27; },
+    { clave: &#x27;Zac&#x27;, nombre: &#x27;Zacatecas&#x27; },
+  ];
+  phoneKeys;
+  phones: PhoneType;
+  userSub: Subscription;
+  constructor(private fb: FormBuilder) {
+    this.initForm(this.user);
+  }
+  ngOnInit(): void {}
+  initForm(defaultUser?: User) {
+    this.userDetailsForm &#x3D; this.fb.group({
+      dayOfBirth: new FormControl(&#x27;&#x27;),
+      addressLine: new FormControl(&#x27;&#x27;),
+      postalCode: new FormControl(&#x27;&#x27;),
+      photoUrl: new FormControl(&#x27;&#x27;),
+      city: new FormControl(&#x27;&#x27;),
+      state: new FormControl(&#x27;&#x27;),
+      country: new FormControl(&#x27;&#x27;),
+      phoneHome: new FormControl(&#x27;&#x27;),
+      mobilePhone: new FormControl(&#x27;&#x27;),
+    });
+  }
+  onSubmit() {
+    alert(
+      &#x27;Todavia no estamos listos para actualizar tu información por esta via. Contácta a la dirección escolar para más detalles&#x27;
+    );
+  }
+  updateUser() {
+    this.updatedUser.emit(this.user);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;mat-card&gt;
+  &lt;form [formGroup]&#x3D;&quot;userDetailsForm&quot; (ngSubmit)&#x3D;&quot;onSubmit()&quot;&gt;
+    &lt;mat-card-content class&#x3D;&quot;card m-n2 bg-transparent&quot;&gt;
+      &lt;h1 class&#x3D;&quot;mat-h1 card-header text-light&quot;&gt;Tus datos&lt;/h1&gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;p class&#x3D;&quot;card-text&quot;&gt;
+          Los datos que nos proporciones estan sujetos a verificación de autenticidad y deberán estar respaldados por
+          documentos oficiales en posesión del personal administrativo de la institución. Consulta las
+          &lt;a [routerLink]&#x3D;&quot;[&#x27;/privacy-policy&#x27;]&quot;&gt;Políticas de Privacidad&lt;/a&gt; sobre la información que nos proporcionas.
+        &lt;/p&gt;
+        &lt;mat-accordion togglePosition&#x3D;&quot;before&quot;&gt;
+          &lt;mat-expansion-panel appMaterialElevation [raisedElevation]&#x3D;&quot;raisedElev&quot;&gt;
+            &lt;mat-expansion-panel-header&gt;
+              &lt;mat-panel-title&gt;
+                Datos Personales
+              &lt;/mat-panel-title&gt;
+              &lt;mat-panel-description&gt;
+
+              &lt;/mat-panel-description&gt;
+            &lt;/mat-expansion-panel-header&gt;
+            &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutGap&#x3D;&quot;5px&quot;&gt;
+              &lt;mat-form-field fxFlex class&#x3D;&quot;d-block&quot; appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Enlace hacia la imagen&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Inserta un enlace URL (http:// ..)&quot;
+                  formControlName&#x3D;&quot;photoUrl&quot; /&gt;
+              &lt;/mat-form-field&gt;
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Fecha de nacimiento&lt;/mat-label&gt;
+                &lt;input matInput [matDatepicker]&#x3D;&quot;picker&quot; (focus)&#x3D;&quot;picker.open()&quot; placeholder&#x3D;&quot;Fecha de nacimiento&quot;
+                  color&#x3D;&quot;primary&quot; name&#x3D;&quot;dayOfBirth&quot; formControlName&#x3D;&quot;dayOfBirth&quot;&gt;
+                &lt;mat-datepicker-toggle matSuffix [for]&#x3D;&quot;picker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+                &lt;mat-datepicker #picker&gt;&lt;/mat-datepicker&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/mat-expansion-panel&gt;
+
+          &lt;mat-expansion-panel appMaterialElevation [raisedElevation]&#x3D;&quot;raisedElev&quot;&gt;
+            &lt;mat-expansion-panel-header&gt;
+              &lt;mat-panel-title&gt;
+                Domicilio y contacto
+              &lt;/mat-panel-title&gt;
+              &lt;mat-panel-description&gt;
+              &lt;/mat-panel-description&gt;
+            &lt;/mat-expansion-panel-header&gt;
+            &lt;mat-form-field class&#x3D;&quot;d-block&quot; appearance&#x3D;&quot;outline&quot;&gt;
+              &lt;mat-label&gt;Dirección (Calle, número, colonia, etc.)&lt;/mat-label&gt;
+              &lt;textarea matInput placeholder&#x3D;&quot;Dirección&quot; name&#x3D;&quot;addressLine&quot; color&#x3D;&quot;primary&quot;
+                formControlName&#x3D;&quot;addressLine&quot;&gt;&lt;/textarea&gt;
+            &lt;/mat-form-field&gt;
+            &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutGap&#x3D;&quot;5px&quot;&gt;
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Ciudad / municipio&lt;/mat-label&gt;
+                &lt;input matInput placeholder&#x3D;&quot;Ciudad&quot; type&#x3D;&quot;text&quot; name&#x3D;&quot;city&quot; color&#x3D;&quot;primary&quot; formControlName&#x3D;&quot;city&quot;&gt;
+              &lt;/mat-form-field&gt;
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Estado&lt;/mat-label&gt;
+                &lt;mat-select placeholder&#x3D;&quot;Estado&quot; type&#x3D;&quot;text&quot; color&#x3D;&quot;primary&quot; name&#x3D;&quot;state&quot; formControlName&#x3D;&quot;state&quot;&gt;
+                  &lt;mat-option *ngFor&#x3D;&quot;let sts of states&quot; [value]&#x3D;&quot;sts.nombre&quot;&gt;
+                    {{sts.nombre}}
+                  &lt;/mat-option&gt;
+                &lt;/mat-select&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+            &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutGap&#x3D;&quot;5px&quot;&gt;
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Código postal&lt;/mat-label&gt;
+                &lt;input matInput maxlength&#x3D;&quot;5&quot; type&#x3D;&quot;number&quot; placeholder&#x3D;&quot;Postal Code&quot; color&#x3D;&quot;primary&quot; name&#x3D;&quot;postalCode&quot;
+                  formControlName&#x3D;&quot;postalCode&quot;&gt;
+              &lt;/mat-form-field&gt;
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;País&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;País&quot; name&#x3D;&quot;country&quot; color&#x3D;&quot;primary&quot; formControlName&#x3D;&quot;country&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/mat-expansion-panel&gt;
+
+          &lt;mat-expansion-panel appMaterialElevation [raisedElevation]&#x3D;&quot;raisedElev&quot;&gt;
+            &lt;mat-expansion-panel-header&gt;
+              &lt;mat-panel-title&gt;
+                Contacto
+              &lt;/mat-panel-title&gt;
+              &lt;mat-panel-description&gt;
+              &lt;/mat-panel-description&gt;
+            &lt;/mat-expansion-panel-header&gt;
+
+            &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutGap&#x3D;&quot;5px&quot;&gt;
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Teléfono fijo&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;tel&quot; placeholder&#x3D;&quot;Teléfono fijo&quot; name&#x3D;&quot;phoneHome&quot; color&#x3D;&quot;primary&quot;
+                  formControlName&#x3D;&quot;phoneHome&quot;&gt;
+              &lt;/mat-form-field&gt;
+
+              &lt;mat-form-field fxFlex appearance&#x3D;&quot;outline&quot;&gt;
+                &lt;mat-label&gt;Teléfono móvil&lt;/mat-label&gt;
+                &lt;input matInput type&#x3D;&quot;tel&quot; placeholder&#x3D;&quot;Teléfono móvil&quot; name&#x3D;&quot;mobilePhone&quot; color&#x3D;&quot;primary&quot;
+                  formControlName&#x3D;&quot;mobilePhone&quot;&gt;
+              &lt;/mat-form-field&gt;
+            &lt;/div&gt;
+          &lt;/mat-expansion-panel&gt;
+        &lt;/mat-accordion&gt;
+
+
+        &lt;mat-card-actions&gt;
+          &lt;button mat-raised-button color&#x3D;&quot;&#x27;$rds-logo-color&#x27;&quot; type&#x3D;&quot;submit&quot;&gt;Submit&lt;/button&gt;
+        &lt;/mat-card-actions&gt;
+      &lt;/div&gt;
+
+    &lt;/mat-card-content&gt;
+
+
+  &lt;/form&gt;
+&lt;/mat-card&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./user-details.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;./../../../../assets/themes/colors.scss&#x27;;
+.card-header {
+  background-color: $rds-logo-color;
+}
+.card {
+  border:1px solid $rds-logo-color
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><mat-card>  <form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()">    <mat-card-content class="card m-n2 bg-transparent">      <h1 class="mat-h1 card-header text-light">Tus datos</h1>      <div class="card-body">        <p class="card-text">          Los datos que nos proporciones estan sujetos a verificación de autenticidad y deberán estar respaldados por          documentos oficiales en posesión del personal administrativo de la institución. Consulta las          <a [routerLink]="[\'/privacy-policy\']">Políticas de Privacidad</a> sobre la información que nos proporcionas.        </p>        <mat-accordion togglePosition="before">          <mat-expansion-panel appMaterialElevation [raisedElevation]="raisedElev">            <mat-expansion-panel-header>              <mat-panel-title>                Datos Personales              </mat-panel-title>              <mat-panel-description>              </mat-panel-description>            </mat-expansion-panel-header>            <div fxLayout="row" fxLayoutGap="5px">              <mat-form-field fxFlex class="d-block" appearance="outline">                <mat-label>Enlace hacia la imagen</mat-label>                <input matInput type="text" placeholder="Inserta un enlace URL (http:// ..)"                  formControlName="photoUrl" />              </mat-form-field>              <mat-form-field fxFlex appearance="outline">                <mat-label>Fecha de nacimiento</mat-label>                <input matInput [matDatepicker]="picker" (focus)="picker.open()" placeholder="Fecha de nacimiento"                  color="primary" name="dayOfBirth" formControlName="dayOfBirth">                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>                <mat-datepicker #picker></mat-datepicker>              </mat-form-field>            </div>          </mat-expansion-panel>          <mat-expansion-panel appMaterialElevation [raisedElevation]="raisedElev">            <mat-expansion-panel-header>              <mat-panel-title>                Domicilio y contacto              </mat-panel-title>              <mat-panel-description>              </mat-panel-description>            </mat-expansion-panel-header>            <mat-form-field class="d-block" appearance="outline">              <mat-label>Dirección (Calle, número, colonia, etc.)</mat-label>              <textarea matInput placeholder="Dirección" name="addressLine" color="primary"                formControlName="addressLine"></textarea>            </mat-form-field>            <div fxLayout="row" fxLayoutGap="5px">              <mat-form-field fxFlex appearance="outline">                <mat-label>Ciudad / municipio</mat-label>                <input matInput placeholder="Ciudad" type="text" name="city" color="primary" formControlName="city">              </mat-form-field>              <mat-form-field fxFlex appearance="outline">                <mat-label>Estado</mat-label>                <mat-select placeholder="Estado" type="text" color="primary" name="state" formControlName="state">                  <mat-option *ngFor="let sts of states" [value]="sts.nombre">                    {{sts.nombre}}                  </mat-option>                </mat-select>              </mat-form-field>            </div>            <div fxLayout="row" fxLayoutGap="5px">              <mat-form-field fxFlex appearance="outline">                <mat-label>Código postal</mat-label>                <input matInput maxlength="5" type="number" placeholder="Postal Code" color="primary" name="postalCode"                  formControlName="postalCode">              </mat-form-field>              <mat-form-field fxFlex appearance="outline">                <mat-label>País</mat-label>                <input matInput type="text" placeholder="País" name="country" color="primary" formControlName="country">              </mat-form-field>            </div>          </mat-expansion-panel>          <mat-expansion-panel appMaterialElevation [raisedElevation]="raisedElev">            <mat-expansion-panel-header>              <mat-panel-title>                Contacto              </mat-panel-title>              <mat-panel-description>              </mat-panel-description>            </mat-expansion-panel-header>            <div fxLayout="row" fxLayoutGap="5px">              <mat-form-field fxFlex appearance="outline">                <mat-label>Teléfono fijo</mat-label>                <input matInput type="tel" placeholder="Teléfono fijo" name="phoneHome" color="primary"                  formControlName="phoneHome">              </mat-form-field>              <mat-form-field fxFlex appearance="outline">                <mat-label>Teléfono móvil</mat-label>                <input matInput type="tel" placeholder="Teléfono móvil" name="mobilePhone" color="primary"                  formControlName="mobilePhone">              </mat-form-field>            </div>          </mat-expansion-panel>        </mat-accordion>        <mat-card-actions>          <button mat-raised-button color="\'$rds-logo-color\'" type="submit">Submit</button>        </mat-card-actions>      </div>    </mat-card-content>  </form></mat-card></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AddUserGroupComponent', 'selector': 'app-add-user-group'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminCoursesComponent', 'selector': 'app-admin-courses'},{'name': 'AdminWellcomeComponent', 'selector': 'app-admin-wellcome'},{'name': 'AnimatedTextComponent', 'selector': 'app-animated-text'},{'name': 'AnnouncementDialogComponent', 'selector': ''},{'name': 'AnnouncementResultComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssigmentsDashboardComponent', 'selector': 'app-assigments-dashboard'},{'name': 'AssignmentsComponent', 'selector': 'app-assignments'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'CodeConductComponent', 'selector': 'app-code-conduct'},{'name': 'CodeConductSchoolComponent', 'selector': 'app-code-conduct-school'},{'name': 'ConfirmDialogComponent', 'selector': ''},{'name': 'CourseAnnouncementsComponent', 'selector': 'app-course-announcements'},{'name': 'CourseComponent', 'selector': 'app-course'},{'name': 'CourseDialogComponent', 'selector': ''},{'name': 'CourseRoomsComponent', 'selector': 'app-course-rooms'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CoursesListComponent', 'selector': 'app-courses-list'},{'name': 'CourseStudentsComponent', 'selector': 'app-course-students'},{'name': 'CourseTeachersComponent', 'selector': 'app-course-teachers'},{'name': 'CourseUserDialogComponent', 'selector': ''},{'name': 'CourseWorkComponent', 'selector': 'app-course-work'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteButtonComponent', 'selector': 'app-delete-button'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GradeCourseComponent', 'selector': 'app-grade-course'},{'name': 'GradeRecomendationComponent', 'selector': 'app-grade-recomendation'},{'name': 'GradesBarChartComponent', 'selector': 'app-grades-bar-chart'},{'name': 'GradesComponent', 'selector': 'app-grades'},{'name': 'GradesListComponent', 'selector': 'app-grades-list'},{'name': 'GradesTableComponent', 'selector': 'app-grades-table'},{'name': 'GradesWellcomeComponent', 'selector': 'app-grades-wellcome'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupDialogComponent', 'selector': 'app-group-dialog'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'GroupTableComponent', 'selector': 'app-group-table'},{'name': 'GuardiansListDialogComponent', 'selector': ''},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LicenseComponent', 'selector': 'app-license'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'LoginDialogComponent', 'selector': ''},{'name': 'LogoAnimateComponent', 'selector': 'app-logo-animate'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'NewCicleDialogComponent', 'selector': ''},{'name': 'NotesEditComponent', 'selector': 'app-notes-edit'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ParallaxComponent', 'selector': 'app-parallax'},{'name': 'ParallaxSpaceComponent', 'selector': 'app-parallax-space'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'ProfileUserComponent', 'selector': 'app-profile-user'},{'name': 'RemoteLearningComponent', 'selector': 'app-remote-learning'},{'name': 'RemoveConfirmComponent', 'selector': ''},{'name': 'ReopenningComponent', 'selector': 'app-reopenning'},{'name': 'RoomComponent', 'selector': 'app-room'},{'name': 'RoomCourseDialogComponent', 'selector': ''},{'name': 'RoomDialogComponent', 'selector': ''},{'name': 'RoomsComponent', 'selector': 'app-rooms'},{'name': 'SaveUserComponent', 'selector': ''},{'name': 'SaveUserConfirmComponent', 'selector': ''},{'name': 'SaveUserErrorComponent', 'selector': 'save-user-error'},{'name': 'SchoolComponent', 'selector': 'app-school'},{'name': 'SchoolDashboardComponent', 'selector': 'app-school-dashboard'},{'name': 'SchoolHomeComponent', 'selector': 'app-school-home'},{'name': 'SchoolStudentsComponent', 'selector': 'app-school-students'},{'name': 'SchoolTeachersComponent', 'selector': 'app-school-teachers'},{'name': 'SchoolUserComponent', 'selector': 'app-school-user'},{'name': 'SchoolUsersComponent', 'selector': 'app-school-users'},{'name': 'ScoresEditComponent', 'selector': 'app-scores-edit'},{'name': 'SelectCourseComponent', 'selector': 'app-select-course'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SnackbarComponent', 'selector': 'app-snackbar'},{'name': 'SnackComponent', 'selector': ''},{'name': 'SubjectDialogComponent', 'selector': ''},{'name': 'TeacherCoursesComponent', 'selector': 'app-teacher-courses'},{'name': 'TeachersComponent', 'selector': 'app-teachers'},{'name': 'TeachersDashboardComponent', 'selector': 'app-teachers-dashboard'},{'name': 'TeachersFormComponent', 'selector': 'app-teachers-form'},{'name': 'TeachersGradeComponent', 'selector': 'app-teachers-grade'},{'name': 'TermsComponent', 'selector': 'app-terms'},{'name': 'UnderConstructionComponent', 'selector': 'app-under-construction'},{'name': 'UserCardComponent', 'selector': 'app-user-card'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UserGradesComponent', 'selector': 'app-user-grades'},{'name': 'UserGradesPrintableComponent', 'selector': 'app-user-grades-printable'},{'name': 'UserHomeComponent', 'selector': 'app-user-home'},{'name': 'UserInfoComponent', 'selector': 'app-user-info'},{'name': 'UserMenuComponent', 'selector': 'app-user-menu'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRoomDialogComponent', 'selector': ''},{'name': 'UsersDomainComponent', 'selector': 'app-users-domain'},{'name': 'UsersGroupsComponent', 'selector': 'app-users-groups'},{'name': 'UsersTableComponent', 'selector': 'app-users-table'},{'name': 'WellcomeComponent', 'selector': 'app-wellcome'},{'name': 'WorkingOnGradesComponent', 'selector': 'app-working-on-grades'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
+    var DIRECTIVES = [{'name': 'MaterialElevationDirective', 'selector': '[appMaterialElevation]'},{'name': 'ParallaxDirective', 'selector': '[appParallax]'}];
+    var ACTUAL_COMPONENT = {'name': 'UserDetailsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserDetailsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

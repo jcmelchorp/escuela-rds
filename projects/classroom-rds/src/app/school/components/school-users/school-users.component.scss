@@ -1,0 +1,6 @@
+@import "./../../../../assets/themes/colors";
+
+mat-list-item.active {
+  color: $mystic-color;
+  background: $rds-logo-color;
+}

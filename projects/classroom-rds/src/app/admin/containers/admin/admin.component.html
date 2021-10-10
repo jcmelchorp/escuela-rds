@@ -1,0 +1,19 @@
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <img mat-card-avatar src="https://mytcpip.com/wp-content/uploads/2019/06/nexusae0_icon2.png" />
+      <mat-card-title><img class="img-google-logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png">
+        <span class="text-google-logo">&nbsp;Admin</span>
+      </mat-card-title>
+      <mat-card-subtitle>Administración de dominio</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-actions align="end">
+      <button mat-button [routerLink]="['users']" routerLinkActive="active">Todos los usuarios</button>
+      <button mat-button [routerLink]="['school-home']" routerLinkActive="active">Estudiantes</button>
+      <button mat-button [routerLink]="['groups']" routerLinkActive="active">Grupos</button>
+    </mat-card-actions>
+  </mat-card>
+  <router-outlet></router-outlet>
+</div>

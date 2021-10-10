@@ -1,0 +1,9 @@
+@import "./../../../../assets/themes/colors.scss";
+
+.animated-text {
+  position: relative;
+  font-family: "Fredoka One";
+  font-size: 1.2rem;
+  color: $rds-logo-color;
+  text-shadow: -2px 2px 1px $gray-chateau-color;
+}

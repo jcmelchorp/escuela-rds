@@ -1,0 +1,11 @@
+<div [ngClass]="{'dark-theme': isDarkTheme | async}" fxLayout="column" fxFlexFill>
+  <app-header class="d-print-none fix-top" [user]="(user$|async)" [isHandset]="(isHandset$|async)"
+    [isAdmin]="(isAdmin$|async)" [isTeacher]="(isTeacher$|async)" [isOnline]="(isOnline$|async)">
+  </app-header>
+  <div fxFlex>
+    <mat-progress-bar name="progressBar" *ngIf="loading" mode="query" color="primary"> </mat-progress-bar>
+    <app-sidenav [isHandset]="(isHandset$|async)" [isOnline]="(isOnline$|async)" [user]="(user$|async)"
+      [isAdmin]="(isAdmin$|async)" [isTeacher]="(isTeacher$|async)">
+    </app-sidenav>
+  </div>
+</div>

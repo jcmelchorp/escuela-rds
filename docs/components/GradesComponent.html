@@ -1,0 +1,1536 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  GradesComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-grades</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./grades.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./grades.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#courses$" >courses$</a>
+                            </li>
+                            <li>
+                                <a href="#coursesAsStudent$" >coursesAsStudent$</a>
+                            </li>
+                            <li>
+                                <a href="#coursesAsTeacher$" >coursesAsTeacher$</a>
+                            </li>
+                            <li>
+                                <a href="#eStates" >eStates</a>
+                            </li>
+                            <li>
+                                <a href="#faBullhorn" >faBullhorn</a>
+                            </li>
+                            <li>
+                                <a href="#faPlus" >faPlus</a>
+                            </li>
+                            <li>
+                                <a href="#faUserPlus" >faUserPlus</a>
+                            </li>
+                            <li>
+                                <a href="#isAdmin$" >isAdmin$</a>
+                            </li>
+                            <li>
+                                <a href="#isLoaded$" >isLoaded$</a>
+                            </li>
+                            <li>
+                                <a href="#isOnline$" >isOnline$</a>
+                            </li>
+                            <li>
+                                <a href="#isTeacher$" >isTeacher$</a>
+                            </li>
+                            <li>
+                                <a href="#keys" >keys</a>
+                            </li>
+                            <li>
+                                <a href="#loading$" >loading$</a>
+                            </li>
+                            <li>
+                                <a href="#queryParams" >queryParams</a>
+                            </li>
+                            <li>
+                                <a href="#roles" >roles</a>
+                            </li>
+                            <li>
+                                <a href="#selectRoleForm" >selectRoleForm</a>
+                            </li>
+                            <li>
+                                <a href="#states" >states</a>
+                            </li>
+                            <li>
+                                <a href="#user$" >user$</a>
+                            </li>
+                            <li>
+                                <a href="#userId" >userId</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile$" >userProfile$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#initializeForm" >initializeForm</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onChangeSelection" >onChangeSelection</a>
+                            </li>
+                            <li>
+                                <a href="#openAddUserDialog" >openAddUserDialog</a>
+                            </li>
+                            <li>
+                                <a href="#openCreateAnnouncementDialog" >openCreateAnnouncementDialog</a>
+                            </li>
+                            <li>
+                                <a href="#openCreateCourseDialog" >openCreateCourseDialog</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(courseEntityService: <a href="../injectables/CourseEntityService.html" target="_self">CourseEntityService</a>, coursesService: <a href="../injectables/CoursesService.html" target="_self">CoursesService</a>, userProfilesService: <a href="../injectables/UserProfilesService.html" target="_self">UserProfilesService</a>, store: <a href="../interfaces/AppState.html" target="_self">Store&lt;AppState&gt;</a>, dialog: MatDialog, announcementsService: <a href="../injectables/AnnouncementsService.html" target="_self">AnnouncementsService</a>, formBuilder: <a href="../interfaces/Form.html" target="_self">FormBuilder</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="58" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:58</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>courseEntityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CourseEntityService.html" target="_self" >CourseEntityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>coursesService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CoursesService.html" target="_self" >CoursesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userProfilesService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserProfilesService.html" target="_self" >UserProfilesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/AppState.html" target="_self" >Store&lt;AppState&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>announcementsService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AnnouncementsService.html" target="_self" >AnnouncementsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>formBuilder</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../interfaces/Form.html" target="_self" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeForm"></a>
+                    <span class="name">
+                        <span ><b>initializeForm</b></span>
+                        <a href="#initializeForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="98"
+                            class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="91"
+                            class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onChangeSelection"></a>
+                    <span class="name">
+                        <span ><b>onChangeSelection</b></span>
+                        <a href="#onChangeSelection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onChangeSelection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="111"
+                            class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:111</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openAddUserDialog"></a>
+                    <span class="name">
+                        <span ><b>openAddUserDialog</b></span>
+                        <a href="#openAddUserDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openAddUserDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="203"
+                            class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openCreateAnnouncementDialog"></a>
+                    <span class="name">
+                        <span ><b>openCreateAnnouncementDialog</b></span>
+                        <a href="#openCreateAnnouncementDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openCreateAnnouncementDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="179"
+                            class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openCreateCourseDialog"></a>
+                    <span class="name">
+                        <span ><b>openCreateCourseDialog</b></span>
+                        <a href="#openCreateCourseDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openCreateCourseDialog()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="165"
+                            class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:165</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="courses$"></a>
+                    <span class="name">
+                        <span ><b>courses$</b></span>
+                        <a href="#courses$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;gapi.client.classroom.Course[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="40" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="coursesAsStudent$"></a>
+                    <span class="name">
+                        <span ><b>coursesAsStudent$</b></span>
+                        <a href="#coursesAsStudent$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;gapi.client.classroom.Course[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="41" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="coursesAsTeacher$"></a>
+                    <span class="name">
+                        <span ><b>coursesAsTeacher$</b></span>
+                        <a href="#coursesAsTeacher$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;gapi.client.classroom.Course[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eStates"></a>
+                    <span class="name">
+                        <span ><b>eStates</b></span>
+                        <a href="#eStates"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>CourseState</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="47" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faBullhorn"></a>
+                    <span class="name">
+                        <span ><b>faBullhorn</b></span>
+                        <a href="#faBullhorn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faBullhorn</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="57" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faPlus"></a>
+                    <span class="name">
+                        <span ><b>faPlus</b></span>
+                        <a href="#faPlus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faPlus</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="55" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faUserPlus"></a>
+                    <span class="name">
+                        <span ><b>faUserPlus</b></span>
+                        <a href="#faUserPlus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserPlus</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="56" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isAdmin$"></a>
+                    <span class="name">
+                        <span ><b>isAdmin$</b></span>
+                        <a href="#isAdmin$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="52" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isLoaded$"></a>
+                    <span class="name">
+                        <span ><b>isLoaded$</b></span>
+                        <a href="#isLoaded$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="49" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isOnline$"></a>
+                    <span class="name">
+                        <span ><b>isOnline$</b></span>
+                        <a href="#isOnline$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="51" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isTeacher$"></a>
+                    <span class="name">
+                        <span ><b>isTeacher$</b></span>
+                        <a href="#isTeacher$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="53" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="keys"></a>
+                    <span class="name">
+                        <span ><b>keys</b></span>
+                        <a href="#keys"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="45" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading$"></a>
+                    <span class="name">
+                        <span ><b>loading$</b></span>
+                        <a href="#loading$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="54" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="queryParams"></a>
+                    <span class="name">
+                        <span ><b>queryParams</b></span>
+                        <a href="#queryParams"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>QueryParams</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="58" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roles"></a>
+                    <span class="name">
+                        <span ><b>roles</b></span>
+                        <a href="#roles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../miscellaneous/enumerations.html#CourseRoles" target="_self" >CourseRoles</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="46" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectRoleForm"></a>
+                    <span class="name">
+                        <span ><b>selectRoleForm</b></span>
+                        <a href="#selectRoleForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="44" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="states"></a>
+                    <span class="name">
+                        <span ><b>states</b></span>
+                        <a href="#states"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="48" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="user$"></a>
+                    <span class="name">
+                        <span ><b>user$</b></span>
+                        <a href="#user$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/User.html" target="_self" >Observable&lt;User&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="38" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userId"></a>
+                    <span class="name">
+                        <span ><b>userId</b></span>
+                        <a href="#userId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="50" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile$"></a>
+                    <span class="name">
+                        <span ><b>userProfile$</b></span>
+                        <a href="#userProfile$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/User.html" target="_self" >Observable&lt;gapi.client.classroom.UserProfile&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="39" class="link-to-prism">projects/classroom-rds/src/app/grades/containers/grades/grades.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from &#x27;@angular/forms&#x27;;
+import { Component, OnInit, ChangeDetectionStrategy } from &#x27;@angular/core&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import {
+  faPlus,
+  faUserPlus,
+  faBullhorn,
+} from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { Store, select } from &#x27;@ngrx/store&#x27;;
+import { QueryParams } from &#x27;@ngrx/data&#x27;;
+import * as fromAuthSelectors from &#x27;@rds-auth/state/auth.selectors&#x27;;
+import { AppState } from &#x27;@rds-store/app.state&#x27;;
+import { User } from &#x27;@rds-auth/models/user.model&#x27;;
+import { CourseEntityService } from &#x27;@rds-store/course/course-entity.service&#x27;;
+import { CourseState } from &#x27;@rds-classroom/models/classroom.enum&#x27;;
+import { AnnouncementsService } from &#x27;@rds-classroom/announcements/services/announcements.service&#x27;;
+import { AnnouncementDialogComponent } from &#x27;@rds-classroom/announcements/components/announcement-dialog/announcement-dialog.component&#x27;;
+import { CourseDialogComponent } from &#x27;@rds-classroom/courses/components/course-dialog/course-dialog.component&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import { CourseRoles } from &#x27;../../models/student-grade.model&#x27;;
+import { CourseUserDialogComponent } from &#x27;@rds-classroom/courses/components/course-user-dialog/course-user-dialog.component&#x27;;
+import { CoursesService } from &#x27;@rds-classroom/courses/services/courses.service&#x27;;
+import { UserProfilesService } from &#x27;@rds-classroom/user-profiles/services/user-profiles.service&#x27;;
+
+@Component({
+  selector: &#x27;app-grades&#x27;,
+  templateUrl: &#x27;./grades.component.html&#x27;,
+  styleUrls: [&#x27;./grades.component.scss&#x27;],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class GradesComponent implements OnInit {
+  user$: Observable&lt;User&gt;;
+  userProfile$: Observable&lt;gapi.client.classroom.UserProfile&gt;;
+  courses$: Observable&lt;gapi.client.classroom.Course[]&gt;;
+  coursesAsStudent$: Observable&lt;gapi.client.classroom.Course[]&gt;;
+  coursesAsTeacher$: Observable&lt;gapi.client.classroom.Course[]&gt;;
+
+  selectRoleForm: FormGroup;
+  keys;
+  roles: CourseRoles;
+  eStates &#x3D; CourseState;
+  states: string[];
+  isLoaded$: Observable&lt;boolean&gt;;
+  userId: string;
+  isOnline$: Observable&lt;boolean&gt;;
+  isAdmin$: Observable&lt;boolean&gt;;
+  isTeacher$: Observable&lt;boolean&gt;;
+  loading$: Observable&lt;boolean&gt;;
+  faPlus &#x3D; faPlus;
+  faUserPlus &#x3D; faUserPlus;
+  faBullhorn &#x3D; faBullhorn;
+  queryParams: QueryParams;
+  constructor(
+    private courseEntityService: CourseEntityService,
+    private coursesService: CoursesService,
+    private userProfilesService: UserProfilesService,
+    private store: Store&lt;AppState&gt;,
+    private dialog: MatDialog,
+    private announcementsService: AnnouncementsService,
+    private formBuilder: FormBuilder
+  ) {
+    this.keys &#x3D; Object.keys(this.eStates).filter(Number);
+    this.isOnline$ &#x3D; this.store.pipe(select(fromAuthSelectors.isLoggedIn));
+    this.store
+      .pipe(select(fromAuthSelectors.selectUser))
+      .subscribe((user) &#x3D;&gt; (this.userId &#x3D; user.id));
+    this.isAdmin$ &#x3D; this.store.pipe(select(fromAuthSelectors.isAdmin));
+    this.isTeacher$ &#x3D; this.store.pipe(select(fromAuthSelectors.isTeacher));
+    this.initializeForm();
+    this.queryParams &#x3D; {};
+    this.loading$ &#x3D; this.courseEntityService.loading$;
+    this.courses$ &#x3D; this.courseEntityService.entities$.pipe(
+      map((courses) &#x3D;&gt; {
+        if (!courses) {
+          this.courseEntityService.getWithQuery(this.queryParams);
+        }
+        return courses
+          .filter((x) &#x3D;&gt; x.ownerId &#x3D;&#x3D; this.userId)
+          .filter((y) &#x3D;&gt; y.courseState &#x3D;&#x3D; &#x27;ACTIVE&#x27;);
+      })
+    );
+    this.onChangeSelection();
+  }
+
+  ngOnInit(): void {
+    this.coursesAsStudent$ &#x3D; this.courseEntityService.getWithQuery({
+      studentId: this.userId,
+      courseStates: &#x27;ACTIVE&#x27;,
+    });
+  }
+
+  initializeForm() {
+    this.selectRoleForm &#x3D; this.formBuilder.group({
+      selectedRole: new FormControl(&#x27;OWNER&#x27;, {
+        validators: [Validators.required],
+        updateOn: &#x27;change&#x27;,
+      }),
+      selectedStates: new FormControl([&#x27;ACTIVE&#x27;], {
+        validators: [Validators.required],
+        updateOn: &#x27;change&#x27;,
+      }),
+    });
+  }
+
+  onChangeSelection() {
+    this.states &#x3D; this.selectRoleForm.get(&#x27;selectedStates&#x27;).value;
+    this.selectRoleForm.get(&#x27;selectedRole&#x27;).valueChanges.subscribe((role) &#x3D;&gt; {
+      if (role &#x3D;&#x3D; &#x27;ADMIN&#x27;) {
+        this.loading$ &#x3D; this.courseEntityService.loading$;
+        this.queryParams &#x3D; { courseStates: this.states };
+        this.courses$ &#x3D; this.courseEntityService.entities$.pipe(
+          map((courses) &#x3D;&gt; {
+            if (!courses) {
+              this.courseEntityService.getWithQuery(this.queryParams);
+            }
+            return courses;
+          })
+        );
+      } else if (role &#x3D;&#x3D; &#x27;OWNER&#x27;) {
+        this.loading$ &#x3D; this.courseEntityService.loading$;
+        this.queryParams &#x3D; {
+          teacherId: this.userId,
+          courseStates: this.states,
+        };
+        this.courses$ &#x3D; this.courseEntityService.entities$.pipe(
+          map((courses) &#x3D;&gt; {
+            if (!courses) {
+              this.courseEntityService.getWithQuery(this.queryParams);
+            }
+            return courses.filter((x) &#x3D;&gt; x.ownerId &#x3D;&#x3D; this.userId);
+          })
+        );
+        console.log(this.states);
+        console.log(role);
+      } else if (role &#x3D;&#x3D; &#x27;TEACHER&#x27;) {
+        this.loading$ &#x3D; this.courseEntityService.loading$;
+        this.queryParams &#x3D; {
+          teacherId: this.userId,
+          courseStates: this.states,
+        };
+        this.coursesAsTeacher$ &#x3D; this.courseEntityService.getWithQuery(
+          this.queryParams
+        );
+        this.courses$ &#x3D; this.coursesAsTeacher$;
+      } else if (role &#x3D;&#x3D; &#x27;STUDENT&#x27;) {
+        this.loading$ &#x3D; this.courseEntityService.loading$;
+        this.queryParams &#x3D; {
+          studentId: this.userId,
+          courseStates: this.states,
+        };
+        this.coursesAsStudent$ &#x3D; this.courseEntityService.getWithQuery(
+          this.queryParams
+        );
+        this.courses$ &#x3D; this.coursesAsStudent$;
+      }
+    });
+  }
+
+  openCreateCourseDialog() {
+    let course: gapi.client.classroom.Course &#x3D; {};
+    const dialogRef &#x3D; this.dialog.open(CourseDialogComponent, {
+      minWidth: &#x27;450px&#x27;,
+      minHeight: &#x27;550px&#x27;,
+      data: { course, isNew: true },
+    });
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        this.courseEntityService.add(result.course, { isOptimistic: false });
+      }
+    });
+  }
+
+  openCreateAnnouncementDialog() {
+    const newAnnouncement: gapi.client.classroom.Announcement &#x3D; {
+      text: &#x27;&#x27;,
+      materials: [],
+      state: &#x27;DRAFT&#x27;,
+      assigneeMode: &#x27;ALL_STUDENTS&#x27;,
+    };
+    const dialogRef &#x3D; this.dialog.open(AnnouncementDialogComponent, {
+      minWidth: &#x27;450px&#x27;,
+      data: { newAnnouncement, isNew: true, section: &#x27;&#x27; },
+    });
+    dialogRef.afterClosed().subscribe(async (result) &#x3D;&gt; {
+      if (result) {
+        this.courseEntityService.keys$.subscribe((courseIds: string[]) &#x3D;&gt; {
+          courseIds.map(async (courseId: string) &#x3D;&gt; {
+            const response &#x3D; await this.announcementsService.createAnnouncement(
+              result.newAnnouncement as gapi.client.classroom.Announcement,
+              courseId
+            );
+          });
+        });
+      }
+    });
+  }
+  openAddUserDialog() {
+    const dialogRef &#x3D; this.dialog.open(CourseUserDialogComponent, {
+      width: &#x27;450px&#x27;,
+      data: { courses: this.courses$, mail: &#x27;me&#x27;, isTeacher: false },
+    });
+    dialogRef.afterClosed().subscribe(async (result) &#x3D;&gt; {
+      if (result) {
+        const profile &#x3D; await this.userProfilesService.getUserProfile(
+          result.mail
+        );
+        const preTeacher: gapi.client.classroom.Invitation &#x3D; {
+          userId: result.mail,
+          courseId: result.id,
+          role: result.isTeacher ? &#x27;TEACHER&#x27; : &#x27;STUDENT&#x27;,
+        };
+        this.coursesService
+          .createInvitation(preTeacher)
+          .then((success) &#x3D;&gt;
+            console.log(
+              &#x27;invitation successfully created for &#x27; +
+                profile.name.givenName +
+                &#x27; as &#x27; +
+                success.role
+            )
+          );
+        //const newTeacher &#x3D; this.teacherEntityService.add(preTeacher)
+        //const newTeacher &#x3D; this.teachersService.addTeacher(result.id, result.mail)
+        //this.teacherEntityService.add(teacher);
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;p-2&quot;&gt;
+  &lt;mat-card&gt;
+    &lt;mat-card-header&gt;
+      &lt;img mat-card-avatar src&#x3D;&quot;https://i.pinimg.com/originals/98/d3/a2/98d3a283f98cded8e639957e935bd373.png&quot; /&gt;
+      &lt;mat-card-title&gt;&lt;span class&#x3D;&quot;view-title&quot;&gt;Sistema de Calificaciones&lt;/span&gt;
+      &lt;/mat-card-title&gt;
+      &lt;mat-card-subtitle class&#x3D;&quot;view-subtitle&quot;&gt;Evalua a los estudiantes en cada uno de tus cursos
+      &lt;/mat-card-subtitle&gt;
+    &lt;/mat-card-header&gt;
+    &lt;mat-card-actions align&#x3D;&quot;end&quot;&gt;
+      &lt;div fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-around center&quot;&gt;
+        &lt;button mat-button (click)&#x3D;&quot;openAddUserDialog()&quot;&gt;
+          &lt;fa-icon class&#x3D;&quot;text-primary&quot; [icon]&#x3D;&quot;faUserPlus&quot; size&#x3D;&quot;lg&quot;&gt;&lt;/fa-icon&gt;
+          &lt;span class&#x3D;&quot;d-none d-sm-inline-block&quot;&gt;&amp;nbsp;Inscribir alumno&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button mat-button (click)&#x3D;&quot;openCreateAnnouncementDialog()&quot;&gt;
+          &lt;fa-icon class&#x3D;&quot;text-primary&quot; [icon]&#x3D;&quot;faBullhorn&quot; size&#x3D;&quot;lg&quot;&gt;&lt;/fa-icon&gt;
+          &lt;span class&#x3D;&quot;d-none d-sm-inline-block&quot;&gt;&amp;nbsp;Anuncio&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button mat-button (click)&#x3D;&quot;openCreateCourseDialog()&quot;&gt;
+          &lt;fa-icon class&#x3D;&quot;text-primary&quot; [icon]&#x3D;&quot;faPlus&quot; size&#x3D;&quot;lg&quot;&gt;&lt;/fa-icon&gt;
+          &lt;span class&#x3D;&quot;d-none d-sm-inline-block&quot;&gt;&amp;nbsp;Nueva clase&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/mat-card-actions&gt;
+  &lt;/mat-card&gt;
+  &lt;div class&#x3D;&quot;py-4&quot;&gt;
+    &lt;form [formGroup]&#x3D;&quot;selectRoleForm&quot; (ngSubmit)&#x3D;&quot;onChangeSelection()&quot;&gt;
+      &lt;mat-radio-group fxLayout&#x3D;&quot;row wrap&quot; fxLayoutAlign&#x3D;&quot;start center&quot; name&#x3D;&quot;selectedRole&quot;
+        (change)&#x3D;&quot;onChangeSelection()&quot; color&#x3D;&quot;primary&quot; formControlName&#x3D;&quot;selectedRole&quot;&gt;
+        &lt;label&gt;Soy: &lt;/label&gt;
+        &lt;mat-radio-button *ngIf&#x3D;&quot;isAdmin$|async&quot; class&#x3D;&quot;mx-2&quot; value&#x3D;&quot;ADMIN&quot;&gt;
+          Administrador
+        &lt;/mat-radio-button&gt;
+        &lt;mat-radio-button *ngIf&#x3D;&quot;isTeacher$|async&quot; class&#x3D;&quot;mx-2&quot; value&#x3D;&quot;OWNER&quot;&gt;
+          Propietario
+        &lt;/mat-radio-button&gt;
+        &lt;mat-radio-button *ngIf&#x3D;&quot;isTeacher$|async&quot; class&#x3D;&quot;mx-2&quot; value&#x3D;&quot;TEACHER&quot;&gt;
+          Profesor
+        &lt;/mat-radio-button&gt;
+        &lt;mat-radio-button class&#x3D;&quot;mx-2&quot; value&#x3D;&quot;STUDENT&quot;&gt;
+          Alumno
+        &lt;/mat-radio-button&gt;
+      &lt;/mat-radio-group&gt;
+      &lt;div *ngIf&#x3D;&quot;isAdmin$|async&quot; fxLayout&#x3D;&quot;row wrap&quot; fxLayoutAlign&#x3D;&quot;start center&quot; fxLayoutGap&#x3D;&quot;10px&quot;&gt;
+        &lt;mat-form-field appearance&#x3D;&quot;outline&quot;&gt;
+          &lt;mat-label&gt;Estado del curso&lt;/mat-label&gt;
+          &lt;mat-select formControlName&#x3D;&quot;selectedStates&quot; (change)&#x3D;&quot;onChangeSelection()&quot; placeholder&#x3D;&quot;Selecciona el estado&quot;
+            multiple&gt;
+            &lt;mat-option *ngFor&#x3D;&quot; let key of keys&quot; [value]&#x3D;&quot;eStates[key]&quot;&gt;{{eStates[key]}}&lt;/mat-option&gt;
+          &lt;/mat-select&gt;
+        &lt;/mat-form-field&gt;
+        &lt;button mat-raised-button color&#x3D;&quot;primary&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;onChangeSelection()&quot;&gt;Buscar&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;app-select-course [courses]&#x3D;&quot;courses$|async&quot; [loading]&#x3D;&quot;loading$|async&quot;&gt;&lt;/app-select-course&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./grades.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &#x27;./../../../../assets/themes/colors.scss&#x27;;
+.view-title {
+  color:$rds-logo-color;
+  font-size: calc(1rem + 1.5vw);
+  font-weight: 800;
+}
+.view-subtitle {
+  margin-top: -50px;
+  font-size: calc(0.5rem + 1vw);
+  font-weight: 400;
+}
+.additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+mat-card {
+  min-width: 350px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="p-2">  <mat-card>    <mat-card-header>      <img mat-card-avatar src="https://i.pinimg.com/originals/98/d3/a2/98d3a283f98cded8e639957e935bd373.png" />      <mat-card-title><span class="view-title">Sistema de Calificaciones</span>      </mat-card-title>      <mat-card-subtitle class="view-subtitle">Evalua a los estudiantes en cada uno de tus cursos      </mat-card-subtitle>    </mat-card-header>    <mat-card-actions align="end">      <div fxLayout="row" fxLayoutAlign="space-around center">        <button mat-button (click)="openAddUserDialog()">          <fa-icon class="text-primary" [icon]="faUserPlus" size="lg"></fa-icon>          <span class="d-none d-sm-inline-block">&nbsp;Inscribir alumno</span>        </button>        <button mat-button (click)="openCreateAnnouncementDialog()">          <fa-icon class="text-primary" [icon]="faBullhorn" size="lg"></fa-icon>          <span class="d-none d-sm-inline-block">&nbsp;Anuncio</span>        </button>        <button mat-button (click)="openCreateCourseDialog()">          <fa-icon class="text-primary" [icon]="faPlus" size="lg"></fa-icon>          <span class="d-none d-sm-inline-block">&nbsp;Nueva clase</span>        </button>      </div>    </mat-card-actions>  </mat-card>  <div class="py-4">    <form [formGroup]="selectRoleForm" (ngSubmit)="onChangeSelection()">      <mat-radio-group fxLayout="row wrap" fxLayoutAlign="start center" name="selectedRole"        (change)="onChangeSelection()" color="primary" formControlName="selectedRole">        <label>Soy: </label>        <mat-radio-button *ngIf="isAdmin$|async" class="mx-2" value="ADMIN">          Administrador        </mat-radio-button>        <mat-radio-button *ngIf="isTeacher$|async" class="mx-2" value="OWNER">          Propietario        </mat-radio-button>        <mat-radio-button *ngIf="isTeacher$|async" class="mx-2" value="TEACHER">          Profesor        </mat-radio-button>        <mat-radio-button class="mx-2" value="STUDENT">          Alumno        </mat-radio-button>      </mat-radio-group>      <div *ngIf="isAdmin$|async" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px">        <mat-form-field appearance="outline">          <mat-label>Estado del curso</mat-label>          <mat-select formControlName="selectedStates" (change)="onChangeSelection()" placeholder="Selecciona el estado"            multiple>            <mat-option *ngFor=" let key of keys" [value]="eStates[key]">{{eStates[key]}}</mat-option>          </mat-select>        </mat-form-field>        <button mat-raised-button color="primary" type="submit" (click)="onChangeSelection()">Buscar</button>      </div>    </form>    <app-select-course [courses]="courses$|async" [loading]="loading$|async"></app-select-course>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AddUserGroupComponent', 'selector': 'app-add-user-group'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminCoursesComponent', 'selector': 'app-admin-courses'},{'name': 'AdminWellcomeComponent', 'selector': 'app-admin-wellcome'},{'name': 'AnimatedTextComponent', 'selector': 'app-animated-text'},{'name': 'AnnouncementDialogComponent', 'selector': ''},{'name': 'AnnouncementResultComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssigmentsDashboardComponent', 'selector': 'app-assigments-dashboard'},{'name': 'AssignmentsComponent', 'selector': 'app-assignments'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'CodeConductComponent', 'selector': 'app-code-conduct'},{'name': 'CodeConductSchoolComponent', 'selector': 'app-code-conduct-school'},{'name': 'ConfirmDialogComponent', 'selector': ''},{'name': 'CourseAnnouncementsComponent', 'selector': 'app-course-announcements'},{'name': 'CourseComponent', 'selector': 'app-course'},{'name': 'CourseDialogComponent', 'selector': ''},{'name': 'CourseRoomsComponent', 'selector': 'app-course-rooms'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CoursesListComponent', 'selector': 'app-courses-list'},{'name': 'CourseStudentsComponent', 'selector': 'app-course-students'},{'name': 'CourseTeachersComponent', 'selector': 'app-course-teachers'},{'name': 'CourseUserDialogComponent', 'selector': ''},{'name': 'CourseWorkComponent', 'selector': 'app-course-work'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteButtonComponent', 'selector': 'app-delete-button'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GradeCourseComponent', 'selector': 'app-grade-course'},{'name': 'GradeRecomendationComponent', 'selector': 'app-grade-recomendation'},{'name': 'GradesBarChartComponent', 'selector': 'app-grades-bar-chart'},{'name': 'GradesComponent', 'selector': 'app-grades'},{'name': 'GradesListComponent', 'selector': 'app-grades-list'},{'name': 'GradesTableComponent', 'selector': 'app-grades-table'},{'name': 'GradesWellcomeComponent', 'selector': 'app-grades-wellcome'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupDialogComponent', 'selector': 'app-group-dialog'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'GroupTableComponent', 'selector': 'app-group-table'},{'name': 'GuardiansListDialogComponent', 'selector': ''},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LicenseComponent', 'selector': 'app-license'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'LoginDialogComponent', 'selector': ''},{'name': 'LogoAnimateComponent', 'selector': 'app-logo-animate'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'NewCicleDialogComponent', 'selector': ''},{'name': 'NotesEditComponent', 'selector': 'app-notes-edit'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ParallaxComponent', 'selector': 'app-parallax'},{'name': 'ParallaxSpaceComponent', 'selector': 'app-parallax-space'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'ProfileUserComponent', 'selector': 'app-profile-user'},{'name': 'RemoteLearningComponent', 'selector': 'app-remote-learning'},{'name': 'RemoveConfirmComponent', 'selector': ''},{'name': 'ReopenningComponent', 'selector': 'app-reopenning'},{'name': 'RoomComponent', 'selector': 'app-room'},{'name': 'RoomCourseDialogComponent', 'selector': ''},{'name': 'RoomDialogComponent', 'selector': ''},{'name': 'RoomsComponent', 'selector': 'app-rooms'},{'name': 'SaveUserComponent', 'selector': ''},{'name': 'SaveUserConfirmComponent', 'selector': ''},{'name': 'SaveUserErrorComponent', 'selector': 'save-user-error'},{'name': 'SchoolComponent', 'selector': 'app-school'},{'name': 'SchoolDashboardComponent', 'selector': 'app-school-dashboard'},{'name': 'SchoolHomeComponent', 'selector': 'app-school-home'},{'name': 'SchoolStudentsComponent', 'selector': 'app-school-students'},{'name': 'SchoolTeachersComponent', 'selector': 'app-school-teachers'},{'name': 'SchoolUserComponent', 'selector': 'app-school-user'},{'name': 'SchoolUsersComponent', 'selector': 'app-school-users'},{'name': 'ScoresEditComponent', 'selector': 'app-scores-edit'},{'name': 'SelectCourseComponent', 'selector': 'app-select-course'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SnackbarComponent', 'selector': 'app-snackbar'},{'name': 'SnackComponent', 'selector': ''},{'name': 'SubjectDialogComponent', 'selector': ''},{'name': 'TeacherCoursesComponent', 'selector': 'app-teacher-courses'},{'name': 'TeachersComponent', 'selector': 'app-teachers'},{'name': 'TeachersDashboardComponent', 'selector': 'app-teachers-dashboard'},{'name': 'TeachersFormComponent', 'selector': 'app-teachers-form'},{'name': 'TeachersGradeComponent', 'selector': 'app-teachers-grade'},{'name': 'TermsComponent', 'selector': 'app-terms'},{'name': 'UnderConstructionComponent', 'selector': 'app-under-construction'},{'name': 'UserCardComponent', 'selector': 'app-user-card'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UserGradesComponent', 'selector': 'app-user-grades'},{'name': 'UserGradesPrintableComponent', 'selector': 'app-user-grades-printable'},{'name': 'UserHomeComponent', 'selector': 'app-user-home'},{'name': 'UserInfoComponent', 'selector': 'app-user-info'},{'name': 'UserMenuComponent', 'selector': 'app-user-menu'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRoomDialogComponent', 'selector': ''},{'name': 'UsersDomainComponent', 'selector': 'app-users-domain'},{'name': 'UsersGroupsComponent', 'selector': 'app-users-groups'},{'name': 'UsersTableComponent', 'selector': 'app-users-table'},{'name': 'WellcomeComponent', 'selector': 'app-wellcome'},{'name': 'WorkingOnGradesComponent', 'selector': 'app-working-on-grades'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
+    var DIRECTIVES = [{'name': 'MaterialElevationDirective', 'selector': '[appMaterialElevation]'},{'name': 'ParallaxDirective', 'selector': '[appParallax]'}];
+    var ACTUAL_COMPONENT = {'name': 'GradesComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GradesComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

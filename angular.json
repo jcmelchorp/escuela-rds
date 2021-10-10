@@ -23,6 +23,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "chartjs-plugin-annotation",
+              "chartjs-plugin-datalabels",
+              "chart.js"
+            ],
             "outputPath": "dist/classroom-rds",
             "index": "projects/classroom-rds/src/index.html",
             "main": "projects/classroom-rds/src/main.ts",
@@ -30,26 +35,32 @@
             "tsConfig": "projects/classroom-rds/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/classroom-rds/src/favicon.ico",
-              "projects/classroom-rds/src/assets"
+              "projects/classroom-rds/src/.well-known",
+              "projects/classroom-rds/src/assets",
+              "projects/classroom-rds/src/manifest.webmanifest"
             ],
             "styles": [
-              "projects/classroom-rds/src/styles.scss"
+              "projects/classroom-rds/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "projects/classroom-rds/ngsw-config.json"
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "8kb"
                 }
               ],
               "fileReplacements": [
@@ -98,13 +109,27 @@
             "karmaConfig": "projects/classroom-rds/karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/classroom-rds/src/favicon.ico",
-              "projects/classroom-rds/src/assets"
+              "projects/classroom-rds/src/.well-known",
+              "projects/classroom-rds/src/assets",
+              "projects/classroom-rds/src/manifest.webmanifest"
             ],
             "styles": [
-              "projects/classroom-rds/src/styles.scss"
+              "projects/classroom-rds/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "classroom-rds:build:production",
+            "firebaseProject": "classroom-rds",
+            "firebaseHostingSite": "classroom-rds"
           }
         }
       }

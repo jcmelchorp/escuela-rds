@@ -1,0 +1,44 @@
+<ng-template #spinner>
+  <div style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
+    <mat-spinner strokeWidth="5" [diameter]="50">
+    </mat-spinner>
+    <span>Buscando ...</span><br>
+  </div>
+</ng-template>
+  <div class="card bg-transparent">
+    <div class="card-body">
+      <div class="card-title" fxLayout="row" fxLayoutAlign="space-betweeen start">
+        <h2 fxFlex="0 1 calc(75% - 2px)">Salones ({{roomsCount}})</h2>
+        <mat-form-field fxFlex="0 1 calc(25% - 2px)" appearance="outline">
+          <mat-label>Ciclo escolar</mat-label>
+          <mat-select [(ngModel)]="selected" (selectionChange)="onCicleSelect($event.value)">
+            <mat-option *ngFor="let period of periods$|async" [value]="period.id">
+              {{period.cicle|lowercase}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div *ngIf="(periods$|async) && (rooms$|async) as rooms; else spinner">
+        <div cdkDropList (cdkDropListDropped)="roomsDrop($event)" cdkDropListOrientation="horizontal"
+          fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2px" fxLayoutAlign="flex-start">
+          <app-room cdkDrag class="rooms" *ngFor="let room of rooms;let i=index" [roomInput]="room" class="mb-1"
+            fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-md="100%">
+            <!-- <div name="roomButtons"> -->
+            <fa-icon class="text-success" mat-icon-button name="editRoom" (click)="openRoomDialog(room,i)"
+              [icon]="faEdit" size="lg">
+            </fa-icon>
+            <!-- <fa-icon class="text-info" mat-icon-button (click)="createGrades(room)" [icon]="faUserGraduate" size="lg">
+            </fa-icon> -->
+            <!-- </div> -->
+          </app-room>
+          <div class="no-rooms text-center" fxFlex="100%" *ngIf="rooms.lenght==0">
+            <h3>No hay ningun grupo registrado</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button mat-fab id="new-room" matTooltip="Nuevo grupo" (click)="openRoomDialog()">
+    <mat-icon>post_add</mat-icon>
+  </button>

@@ -1,0 +1,482 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  ParallaxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>projects/classroom-rds/src/app/shared/components/parallax/parallax.component.ts</code>
+</p>
+
+
+
+
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-parallax</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./parallax.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./parallax.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-parallax&#x27;,
+  templateUrl: &#x27;./parallax.component.html&#x27;,
+  styleUrls: [&#x27;./parallax.component.scss&#x27;]
+})
+export class ParallaxComponent {
+  /* @ViewChild(&#x27;parallax&#x27;) elem;
+  constructor() {
+    document.addEventListener(&quot;mousemove&quot;, this.onMouseMove);
+    this.elem &#x3D; document.querySelector(&quot;#parallax&quot;);
+  } */
+
+  /*  @HostListener(&#x27;document:mousemove&#x27;, [&#x27;$event&#x27;])
+   onMouseMove(event: MouseEvent) {
+     let _w &#x3D; window.innerWidth / 2;
+     let _h &#x3D; window.innerHeight / 2;
+     let _mouseX &#x3D; event.clientX;
+     let _mouseY &#x3D; event.clientY;
+     let _depth1 &#x3D; &#x60;${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%&#x60;;
+     let _depth2 &#x3D; &#x60;${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%&#x60;;
+     let _depth3 &#x3D; &#x60;${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%&#x60;;
+     let x &#x3D; &#x60;${_depth3}, ${_depth2}, ${_depth1}&#x60;;
+     console.log(x);
+     this.elem.style.backgroundPosition &#x3D; x;
+   } */
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;div class&#x3D;&quot;wrapper&quot;&gt;
+  &lt;section class&#x3D;&quot;section parallax bg1 bg2&quot;&gt;
+    &lt;h1&gt;Cute Kitten&lt;/h1&gt;
+&lt;/section&gt;
+&lt;section class&#x3D;&quot;section parallax bg2&quot;&gt;
+   &lt;h1&gt;Fluffy Kitten&lt;/h1&gt;
+&lt;/section&gt;
+&lt;section class&#x3D;&quot;section static&quot;&gt;
+  &lt;h1&gt;Boring&lt;/h1&gt;
+&lt;/section&gt;
+&lt;section class&#x3D;&quot;section parallax bg2&quot;&gt;
+  &lt;h1&gt;Fluffy Kitten&lt;/h1&gt;
+&lt;/section&gt;
+&lt;/div&gt; --&gt;
+&lt;!-- &lt;div appParallax [ratio]&#x3D;&quot;-0.2&quot; id&#x3D;&quot;square&quot;&gt;&lt;/div&gt;
+&lt;div appParallax [ratio]&#x3D;&quot;0.5&quot; id&#x3D;&quot;circle&quot;&gt;&lt;/div&gt;
+&lt;div appParallax [ratio]&#x3D;&quot;0.9&quot; id&#x3D;&quot;rectangle&quot;&gt;&lt;/div&gt; --&gt;
+
+&lt;!-- &lt;div class&#x3D;&quot;container&quot; style&#x3D;&quot;height:180vh&quot;&gt;
+  &lt;div class&#x3D;&quot;img-container&quot; appParallax [ratio]&#x3D;&quot;0.4&quot;&gt;
+    &lt;img class&#x3D;&quot;d-block img-casa&quot; src&#x3D;&quot;assets/images/paralax_house.png&quot; /&gt;
+  &lt;/div&gt;
+  &lt;img appParallax [ratio]&#x3D;&quot;-0.5&quot; class&#x3D;&quot;d-block img-personas&quot; src&#x3D;&quot;assets/images/rds-personas.png&quot; /&gt;
+&lt;/div&gt;
+ --&gt;
+
+&lt;!-- &lt;div #parallax (mousemove)&#x3D;&quot;onMouseMove($event)&quot;&gt;
+  &lt;h1&gt;Parallax&lt;/h1&gt;
+&lt;/div&gt; --&gt;
+&lt;div style&#x3D;&quot;height: 200vh;&quot;&gt;
+  &lt;h1 class&#x3D;&quot;mt-4&quot; appParallax [ratio]&#x3D;&quot;0.3&quot; class&#x3D;&quot;emblem&quot;&gt;
+    &lt;span class&#x3D;&quot;char01&quot;&gt;E&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char02&quot;&gt;s&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char03&quot;&gt;c&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char04&quot;&gt;u&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char05&quot;&gt;e&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char06&quot;&gt;l&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char07&quot;&gt;a&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char08&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char09&quot;&gt;R&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char10&quot;&gt;a&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char11&quot;&gt;f&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char12&quot;&gt;a&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char13&quot;&gt;e&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char14&quot;&gt;l&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char15&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char16&quot;&gt;D&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char17&quot;&gt;í&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char18&quot;&gt;a&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char19&quot;&gt;z&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char20&quot;&gt;&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char21&quot;&gt;S&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char22&quot;&gt;e&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char23&quot;&gt;r&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char24&quot;&gt;d&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char25&quot;&gt;á&lt;/span&gt;
+    &lt;span class&#x3D;&quot;char26&quot;&gt;n&lt;/span&gt;
+  &lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;!-- &lt;div appParallax [ratio]&#x3D;&quot;2.2&quot; class&#x3D;&quot;text&quot;&gt;&lt;/div&gt; --&gt;
+&lt;div appParallax [ratio]&#x3D;&quot;-0.2&quot; class&#x3D;&quot;house&quot;&gt;&lt;/div&gt;
+&lt;div appParallax [ratio]&#x3D;&quot;-0.25&quot; class&#x3D;&quot;people&quot;&gt;&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./parallax.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;./../../../../assets/themes/colors.scss&quot;;
+
+.house {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  left: calc(50% - 95px);
+  width: 200px;
+  height: 320px;
+  background-image: url(&quot;/assets/images/parallax_house.png&quot;);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  animation: createBox 0.8s cubic-bezier(0.8, 0, 0.5, 1.85);
+}
+
+.people {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  right: calc(50% - 145px);
+  width: 360px;
+  height: 500px;
+  background-image: url(&quot;/assets/images/rds-personas.png&quot;);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  animation: createBox 0.8s cubic-bezier(0.2, 0, 0.9, 0.95);
+}
+
+h1 span {
+  font-family: &quot;Fredoka One&quot;;
+  font-size: 2.5rem;
+  height: 200px;
+  position: fixed;
+  width: 30px;
+  transform-origin: bottom;
+  color: $rds-logo-color;
+  text-shadow: 3px 3px 1px $gray-chateau-color;
+}
+.emblem {
+  position: relative;
+  //top: 100;
+  left: calc(50% - 200px);
+  margin: 0 auto;
+  width: 300px;
+  height: 480px;
+  font-weight: bold;
+  color: $rds-logo-color;
+  animation: spinZ 1s cubic-bezier(0.98, 0, 0.65, 1.65) alternate;
+  text-align: center;
+  display: inline-block;
+}
+
+.char01 {
+  transform: rotate(301deg);
+}
+.char02 {
+  transform: rotate(309deg);
+}
+.char03 {
+  transform: rotate(316deg);
+}
+.char04 {
+  transform: rotate(323deg);
+}
+.char05 {
+  transform: rotate(331deg);
+}
+.char06 {
+  transform: rotate(337deg);
+}
+.char07 {
+  transform: rotate(343deg);
+}
+.char08 {
+  transform: rotate(350deg);
+}
+.char09 {
+  transform: rotate(356deg);
+}
+.char10 {
+  transform: rotate(4deg);
+}
+.char11 {
+  transform: rotate(11deg);
+}
+.char12 {
+  transform: rotate(18deg);
+}
+.char13 {
+  transform: rotate(26deg);
+}
+.char14 {
+  transform: rotate(32deg);
+}
+.char15 {
+  transform: rotate(36deg);
+}
+.char16 {
+  transform: rotate(42deg);
+}
+.char17 {
+  transform: rotate(48deg);
+}
+.char18 {
+  transform: rotate(54deg);
+}
+.char19 {
+  transform: rotate(62deg);
+}
+.char20 {
+  transform: rotate(67deg);
+}
+.char21 {
+  transform: rotate(73deg);
+}
+.char22 {
+  transform: rotate(81deg);
+}
+.char23 {
+  transform: rotate(88deg);
+}
+.char24 {
+  transform: rotate(95deg);
+}
+.char25 {
+  transform: rotate(103deg);
+}
+.char26 {
+  transform: rotate(111deg);
+}
+@keyframes spinZ {
+  0% {
+    transform: rotateZ(360deg) scale(0);
+    //transform: scale(0);
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1);
+    //transform: scale(1);
+  }
+}
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- <div class="wrapper">  <section class="section parallax bg1 bg2">    <h1>Cute Kitten</h1></section><section class="section parallax bg2">   <h1>Fluffy Kitten</h1></section><section class="section static">  <h1>Boring</h1></section><section class="section parallax bg2">  <h1>Fluffy Kitten</h1></section></div> --><!-- <div appParallax [ratio]="-0.2" id="square"></div><div appParallax [ratio]="0.5" id="circle"></div><div appParallax [ratio]="0.9" id="rectangle"></div> --><!-- <div class="container" style="height:180vh">  <div class="img-container" appParallax [ratio]="0.4">    <img class="d-block img-casa" src="assets/images/paralax_house.png" />  </div>  <img appParallax [ratio]="-0.5" class="d-block img-personas" src="assets/images/rds-personas.png" /></div> --><!-- <div #parallax (mousemove)="onMouseMove($event)">  <h1>Parallax</h1></div> --><div style="height: 200vh;">  <h1 class="mt-4" appParallax [ratio]="0.3" class="emblem">    <span class="char01">E</span>    <span class="char02">s</span>    <span class="char03">c</span>    <span class="char04">u</span>    <span class="char05">e</span>    <span class="char06">l</span>    <span class="char07">a</span>    <span class="char08"></span>    <span class="char09">R</span>    <span class="char10">a</span>    <span class="char11">f</span>    <span class="char12">a</span>    <span class="char13">e</span>    <span class="char14">l</span>    <span class="char15"></span>    <span class="char16">D</span>    <span class="char17">í</span>    <span class="char18">a</span>    <span class="char19">z</span>    <span class="char20"></span>    <span class="char21">S</span>    <span class="char22">e</span>    <span class="char23">r</span>    <span class="char24">d</span>    <span class="char25">á</span>    <span class="char26">n</span>  </h1></div><!-- <div appParallax [ratio]="2.2" class="text"></div> --><div appParallax [ratio]="-0.2" class="house"></div><div appParallax [ratio]="-0.25" class="people"></div></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AddUserGroupComponent', 'selector': 'app-add-user-group'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminCoursesComponent', 'selector': 'app-admin-courses'},{'name': 'AdminWellcomeComponent', 'selector': 'app-admin-wellcome'},{'name': 'AnimatedTextComponent', 'selector': 'app-animated-text'},{'name': 'AnnouncementDialogComponent', 'selector': ''},{'name': 'AnnouncementResultComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssigmentsDashboardComponent', 'selector': 'app-assigments-dashboard'},{'name': 'AssignmentsComponent', 'selector': 'app-assignments'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'CodeConductComponent', 'selector': 'app-code-conduct'},{'name': 'CodeConductSchoolComponent', 'selector': 'app-code-conduct-school'},{'name': 'ConfirmDialogComponent', 'selector': ''},{'name': 'CourseAnnouncementsComponent', 'selector': 'app-course-announcements'},{'name': 'CourseComponent', 'selector': 'app-course'},{'name': 'CourseDialogComponent', 'selector': ''},{'name': 'CourseRoomsComponent', 'selector': 'app-course-rooms'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CoursesListComponent', 'selector': 'app-courses-list'},{'name': 'CourseStudentsComponent', 'selector': 'app-course-students'},{'name': 'CourseTeachersComponent', 'selector': 'app-course-teachers'},{'name': 'CourseUserDialogComponent', 'selector': ''},{'name': 'CourseWorkComponent', 'selector': 'app-course-work'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteButtonComponent', 'selector': 'app-delete-button'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GradeCourseComponent', 'selector': 'app-grade-course'},{'name': 'GradeRecomendationComponent', 'selector': 'app-grade-recomendation'},{'name': 'GradesBarChartComponent', 'selector': 'app-grades-bar-chart'},{'name': 'GradesComponent', 'selector': 'app-grades'},{'name': 'GradesListComponent', 'selector': 'app-grades-list'},{'name': 'GradesTableComponent', 'selector': 'app-grades-table'},{'name': 'GradesWellcomeComponent', 'selector': 'app-grades-wellcome'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupDialogComponent', 'selector': 'app-group-dialog'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'GroupTableComponent', 'selector': 'app-group-table'},{'name': 'GuardiansListDialogComponent', 'selector': ''},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LicenseComponent', 'selector': 'app-license'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'LoginDialogComponent', 'selector': ''},{'name': 'LogoAnimateComponent', 'selector': 'app-logo-animate'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'NewCicleDialogComponent', 'selector': ''},{'name': 'NotesEditComponent', 'selector': 'app-notes-edit'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ParallaxComponent', 'selector': 'app-parallax'},{'name': 'ParallaxSpaceComponent', 'selector': 'app-parallax-space'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'ProfileUserComponent', 'selector': 'app-profile-user'},{'name': 'RemoteLearningComponent', 'selector': 'app-remote-learning'},{'name': 'RemoveConfirmComponent', 'selector': ''},{'name': 'ReopenningComponent', 'selector': 'app-reopenning'},{'name': 'RoomComponent', 'selector': 'app-room'},{'name': 'RoomCourseDialogComponent', 'selector': ''},{'name': 'RoomDialogComponent', 'selector': ''},{'name': 'RoomsComponent', 'selector': 'app-rooms'},{'name': 'SaveUserComponent', 'selector': ''},{'name': 'SaveUserConfirmComponent', 'selector': ''},{'name': 'SaveUserErrorComponent', 'selector': 'save-user-error'},{'name': 'SchoolComponent', 'selector': 'app-school'},{'name': 'SchoolDashboardComponent', 'selector': 'app-school-dashboard'},{'name': 'SchoolHomeComponent', 'selector': 'app-school-home'},{'name': 'SchoolStudentsComponent', 'selector': 'app-school-students'},{'name': 'SchoolTeachersComponent', 'selector': 'app-school-teachers'},{'name': 'SchoolUserComponent', 'selector': 'app-school-user'},{'name': 'SchoolUsersComponent', 'selector': 'app-school-users'},{'name': 'ScoresEditComponent', 'selector': 'app-scores-edit'},{'name': 'SelectCourseComponent', 'selector': 'app-select-course'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SnackbarComponent', 'selector': 'app-snackbar'},{'name': 'SnackComponent', 'selector': ''},{'name': 'SubjectDialogComponent', 'selector': ''},{'name': 'TeacherCoursesComponent', 'selector': 'app-teacher-courses'},{'name': 'TeachersComponent', 'selector': 'app-teachers'},{'name': 'TeachersDashboardComponent', 'selector': 'app-teachers-dashboard'},{'name': 'TeachersFormComponent', 'selector': 'app-teachers-form'},{'name': 'TeachersGradeComponent', 'selector': 'app-teachers-grade'},{'name': 'TermsComponent', 'selector': 'app-terms'},{'name': 'UnderConstructionComponent', 'selector': 'app-under-construction'},{'name': 'UserCardComponent', 'selector': 'app-user-card'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UserGradesComponent', 'selector': 'app-user-grades'},{'name': 'UserGradesPrintableComponent', 'selector': 'app-user-grades-printable'},{'name': 'UserHomeComponent', 'selector': 'app-user-home'},{'name': 'UserInfoComponent', 'selector': 'app-user-info'},{'name': 'UserMenuComponent', 'selector': 'app-user-menu'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRoomDialogComponent', 'selector': ''},{'name': 'UsersDomainComponent', 'selector': 'app-users-domain'},{'name': 'UsersGroupsComponent', 'selector': 'app-users-groups'},{'name': 'UsersTableComponent', 'selector': 'app-users-table'},{'name': 'WellcomeComponent', 'selector': 'app-wellcome'},{'name': 'WorkingOnGradesComponent', 'selector': 'app-working-on-grades'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
+    var DIRECTIVES = [{'name': 'MaterialElevationDirective', 'selector': '[appMaterialElevation]'},{'name': 'ParallaxDirective', 'selector': '[appParallax]'}];
+    var ACTUAL_COMPONENT = {'name': 'ParallaxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ParallaxComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

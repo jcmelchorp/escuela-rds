@@ -1,0 +1,839 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Inyectables</li>
+  <li >AuthService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>Fichero</h3>
+        </p>
+        <p class="comment">
+            <code>projects/classroom-rds/src/app/auth/services/auth.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_googleAuth" >_googleAuth</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_googleUser" >_googleUser</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getAuth" >getAuth</a>
+                            </li>
+                            <li>
+                                <a href="#handleClientLoad" >handleClientLoad</a>
+                            </li>
+                            <li>
+                                <a href="#handleSignInClick" >handleSignInClick</a>
+                            </li>
+                            <li>
+                                <a href="#initClient" >initClient</a>
+                            </li>
+                            <li>
+                                <a href="#setSigninStatus" >setSigninStatus</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#signIn" >signIn</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#signOut" >signOut</a>
+                            </li>
+                            <li>
+                                <a href="#updateSigninStatus" >updateSigninStatus</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(authFireService: <a href="../injectables/AuthFireService.html" target="_self">AuthFireService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="22" class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>authFireService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthFireService.html" target="_self" >AuthFireService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAuth"></a>
+                    <span class="name">
+                        <span ><b>getAuth</b></span>
+                        <a href="#getAuth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAuth()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="114"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>Observable&lt;gapi.auth2.GoogleAuth&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleClientLoad"></a>
+                    <span class="name">
+                        <span ><b>handleClientLoad</b></span>
+                        <a href="#handleClientLoad"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleClientLoad()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="39"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:39</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleSignInClick"></a>
+                    <span class="name">
+                        <span ><b>handleSignInClick</b></span>
+                        <a href="#handleSignInClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleSignInClick()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="78"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handler method for Authorize button</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initClient"></a>
+                    <span class="name">
+                        <span ><b>initClient</b></span>
+                        <a href="#initClient"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initClient()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="54"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setSigninStatus"></a>
+                    <span class="name">
+                        <span ><b>setSigninStatus</b></span>
+                        <a href="#setSigninStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setSigninStatus(googleUser: <a href="../interfaces/User.html" target="_self">gapi.auth2.GoogleUser</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="98"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>googleUser</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >gapi.auth2.GoogleUser</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="signIn"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>signIn</b></span>
+                        <a href="#signIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>signIn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="81"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:81</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>unknown</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="signOut"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>signOut</b></span>
+                        <a href="#signOut"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>signOut(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="93"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateSigninStatus"></a>
+                    <span class="name">
+                        <span ><b>updateSigninStatus</b></span>
+                        <a href="#updateSigninStatus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateSigninStatus(user: <a href="../interfaces/User.html" target="_self">gapi.auth2.GoogleUser</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="110"
+                            class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >gapi.auth2.GoogleUser</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_googleAuth"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_googleAuth</b></span>
+                        <a href="#_googleAuth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>gapi.auth2.GoogleAuth</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="20" class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_googleUser"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_googleUser</b></span>
+                        <a href="#_googleUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/User.html" target="_self" >gapi.auth2.GoogleUser</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="22" class="link-to-prism">projects/classroom-rds/src/app/auth/services/auth.service.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+
+import { environment } from &#x27;@rds-env/environment&#x27;;
+
+import { from, Observable, of, Subject, Subscription } from &#x27;rxjs&#x27;;
+
+import firebase from &#x27;firebase/compat/app&#x27;;
+import &#x27;firebase/compat/auth&#x27;;
+
+import { map } from &#x27;rxjs/operators&#x27;;
+
+import { signIn } from &#x27;./../state/auth.actions&#x27;;
+
+import { AuthFireService } from &#x27;./auth-fire.service&#x27;;
+//declare const gapi: any;
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class AuthService {
+  private _googleAuth: gapi.auth2.GoogleAuth;
+  /*   private googleAuth$: Observable&lt;gapi.auth2.GoogleAuth&gt;;
+   */ private _googleUser: gapi.auth2.GoogleUser;
+  /*   private _accessToken: string;
+    private autoSignInTimer: Subscription; */
+  /* set accessToken(value) {
+    this._accessToken &#x3D; value;
+  }
+  get accessToken() {
+    const token &#x3D; {
+      fromGoogle: extractAccessToken(this._googleAuth),
+      fromApp: this._accessToken,
+      equal: true
+    };
+    return token.fromGoogle;
+  } */
+  /*   status$ &#x3D; new Subject&lt;boolean&gt;();
+   */ constructor(private authFireService: AuthFireService) {}
+
+  handleClientLoad() {
+    // Load the API&#x27;s client and auth2 modules.
+    // Call the initClient function after the modules load.
+    gapi.load(&#x27;auth2:client&#x27;, {
+      callback: () &#x3D;&gt; this.initClient(),
+      onerror: () &#x3D;&gt;
+        // Handle loading error.
+        confirm(&#x27;gapi.client failed to load!&#x27;),
+      timeout: 15000, // 15 seconds.
+      ontimeout: () &#x3D;&gt;
+        // Handle timeout.
+        confirm(&#x27;gapi.client could not load in a timely manner!&#x27;),
+    });
+  }
+
+  initClient() {
+    const params &#x3D; {
+      clientId: environment.gapi.client_id,
+      scope: environment.gapi.authScopes,
+      apiKey: environment.firebase.apiKey,
+      discoveryDocs: environment.gapi.discoveryDocs,
+    };
+    // Initialize the gapi.client object
+    gapi.client.init(params).then(() &#x3D;&gt; {
+      //this.isClientLoaded &#x3D; true;
+      // Listen for sign-in state changes.
+      this._googleAuth &#x3D; gapi.auth2.getAuthInstance();
+      this._googleAuth.isSignedIn.listen(() &#x3D;&gt;
+        this._googleAuth.isSignedIn.get()
+      );
+      // Handle initial sign-in state. (Determine if user is already signed in.)
+      this._googleUser &#x3D; this.setSigninStatus(
+        gapi.auth2.getAuthInstance().currentUser.get()
+      );
+    });
+  }
+  /**
+   * Handler method for Authorize button
+   */
+  handleSignInClick() {
+    return from(this.signIn());
+  }
+  async signIn() {
+    this._googleUser &#x3D; await this._googleAuth.signIn();
+    const authResponse: gapi.auth2.AuthResponse &#x3D;
+      this._googleUser.getAuthResponse(true);
+    const credential: firebase.auth.AuthCredential &#x3D;
+      firebase.auth.GoogleAuthProvider.credential(
+        authResponse.id_token,
+        authResponse.access_token
+      );
+    return await this.authFireService.signInWithCredential(credential);
+  }
+
+  async signOut(id: string) {
+    const auth2 &#x3D; gapi.auth2.getAuthInstance();
+    return await auth2.signOut();
+  }
+
+  setSigninStatus(googleUser: gapi.auth2.GoogleUser) {
+    const isAuthorized &#x3D; this.updateSigninStatus(googleUser);
+    if (isAuthorized) {
+      /* alert(&#x27;You are currently signed in and have granted access to this app.&#x27;);
+      alert(googleUser.getGrantedScopes()) */
+      return googleUser;
+    } else {
+      /* alert(&#x27;You have not authorized this app or you are signed out.&#x27;); */
+      return null;
+    }
+  }
+
+  updateSigninStatus(user: gapi.auth2.GoogleUser) {
+    return user.hasGrantedScopes(environment.gapi.authScopes);
+  }
+
+  getAuth(): Observable&lt;gapi.auth2.GoogleAuth&gt; {
+    this._googleAuth &#x3D; gapi.auth2.getAuthInstance();
+    return from(this._googleAuth);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

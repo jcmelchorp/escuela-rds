@@ -1,0 +1,20 @@
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="5px" fxLayoutAlign="space-arround top">
+  <mat-card *ngIf="(loaded$|async) && users$|async as users" fxFlex="0 1 calc(30% - 5px)" fxFlex.lt-sm="100%"
+    class="students-list">
+
+    <mat-list *ngIf="users.length==0" dense>
+      <mat-list-item> No hay profesores para mostrar </mat-list-item>
+    </mat-list>
+    <mat-list class="teacher-list" dense>
+      <mat-list-item *ngFor="let user of users$|async" [routerLink]="user.id">
+        <img matListAvatar src="{{user.photoUrl?user.photoUrl:user.thumbnailPhotoUrl}}" />
+        <p matLine>{{user.name.fullName}}</p>
+        <fa-icon matTooltip="Última conexión: {{user.lastLoginTime|date:'medium'}}" [icon]="faCircle"
+          class="{{user.isOnline?'text-success':'text-danger'}}"></fa-icon>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+  <div fxFlex="0 1 calc(70% - 5px)" fxFlex.lt-md="100%">
+    <router-outlet></router-outlet>
+  </div>
+</div>

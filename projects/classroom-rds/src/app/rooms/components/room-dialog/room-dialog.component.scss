@@ -1,0 +1,38 @@
+@import "./../../../../assets/themes/colors";
+.content {
+  overflow: hidden;
+  height: auto;
+  padding: 20px;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.blue {
+  color: $rds-logo-color;
+}
+.green {
+  color: $success-color;
+}
+.yellow {
+  color: $gold-color;
+}
+.purple {
+  color: $purple-color;
+}
+.red {
+  color: $punch-color;
+}
+
+.gray {
+  background: $gray-chateau-color;
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=dialog.css.map */

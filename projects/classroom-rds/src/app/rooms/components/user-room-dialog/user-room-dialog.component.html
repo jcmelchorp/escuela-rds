@@ -1,0 +1,39 @@
+<div class="m-n4 card bg-transparent">
+  <div class="card-header" mat-dialog-title fxLayout="row wrap" fxLayoutAlign="space-between">
+    <h2 class="text-light">
+      <fa-icon [icon]="faUserPlus"></fa-icon> <span class="ml-2">{{ data.isNew ? 'Agrega' : 'Actualiza' }} un
+        alumno</span>
+    </h2>
+    <fa-icon mat-icon-button [icon]="faTimes" size="lg" (click)="close()" [matDialogClose]=""></fa-icon>
+  </div>
+  <mat-dialog-content class="m-2">
+    <form>
+      <mat-form-field class="pb-3 d-block" appearance="outline">
+        <mat-label>Correo del alumno</mat-label>
+        <input placeholder="Correo electrónico" matInput [(ngModel)]="data.student.email" [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions|async" [value]="option.primaryEmail">
+            {{option.primaryEmail}}
+          </mat-option>
+        </mat-autocomplete>
+        <mat-hint>Si el estudiante que desea seleccionar no aparece, revisa su estatus de suspención <a
+            [routerLink]="['/','escuela','usuarios']">aquí</a>.</mat-hint>
+      </mat-form-field>
+    </form>
+    <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="data.student.label">
+      <mat-button-toggle *ngFor="let opt of labelOptions" [value]="opt">
+        <mat-icon [ngClass]="opt">{{
+          opt === 'gray' ? 'check_circle' : 'lens'}}</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-dialog-content>
+  <mat-dialog-actions class="m-2">
+    <button mat-stroked-button color="warn" [mat-dialog-close]="" (click)="close()">
+      Cancelar
+    </button>
+    <button mat-stroked-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>
+      {{ data.isNew ? 'Crear' : 'Modificar' }}
+    </button>
+  </mat-dialog-actions>
+</div>

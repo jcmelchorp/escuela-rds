@@ -1,0 +1,58 @@
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <img mat-card-avatar src="https://i.pinimg.com/originals/98/d3/a2/98d3a283f98cded8e639957e935bd373.png" />
+      <mat-card-title><span class="view-title">Sistema de Calificaciones</span>
+      </mat-card-title>
+      <mat-card-subtitle class="view-subtitle">Evalua a los estudiantes en cada uno de tus cursos
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <button mat-button (click)="openAddUserDialog()">
+          <fa-icon class="text-primary" [icon]="faUserPlus" size="lg"></fa-icon>
+          <span class="d-none d-sm-inline-block">&nbsp;Inscribir alumno</span>
+        </button>
+        <button mat-button (click)="openCreateAnnouncementDialog()">
+          <fa-icon class="text-primary" [icon]="faBullhorn" size="lg"></fa-icon>
+          <span class="d-none d-sm-inline-block">&nbsp;Anuncio</span>
+        </button>
+        <button mat-button (click)="openCreateCourseDialog()">
+          <fa-icon class="text-primary" [icon]="faPlus" size="lg"></fa-icon>
+          <span class="d-none d-sm-inline-block">&nbsp;Nueva clase</span>
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  <div class="py-4">
+    <form [formGroup]="selectRoleForm" (ngSubmit)="onChangeSelection()">
+      <mat-radio-group fxLayout="row wrap" fxLayoutAlign="start center" name="selectedRole"
+        (change)="onChangeSelection()" color="primary" formControlName="selectedRole">
+        <label>Soy: </label>
+        <mat-radio-button *ngIf="isAdmin$|async" class="mx-2" value="ADMIN">
+          Administrador
+        </mat-radio-button>
+        <mat-radio-button *ngIf="isTeacher$|async" class="mx-2" value="OWNER">
+          Propietario
+        </mat-radio-button>
+        <mat-radio-button *ngIf="isTeacher$|async" class="mx-2" value="TEACHER">
+          Profesor
+        </mat-radio-button>
+        <mat-radio-button class="mx-2" value="STUDENT">
+          Alumno
+        </mat-radio-button>
+      </mat-radio-group>
+      <div *ngIf="isAdmin$|async" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <mat-form-field appearance="outline">
+          <mat-label>Estado del curso</mat-label>
+          <mat-select formControlName="selectedStates" (change)="onChangeSelection()" placeholder="Selecciona el estado"
+            multiple>
+            <mat-option *ngFor=" let key of keys" [value]="eStates[key]">{{eStates[key]}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" (click)="onChangeSelection()">Buscar</button>
+      </div>
+    </form>
+    <app-select-course [courses]="courses$|async" [loading]="loading$|async"></app-select-course>
+  </div>
+</div>

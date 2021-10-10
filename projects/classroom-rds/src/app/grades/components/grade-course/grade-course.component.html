@@ -1,0 +1,44 @@
+<div *ngIf="(loading$|async)" style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
+  <mat-spinner strokeWidth="3" [diameter]="50">
+  </mat-spinner>
+  <span>Buscando ...</span><br>
+</div>
+<mat-card *ngIf="!(loading$|async)">
+  <div class="card border-primary m-n2 bg-transparent">
+    <h3 class="mat-h3 card-header">Lista de alumnos</h3>
+    <div class="card-body">
+      <p class="card-text">Escribe la calificación de cada estudiante y al terminar, presiona "enviar". </p>
+      <mat-list class="list-group" dense>
+        <div mat-list-item class="list-group-item d-flex justify-content-between align-items-center"
+          *ngFor="let grade of courseGrade">
+          {{grade.studentName}}
+          <div>
+            <mat-slider min="5" max="10" step="1" [(ngModel)]="grade.grade" [value]="grade.grade" [tickInterval]="1"
+              [thumbLabel]="true">
+            </mat-slider>
+            {{grade.grade}}
+          </div>
+        </div>
+      </mat-list>
+    </div>
+  </div>
+  <section class="example">
+    <div class="container">
+      <h3>Example</h3>
+      <div *ngIf="characters$ | async as characters; else loading">
+        <div *ngFor="let character of characters" class="character-card">
+          <div class="name">
+            {{ character.studentName }}
+          </div>
+        </div>
+      </div>
+      <ng-template #loading>
+        <div class="loading">
+          <div class="lds-ripple">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </section>

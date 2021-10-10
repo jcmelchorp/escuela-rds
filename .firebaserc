@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "classroom-rds": {
+      "hosting": {
+        "classroom-rds": [
+          "classroom-rds"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "classroom-rds"
+  }
+}

@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav *ngIf="isOnline" #leftSidenav class="sidenav d-print-none bg-transparent"
+    [@onSideNavChange]="sideNavState ? 'open' : 'close'" fixedInViewPort="true"
+    [attr.role]="isHandset ? 'dialog' : 'navigation'" [mode]="'side'" [opened]="isHandset === false">
+    <div role="navigation" fxLayout="column" fxLayoutAlign="space-between" fxFlexFill>
+      <mat-nav-list dense>
+        <!--         <h3 matSubheader [@animateText]="linkText ? 'show' : 'hide'">Administradores</h3>-->
+        <mat-list-item *ngIf="isTeacher || isAdmin" [routerLink]="['gsuite']" routerLinkActive="active">
+          <fa-icon matListIcon [icon]="faGoogle"></fa-icon>
+          <span matLine [@animateText]="linkText ? 'show' : 'hide'">GSuite</span>
+        </mat-list-item>
+        <mat-list-item *ngIf="isTeacher || isAdmin" [routerLink]="['escuela']" routerLinkActive="active">
+          <fa-icon matListIcon [icon]="faBuilding"></fa-icon>
+          <span matLine [@animateText]="linkText ? 'show' : 'hide'">Administración</span>
+        </mat-list-item>
+        <mat-list-item *ngIf="isTeacher" [routerLink]="['profesores']" routerLinkActive="active">
+          <fa-icon matListIcon [icon]="faUserTie"></fa-icon>
+          <span matLine [@animateText]="linkText ? 'show' : 'hide'">Docentes</span>
+        </mat-list-item>
+        <!-- <h3 matSubheader [@animateText]="linkText ? 'show' : 'hide'">Alumnos</h3> -->
+        <mat-list-item [routerLink]="['user']" routerLinkActive="active">
+          <fa-icon matListIcon [icon]="faUserGraduate"></fa-icon>
+          <span matLine [@animateText]="linkText ? 'show' : 'hide'">Usuario</span>
+        </mat-list-item>
+      </mat-nav-list>
+      <mat-nav-list dense>
+        <mat-divider></mat-divider>
+        <mat-list-item (click)="onSidenavToggle()">
+          <fa-icon matListIcon [icon]="sideNavState ? faCompressAlt : faExpandAlt"></fa-icon>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content [@onMainContentChange]="(onSideNavChange) ? 'open': 'close'">
+    <ng-content #progressBar></ng-content>
+    <app-main-content [isOnline]="isOnline"></app-main-content>
+    <!-- <app-footer [isHandset]="isHandset" *ngIf="!isOnline" fxFlexOffset="auto"></app-footer> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

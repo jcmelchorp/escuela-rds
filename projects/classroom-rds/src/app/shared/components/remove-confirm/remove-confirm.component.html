@@ -1,0 +1,13 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+  <h2 mat-dialog-title>Expulsar alumno</h2>
+  <fa-icon mat-icon-button [icon]="faTimes" size="lg" (click)="data.confirm=false;" matDialogClose></fa-icon>
+</div>
+<mat-dialog-content>
+  <div>¿Estas seguro que deseas retirar de la clase a este usuario?</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button class="text-danger" (click)="data.confirm=true;" [matDialogClose]="data">
+    Confirmar
+  </button>
+  <button mat-raised-button (click)="data.confirm=false;" matDialogClose>Cancelar</button>
+</mat-dialog-actions>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="./styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p><img src="https://github.com/jcmelchorp/escuela-rds/workflows/Deploy%20to%20Firebase%20Hosting/badge.svg?branch=main" alt="Deploy to Firebase Hosting on merge" class="img-responsive"></p>
+<h1> <a href="https://classroom-rds.web.app">
+ <img src="projects/classroom-rds/src/assets/icons/apple-touch-icon-precomposed.png">
+ </a> Sistema RDS
+ </h1>
+
+<p>Angular webapp for Manage User accounts from Google&#39;s Admin Directory. Domain user&#39;s entities adapted to fit &quot;Escuela Rafael Díaz Serdan&quot; requirements (personal data, students and teachers block enrollment, manage groups and courses, view and edit information as an Admin and Superadmin in Google Workspace, and many more).</p>
+<h3 id="comming-soon">Comming soon</h3>
+<p>Create school grades reports from Google Classroom submissions.</p>
+<h2 id="documentation-and-demo">Documentation and Demo</h2>
+<p>See Documentation for this project at: <a href="https://jcmelchorp.github.io/escuela-rds/">Escuela RDS Doc</a>.</p>
+<p>See Demo app for this project at: <a href="https://rds.edu.mx">Escuela RDS</a>.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Angular 12</li>
+<li>Angular Material 12 with custom theme and dark theme</li>
+<li>NGRX State Management 12 (@ngrx/route-store &amp; @ngrx/data)</li>
+<li>Angular FontAwesome 5.15.1</li>
+<li>Angular Flex-layout 12</li>
+<li>Full Angular PWA 12</li>
+<li>Lasy Loading &amp; SEO.</li>
+<li>Ngx-bootstrap 6.2.0 with Bootstrap 5.0.2</li>
+<li>Google API Auth2 (via GAPI with @types/gapi.auth2) &amp; and Firebase Authentication</li>
+<li>Google Classroom Client (via GAPI with @types/gapi.client.classroom)</li>
+<li>Google Firebase for FireHosting</li>
+<li>Google Firebase Real-Time Database &amp; Firestore</li>
+<li>CompoDoc for automated documentation.</li>
+<li>Angular PWA assets generator for icons.</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot01.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 1</strong> - View example</p>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot02.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 2</strong> - View example</p>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot03.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 3</strong> - View example</p>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot04.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 4</strong> - View example</p>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot05.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 5</strong> - View example</p>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot06.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 6</strong> - View example</p>
+<p><img src="projects/classroom-rds/src/assets/screenshots/screenshot07.png" alt="" class="img-responsive"></p>
+<p><strong>Fig. 7</strong> - View example</p>
+<h2 id="install-this-repository">Install this repository</h2>
+<p>If you want to use this repository as a template, run:</p>
+<div><pre class="line-numbers"><code class="language-bash">git clone https://github.com/jcmelchorp/escuela-rds.git</code></pre></div><p>then, enter the workspace directory:</p>
+<div><pre class="line-numbers"><code class="language-bash">cd classroom-rds</code></pre></div><p>and install NPM packages:</p>
+<div><pre class="line-numbers"><code class="language-bash">npm install</code></pre></div><h2 id="build-requirements">Build requirements</h2>
+<p>This repository has the following pre-requisites:</p>
+<ul>
+<li><a href="https://nodejs.org/">NodeJS</a></li>
+<li><a href="https://firebase.google.com/">Google Firebase</a> Account (optional for Hosting and further features)</li>
+<li><a href="https://cli.angular.io/">Angular CLI</a></li>
+</ul>
+<p>The Angular CLI, CompoDoc, PWA asset generator comes with NPM install. If you want to use Angular CLI as a shell command:</p>
+<div><pre class="line-numbers"><code class="language-bash">npm i -g &#64;angular/cli</code></pre></div><h3 id="documentation">Documentation</h3>
+<p>By default, this project generate documentation with Material Theme in <em>docs/</em> directory.</p>
+<p>To generate documentation:</p>
+<div><pre class="line-numbers"><code class="language-bash"> npm run doc:g</code></pre></div><h3 id="deployment">Deployment</h3>
+<p>Build in production environment and deploy on Google Firebase</p>
+<div><pre class="line-numbers"><code class="language-bash">npm run deploy</code></pre></div><h3 id="reset-project-to-default">Reset project to default</h3>
+<p>To reset project just type:</p>
+<div><pre class="line-numbers"><code class="language-bash">npm run reset</code></pre></div><h3 id="pwa-assets-generator">PWA Assets Generator</h3>
+<p>To generate Apple icons, MS-Tiles and splash run:</p>
+<div><pre class="line-numbers"><code class="language-bash">npm run pwa:asset-std-logo</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

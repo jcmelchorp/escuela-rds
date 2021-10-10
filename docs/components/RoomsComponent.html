@@ -1,0 +1,1279 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Sistema RDS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Sistema RDS</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Escribe para buscar"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Componentes</li>
+  <li
+  >
+  RoomsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>Fichero</h3>
+</p>
+<p class="comment">
+    <code>projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implementa</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Meta datos</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-rooms</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./rooms.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./rooms.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Índice</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Propiedades</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog" >dialog</a>
+                            </li>
+                            <li>
+                                <a href="#faEdit" >faEdit</a>
+                            </li>
+                            <li>
+                                <a href="#faGripVertical" >faGripVertical</a>
+                            </li>
+                            <li>
+                                <a href="#faPlus" >faPlus</a>
+                            </li>
+                            <li>
+                                <a href="#faUserGraduate" >faUserGraduate</a>
+                            </li>
+                            <li>
+                                <a href="#periodControl" >periodControl</a>
+                            </li>
+                            <li>
+                                <a href="#periods$" >periods$</a>
+                            </li>
+                            <li>
+                                <a href="#periodsForm" >periodsForm</a>
+                            </li>
+                            <li>
+                                <a href="#rooms" >rooms</a>
+                            </li>
+                            <li>
+                                <a href="#rooms$" >rooms$</a>
+                            </li>
+                            <li>
+                                <a href="#roomsCount" >roomsCount</a>
+                            </li>
+                            <li>
+                                <a href="#selected" >selected</a>
+                            </li>
+                            <li>
+                                <a href="#sub" >sub</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Métodos</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onCicleSelect" >onCicleSelect</a>
+                            </li>
+                            <li>
+                                <a href="#openRoomDialog" >openRoomDialog</a>
+                            </li>
+                            <li>
+                                <a href="#roomsDrop" >roomsDrop</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(toastr: ToastrService, roomService: <a href="../injectables/RoomService.html" target="_self">RoomService</a>, userEntityService: <a href="../injectables/UserEntityService.html" target="_self">UserEntityService</a>, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="37" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parámetros :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Nombre</td>
+                                                    <td>Tipo</td>
+                                                <td>Opcional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>roomService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RoomService.html" target="_self" >RoomService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userEntityService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserEntityService.html" target="_self" >UserEntityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Métodos
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="47"
+                            class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onCicleSelect"></a>
+                    <span class="name">
+                        <span ><b>onCicleSelect</b></span>
+                        <a href="#onCicleSelect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onCicleSelect(period: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="51"
+                            class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>period</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openRoomDialog"></a>
+                    <span class="name">
+                        <span ><b>openRoomDialog</b></span>
+                        <a href="#openRoomDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openRoomDialog(room?: <a href="../interfaces/Room.html" target="_self">Room</a>, idx?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="94"
+                            class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>room</td>
+                                    <td>
+                                                <code><a href="../interfaces/Room.html" target="_self" >Room</a></code>
+                                    </td>
+
+                                    <td>
+                                        Si
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>idx</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Si
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roomsDrop"></a>
+                    <span class="name">
+                        <span ><b>roomsDrop</b></span>
+                        <a href="#roomsDrop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>roomsDrop(event: CdkDragDrop<string[]>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Definido en <a href="" data-line="87"
+                            class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:87</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parámetros :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>CdkDragDrop&lt;string[]&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Devuelve : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Propiedades
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dialog"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>dialog</b></span>
+                        <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>MatDialog</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="42" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faEdit"></a>
+                    <span class="name">
+                        <span ><b>faEdit</b></span>
+                        <a href="#faEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faEdit</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="33" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faGripVertical"></a>
+                    <span class="name">
+                        <span ><b>faGripVertical</b></span>
+                        <a href="#faGripVertical"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faGripVertical</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="34" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faPlus"></a>
+                    <span class="name">
+                        <span ><b>faPlus</b></span>
+                        <a href="#faPlus"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faPlus</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="32" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faUserGraduate"></a>
+                    <span class="name">
+                        <span ><b>faUserGraduate</b></span>
+                        <a href="#faUserGraduate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>faUserGraduate</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="35" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="periodControl"></a>
+                    <span class="name">
+                        <span ><b>periodControl</b></span>
+                        <a href="#periodControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/Form.html" target="_self" >FormControl</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>new FormControl(this.selected)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="37" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="periods$"></a>
+                    <span class="name">
+                        <span ><b>periods$</b></span>
+                        <a href="#periods$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Observable&lt;string[]&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="27" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="periodsForm"></a>
+                    <span class="name">
+                        <span ><b>periodsForm</b></span>
+                        <a href="#periodsForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="26" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rooms"></a>
+                    <span class="name">
+                        <span ><b>rooms</b></span>
+                        <a href="#rooms"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/Room.html" target="_self" >Room[]</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="31" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rooms$"></a>
+                    <span class="name">
+                        <span ><b>rooms$</b></span>
+                        <a href="#rooms$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="../interfaces/Room.html" target="_self" >Observable&lt;Room[]&gt;</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="28" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roomsCount"></a>
+                    <span class="name">
+                        <span ><b>roomsCount</b></span>
+                        <a href="#roomsCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="30" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selected"></a>
+                    <span class="name">
+                        <span ><b>selected</b></span>
+                        <a href="#selected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor por defecto : </i><code>&#x27;20202021&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="36" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sub"></a>
+                    <span class="name">
+                        <span ><b>sub</b></span>
+                        <a href="#sub"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido en <a href="" data-line="29" class="link-to-prism">projects/classroom-rds/src/app/rooms/containers/rooms/rooms.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+import { MatDialog } from &#x27;@angular/material/dialog&#x27;;
+import { CdkDragDrop, moveItemInArray } from &#x27;@angular/cdk/drag-drop&#x27;;
+import { faEdit } from &#x27;@fortawesome/free-regular-svg-icons&#x27;;
+import {
+  faGripVertical,
+  faPlus,
+  faUserGraduate,
+} from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { Observable, Subscription } from &#x27;rxjs&#x27;;
+import { map, mergeMap, tap } from &#x27;rxjs/operators&#x27;;
+import { Room } from &#x27;../../models/room.model&#x27;;
+import { RoomService } from &#x27;../../services/room.service&#x27;;
+import { RoomDialogComponent } from &#x27;../../components/room-dialog/room-dialog.component&#x27;;
+import { FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
+import { UserEntityService } from &#x27;@rds-store/user/user-entity.service&#x27;;
+import { CourseRoom } from &#x27;@rds-subjects/models/course-room.model&#x27;;
+import { User } from &#x27;@rds-auth/models/user.model&#x27;;
+@Component({
+  selector: &#x27;app-rooms&#x27;,
+  templateUrl: &#x27;./rooms.component.html&#x27;,
+  styleUrls: [&#x27;./rooms.component.scss&#x27;],
+})
+export class RoomsComponent implements OnInit {
+  periodsForm: FormGroup;
+  periods$: Observable&lt;string[]&gt;;
+  rooms$: Observable&lt;Room[]&gt;;
+  sub: Subscription;
+  roomsCount: number;
+  rooms: Room[];
+  faPlus &#x3D; faPlus;
+  faEdit &#x3D; faEdit;
+  faGripVertical &#x3D; faGripVertical;
+  faUserGraduate &#x3D; faUserGraduate;
+  selected &#x3D; &#x27;20202021&#x27;;
+  periodControl: FormControl &#x3D; new FormControl(this.selected);
+  constructor(
+    private toastr: ToastrService,
+    private roomService: RoomService,
+    private userEntityService: UserEntityService,
+    public dialog: MatDialog
+  ) {
+    this.periods$ &#x3D; this.roomService.getPeriods();
+  }
+
+  ngOnInit(): void {
+    this.onCicleSelect(this.selected);
+  }
+
+  onCicleSelect(period: string): void {
+    this.rooms$ &#x3D; this.roomService.getRoomsOnCicle(period).pipe(
+      tap((rooms) &#x3D;&gt; (this.roomsCount &#x3D; rooms.length)),
+      mergeMap((rooms: Room[]) &#x3D;&gt;
+        this.userEntityService.entities$.pipe(
+          map((users: User[]) &#x3D;&gt; {
+            const allRooms &#x3D; rooms.map((room: Room) &#x3D;&gt; {
+              const courses &#x3D; room.courses.map((course: CourseRoom) &#x3D;&gt; {
+                return {
+                  ...course,
+                  mainTeacher: users.find((u) &#x3D;&gt; u.id &#x3D;&#x3D; course.mainTeacherId),
+                  grade: room.grade,
+                };
+              });
+              const students &#x3D; room.students.map((student) &#x3D;&gt; {
+                const studentUser &#x3D; users.find((u) &#x3D;&gt; u.id &#x3D;&#x3D; student.id);
+                return {
+                  ...student,
+                  name: {
+                    familyName: studentUser.name.familyName,
+                    givenName: studentUser.name.givenName,
+                    fullName: studentUser.name.fullName,
+                  },
+                  primaryEmail: studentUser.primaryEmail,
+                };
+              });
+              console.log(students);
+              return { ...room, courses: courses, students: students };
+            });
+            return allRooms;
+          })
+        )
+      )
+    );
+  }
+
+  roomsDrop(event: CdkDragDrop&lt;string[]&gt;): void {
+    moveItemInArray(this.rooms, event.previousIndex, event.currentIndex);
+    this.rooms.forEach((room) &#x3D;&gt;
+      this.roomService.updateRoom({ id: room.id, priority: room.priority })
+    );
+  }
+
+  openRoomDialog(room?: Room, idx?: number): void {
+    const dialogRef &#x3D; this.dialog.open(RoomDialogComponent, {
+      width: &#x27;450px&#x27;,
+      data: room
+        ? { room: { ...room }, isNew: false, idx }
+        : { room: {}, isNew: true },
+    });
+
+    dialogRef.afterClosed().subscribe((result) &#x3D;&gt; {
+      if (result) {
+        if (result.isNew) {
+          this.roomService
+            .createRoom({
+              ...result.room,
+              id: &#x27;&#x27;,
+              priority: this.roomsCount,
+              students: [],
+              courses: [],
+            })
+            .subscribe(
+              (room) &#x3D;&gt;
+                this.toastr.success(
+                  &#x60;Se ha creado ${room.name} con éxito&#x60;,
+                  &#x60;Sistema RDS&#x60;
+                ),
+              (error) &#x3D;&gt;
+                this.toastr.error(
+                  &#x60;Ocurrió un error al guardar ${room.name} en el sistema&#x60;,
+                  &#x60;Error: ${error.code}&#x60;
+                )
+            );
+        } else {
+          this.roomService.updateRoom(result.room).then(
+            () &#x3D;&gt;
+              this.toastr.success(
+                &#x60;Se ha modificado ${room.name} con éxito&#x60;,
+                &#x60;Sistema RDS&#x60;
+              ),
+            (error) &#x3D;&gt;
+              this.toastr.error(
+                &#x60;Ocurrió un error al actualizar ${room.name} en el sistema&#x60;,
+                &#x60;Error: ${error.code}&#x60;
+              )
+          );
+        }
+      }
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ng-template #spinner&gt;
+  &lt;div style&#x3D;&quot;min-height: 300px;&quot; fxLayout&#x3D;&quot;column&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
+    &lt;mat-spinner strokeWidth&#x3D;&quot;5&quot; [diameter]&#x3D;&quot;50&quot;&gt;
+    &lt;/mat-spinner&gt;
+    &lt;span&gt;Buscando ...&lt;/span&gt;&lt;br&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+  &lt;div class&#x3D;&quot;card bg-transparent&quot;&gt;
+    &lt;div class&#x3D;&quot;card-body&quot;&gt;
+      &lt;div class&#x3D;&quot;card-title&quot; fxLayout&#x3D;&quot;row&quot; fxLayoutAlign&#x3D;&quot;space-betweeen start&quot;&gt;
+        &lt;h2 fxFlex&#x3D;&quot;0 1 calc(75% - 2px)&quot;&gt;Salones ({{roomsCount}})&lt;/h2&gt;
+        &lt;mat-form-field fxFlex&#x3D;&quot;0 1 calc(25% - 2px)&quot; appearance&#x3D;&quot;outline&quot;&gt;
+          &lt;mat-label&gt;Ciclo escolar&lt;/mat-label&gt;
+          &lt;mat-select [(ngModel)]&#x3D;&quot;selected&quot; (selectionChange)&#x3D;&quot;onCicleSelect($event.value)&quot;&gt;
+            &lt;mat-option *ngFor&#x3D;&quot;let period of periods$|async&quot; [value]&#x3D;&quot;period.id&quot;&gt;
+              {{period.cicle|lowercase}}
+            &lt;/mat-option&gt;
+          &lt;/mat-select&gt;
+        &lt;/mat-form-field&gt;
+      &lt;/div&gt;
+      &lt;div *ngIf&#x3D;&quot;(periods$|async) &amp;&amp; (rooms$|async) as rooms; else spinner&quot;&gt;
+        &lt;div cdkDropList (cdkDropListDropped)&#x3D;&quot;roomsDrop($event)&quot; cdkDropListOrientation&#x3D;&quot;horizontal&quot;
+          fxLayout&#x3D;&quot;row wrap&quot; fxLayout.lt-md&#x3D;&quot;column&quot; fxLayoutGap&#x3D;&quot;2px&quot; fxLayoutAlign&#x3D;&quot;flex-start&quot;&gt;
+          &lt;app-room cdkDrag class&#x3D;&quot;rooms&quot; *ngFor&#x3D;&quot;let room of rooms;let i&#x3D;index&quot; [roomInput]&#x3D;&quot;room&quot; class&#x3D;&quot;mb-1&quot;
+            fxFlex&#x3D;&quot;0 1 calc(50% - 5px)&quot; fxFlex.lt-md&#x3D;&quot;100%&quot;&gt;
+            &lt;!-- &lt;div name&#x3D;&quot;roomButtons&quot;&gt; --&gt;
+            &lt;fa-icon class&#x3D;&quot;text-success&quot; mat-icon-button name&#x3D;&quot;editRoom&quot; (click)&#x3D;&quot;openRoomDialog(room,i)&quot;
+              [icon]&#x3D;&quot;faEdit&quot; size&#x3D;&quot;lg&quot;&gt;
+            &lt;/fa-icon&gt;
+            &lt;!-- &lt;fa-icon class&#x3D;&quot;text-info&quot; mat-icon-button (click)&#x3D;&quot;createGrades(room)&quot; [icon]&#x3D;&quot;faUserGraduate&quot; size&#x3D;&quot;lg&quot;&gt;
+            &lt;/fa-icon&gt; --&gt;
+            &lt;!-- &lt;/div&gt; --&gt;
+          &lt;/app-room&gt;
+          &lt;div class&#x3D;&quot;no-rooms text-center&quot; fxFlex&#x3D;&quot;100%&quot; *ngIf&#x3D;&quot;rooms.lenght&#x3D;&#x3D;0&quot;&gt;
+            &lt;h3&gt;No hay ningun grupo registrado&lt;/h3&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;button mat-fab id&#x3D;&quot;new-room&quot; matTooltip&#x3D;&quot;Nuevo grupo&quot; (click)&#x3D;&quot;openRoomDialog()&quot;&gt;
+    &lt;mat-icon&gt;post_add&lt;/mat-icon&gt;
+  &lt;/button&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./rooms.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;./../../../../assets/themes/colors&quot;;
+
+#new-room {
+  color: white;
+  background-color: $rds-logo-color;
+  position: fixed;
+  bottom: 190px;
+  top: auto;
+  right: 50px;
+  left: auto;
+}
+.no-rooms {
+  //padding: 50px;
+  border: 2px dashed #555555;
+}
+.rooms {
+  min-width: 200px;
+  /*padding: 24px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll; */
+  &amp;::-webkit-scrollbar {
+    height: 12px;
+    width: 4px;
+  }
+  &amp;::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(240, 240, 240);
+  }
+  &amp;::-webkit-scrollbar {
+    width: 3px;
+    background-color: #000;
+  }
+
+  &amp;::-webkit-scrollbar-thumb {
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #555555;
+    border-radius: 5px;
+    border-left: 2px solid #a0a0a0;
+    border-right: 2px solid #555555;
+  }
+
+  .handle {
+    position: relative;
+    top: 5px;
+    left: 0;
+    cursor: move;
+  }
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.2;
+  width: 350px;
+  border: 2px dashed gray;
+  margin: 0 10px;
+}
+
+.cdk-drag-animating {
+  transition: transform 300ms ease;
+}
+
+.rooms.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 300ms ease;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Leyenda</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Elemento Html</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Componente</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Elemento Html con directiva</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ng-template #spinner>  <div style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">    <mat-spinner strokeWidth="5" [diameter]="50">    </mat-spinner>    <span>Buscando ...</span><br>  </div></ng-template>  <div class="card bg-transparent">    <div class="card-body">      <div class="card-title" fxLayout="row" fxLayoutAlign="space-betweeen start">        <h2 fxFlex="0 1 calc(75% - 2px)">Salones ({{roomsCount}})</h2>        <mat-form-field fxFlex="0 1 calc(25% - 2px)" appearance="outline">          <mat-label>Ciclo escolar</mat-label>          <mat-select [(ngModel)]="selected" (selectionChange)="onCicleSelect($event.value)">            <mat-option *ngFor="let period of periods$|async" [value]="period.id">              {{period.cicle|lowercase}}            </mat-option>          </mat-select>        </mat-form-field>      </div>      <div *ngIf="(periods$|async) && (rooms$|async) as rooms; else spinner">        <div cdkDropList (cdkDropListDropped)="roomsDrop($event)" cdkDropListOrientation="horizontal"          fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2px" fxLayoutAlign="flex-start">          <app-room cdkDrag class="rooms" *ngFor="let room of rooms;let i=index" [roomInput]="room" class="mb-1"            fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-md="100%">            <!-- <div name="roomButtons"> -->            <fa-icon class="text-success" mat-icon-button name="editRoom" (click)="openRoomDialog(room,i)"              [icon]="faEdit" size="lg">            </fa-icon>            <!-- <fa-icon class="text-info" mat-icon-button (click)="createGrades(room)" [icon]="faUserGraduate" size="lg">            </fa-icon> -->            <!-- </div> -->          </app-room>          <div class="no-rooms text-center" fxFlex="100%" *ngIf="rooms.lenght==0">            <h3>No hay ningun grupo registrado</h3>          </div>        </div>      </div>    </div>  </div>  <button mat-fab id="new-room" matTooltip="Nuevo grupo" (click)="openRoomDialog()">    <mat-icon>post_add</mat-icon>  </button></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AddUserGroupComponent', 'selector': 'app-add-user-group'},{'name': 'AdminComponent', 'selector': 'app-admin'},{'name': 'AdminCoursesComponent', 'selector': 'app-admin-courses'},{'name': 'AdminWellcomeComponent', 'selector': 'app-admin-wellcome'},{'name': 'AnimatedTextComponent', 'selector': 'app-animated-text'},{'name': 'AnnouncementDialogComponent', 'selector': ''},{'name': 'AnnouncementResultComponent', 'selector': ''},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssigmentsDashboardComponent', 'selector': 'app-assigments-dashboard'},{'name': 'AssignmentsComponent', 'selector': 'app-assignments'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'ClassroomComponent', 'selector': 'app-classroom'},{'name': 'CodeConductComponent', 'selector': 'app-code-conduct'},{'name': 'CodeConductSchoolComponent', 'selector': 'app-code-conduct-school'},{'name': 'ConfirmDialogComponent', 'selector': ''},{'name': 'CourseAnnouncementsComponent', 'selector': 'app-course-announcements'},{'name': 'CourseComponent', 'selector': 'app-course'},{'name': 'CourseDialogComponent', 'selector': ''},{'name': 'CourseRoomsComponent', 'selector': 'app-course-rooms'},{'name': 'CoursesComponent', 'selector': 'app-courses'},{'name': 'CoursesListComponent', 'selector': 'app-courses-list'},{'name': 'CourseStudentsComponent', 'selector': 'app-course-students'},{'name': 'CourseTeachersComponent', 'selector': 'app-course-teachers'},{'name': 'CourseUserDialogComponent', 'selector': ''},{'name': 'CourseWorkComponent', 'selector': 'app-course-work'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteButtonComponent', 'selector': 'app-delete-button'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GradeCourseComponent', 'selector': 'app-grade-course'},{'name': 'GradeRecomendationComponent', 'selector': 'app-grade-recomendation'},{'name': 'GradesBarChartComponent', 'selector': 'app-grades-bar-chart'},{'name': 'GradesComponent', 'selector': 'app-grades'},{'name': 'GradesListComponent', 'selector': 'app-grades-list'},{'name': 'GradesTableComponent', 'selector': 'app-grades-table'},{'name': 'GradesWellcomeComponent', 'selector': 'app-grades-wellcome'},{'name': 'GroupComponent', 'selector': 'app-group'},{'name': 'GroupDialogComponent', 'selector': 'app-group-dialog'},{'name': 'GroupsComponent', 'selector': 'app-groups'},{'name': 'GroupTableComponent', 'selector': 'app-group-table'},{'name': 'GuardiansListDialogComponent', 'selector': ''},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LicenseComponent', 'selector': 'app-license'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'LoginDialogComponent', 'selector': ''},{'name': 'LogoAnimateComponent', 'selector': 'app-logo-animate'},{'name': 'LogoComponent', 'selector': 'app-logo'},{'name': 'MainContentComponent', 'selector': 'app-main-content'},{'name': 'NewCicleDialogComponent', 'selector': ''},{'name': 'NotesEditComponent', 'selector': 'app-notes-edit'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'ParallaxComponent', 'selector': 'app-parallax'},{'name': 'ParallaxSpaceComponent', 'selector': 'app-parallax-space'},{'name': 'PrivacyPolicyComponent', 'selector': 'app-privacy-policy'},{'name': 'ProfileUserComponent', 'selector': 'app-profile-user'},{'name': 'RemoteLearningComponent', 'selector': 'app-remote-learning'},{'name': 'RemoveConfirmComponent', 'selector': ''},{'name': 'ReopenningComponent', 'selector': 'app-reopenning'},{'name': 'RoomComponent', 'selector': 'app-room'},{'name': 'RoomCourseDialogComponent', 'selector': ''},{'name': 'RoomDialogComponent', 'selector': ''},{'name': 'RoomsComponent', 'selector': 'app-rooms'},{'name': 'SaveUserComponent', 'selector': ''},{'name': 'SaveUserConfirmComponent', 'selector': ''},{'name': 'SaveUserErrorComponent', 'selector': 'save-user-error'},{'name': 'SchoolComponent', 'selector': 'app-school'},{'name': 'SchoolDashboardComponent', 'selector': 'app-school-dashboard'},{'name': 'SchoolHomeComponent', 'selector': 'app-school-home'},{'name': 'SchoolStudentsComponent', 'selector': 'app-school-students'},{'name': 'SchoolTeachersComponent', 'selector': 'app-school-teachers'},{'name': 'SchoolUserComponent', 'selector': 'app-school-user'},{'name': 'SchoolUsersComponent', 'selector': 'app-school-users'},{'name': 'ScoresEditComponent', 'selector': 'app-scores-edit'},{'name': 'SelectCourseComponent', 'selector': 'app-select-course'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'SnackbarComponent', 'selector': 'app-snackbar'},{'name': 'SnackComponent', 'selector': ''},{'name': 'SubjectDialogComponent', 'selector': ''},{'name': 'TeacherCoursesComponent', 'selector': 'app-teacher-courses'},{'name': 'TeachersComponent', 'selector': 'app-teachers'},{'name': 'TeachersDashboardComponent', 'selector': 'app-teachers-dashboard'},{'name': 'TeachersFormComponent', 'selector': 'app-teachers-form'},{'name': 'TeachersGradeComponent', 'selector': 'app-teachers-grade'},{'name': 'TermsComponent', 'selector': 'app-terms'},{'name': 'UnderConstructionComponent', 'selector': 'app-under-construction'},{'name': 'UserCardComponent', 'selector': 'app-user-card'},{'name': 'UserComponent', 'selector': 'app-user'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'},{'name': 'UserGradesComponent', 'selector': 'app-user-grades'},{'name': 'UserGradesPrintableComponent', 'selector': 'app-user-grades-printable'},{'name': 'UserHomeComponent', 'selector': 'app-user-home'},{'name': 'UserInfoComponent', 'selector': 'app-user-info'},{'name': 'UserMenuComponent', 'selector': 'app-user-menu'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'},{'name': 'UserRoomDialogComponent', 'selector': ''},{'name': 'UsersDomainComponent', 'selector': 'app-users-domain'},{'name': 'UsersGroupsComponent', 'selector': 'app-users-groups'},{'name': 'UsersTableComponent', 'selector': 'app-users-table'},{'name': 'WellcomeComponent', 'selector': 'app-wellcome'},{'name': 'WorkingOnGradesComponent', 'selector': 'app-working-on-grades'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
+    var DIRECTIVES = [{'name': 'MaterialElevationDirective', 'selector': '[appMaterialElevation]'},{'name': 'ParallaxDirective', 'selector': '[appParallax]'}];
+    var ACTUAL_COMPONENT = {'name': 'RoomsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> comparación de resultados "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No hay resultados que coincidan "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RoomsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
