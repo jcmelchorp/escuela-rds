@@ -12,7 +12,7 @@ import { filter, tap, first } from 'rxjs/operators';
 
 @Injectable()
 export class CourseRoomResolver implements Resolve<boolean> {
-  constructor(private courseRoomEntityService: CourseRoomEntityService) {}
+  constructor(private courseRoomEntityService: CourseRoomEntityService) { }
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -21,11 +21,11 @@ export class CourseRoomResolver implements Resolve<boolean> {
       tap((loaded) => {
         if (!loaded) {
           this.courseRoomEntityService.getAll();
-          /* .getWithQuery({
-              field: 'cicle',
-              operation: '==',
-              value: '20202021',
-            }); */
+          /*  .getWithQuery({
+             field: 'cicle',
+             operation: '==',
+             value:'20212022' ,
+           }); */
         }
       }),
       filter((loaded) => !!loaded),

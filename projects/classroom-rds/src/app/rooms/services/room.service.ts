@@ -8,6 +8,11 @@ import {
   AngularFirestoreCollection,
 } from '@angular/fire/compat/firestore';
 
+import { CourseRoom } from '@rds-subjects/models/course-room.model';
+
+import { User } from '@rds-auth/models/user.model';
+import { UserStudent } from '@rds-auth/models/user-student.model';
+
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
@@ -16,10 +21,6 @@ import { from, Observable } from 'rxjs';
 import { map, take, switchMap, tap } from 'rxjs/operators';
 
 import { Room } from '../models/room.model';
-import { CourseRoom } from '@rds-subjects/models/course-room.model';
-
-import { User } from '@rds-auth/models/user.model';
-import { UserStudent } from '@rds-auth/models/user-student.model';
 @Injectable()
 export class RoomService {
   private roomsCollection: string = 'rooms';
@@ -30,7 +31,7 @@ export class RoomService {
   constructor(
     private afs: AngularFirestore,
     private afDatabase: AngularFireDatabase
-  ) {}
+  ) { }
 
   getPeriods(): Observable<string[]> {
     return this.afs
@@ -170,9 +171,9 @@ export class RoomService {
     return this.afs
       .collection(this.periodCollection)
       .doc(cicle)
-      .collection(this.roomsCollection)
+      .collection<Room>(this.roomsCollection)
       .doc(roomId)
-      .update({ courses });
+      .update({ courses: courses as CourseRoom[] });
   }
   /**
    * Remove a specifc task from the quiz

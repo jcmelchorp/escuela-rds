@@ -4,6 +4,9 @@ import {
   AngularFireDatabase,
   AngularFireList,
 } from '@angular/fire/compat/database';
+
+import { QueryParams } from '@ngrx/data';
+
 import { Observable, of } from 'rxjs';
 import {
   map,
@@ -15,7 +18,6 @@ import {
 } from 'rxjs/operators';
 
 import { CourseRoom } from '../models/course-room.model';
-import { QueryParams } from '@ngrx/data';
 
 @Injectable()
 export class RoomCourseService {
@@ -42,6 +44,19 @@ export class RoomCourseService {
         () => console.log('Course created on Firestore'),
         () => console.log('Error creating user on Firestore')
       );
+    this.afStore
+      .collection(this.periodCollection)
+      .doc(course.cicle)
+      .collection<CourseRoom>(this.courseCollection).doc(dbKey).set({
+        id: dbKey,
+        roomId: course.roomId,
+        mainTeacherId: course.mainTeacherId,
+        priority: course.priority,
+        description: course.description,
+        name: course.name,
+        courseType: course.courseType,
+      })
+
     /* return this.afDatabase.object<CourseRoom>(`${this.classesCollection}/${dbKey}`).valueChanges(); */
     return this.get(dbKey).pipe(take(1));
   }
@@ -67,19 +82,10 @@ export class RoomCourseService {
   }
   getPeriods() {
     let periods: any[];
-    this.afStore
+    return this.afStore
       .collection<string>(this.periodCollection, (ref) => ref.orderBy('cicle'))
-      .snapshotChanges()
-      .subscribe(
-        (actions) =>
-          (periods = actions.map((a) => {
-            return {
-              cicles: a.payload.doc.data(),
-              id: a.payload.doc.id,
-            };
-          }))
-      );
-    return periods;
+      .valueChanges({ idField: 'id' });
+
   }
   list() {
     return this.afStore

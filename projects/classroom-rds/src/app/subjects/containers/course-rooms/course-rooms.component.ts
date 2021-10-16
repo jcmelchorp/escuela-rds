@@ -6,8 +6,22 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+
 import { SchoolLevel } from '@rds-auth/models/user.enum';
+
+import { Room, RoomState } from '@rds-rooms/models/room.model';
+
+import { CourseRoomEntityService } from '@rds-store/course-room/course-room-entity.service';
+import { UserEntityService } from '@rds-store/user/user-entity.service';
+
+import { moveIn } from '@rds-shared/animations/router.animations';
+
+import { User } from '@rds-auth/models/user.model';
+
+import { RoomService } from '@rds-rooms/services/room.service';
+
 import { Observable, of, Subject, Subscription } from 'rxjs';
 import {
   concatMap,
@@ -19,14 +33,9 @@ import {
   mergeMap,
   tap,
 } from 'rxjs/operators';
+
 import { SubjectDialogComponent } from '../../components';
 import { CourseRoom, CourseType } from '../../models/course-room.model';
-import { Room, RoomState } from '@rds-rooms/models/room.model';
-import { CourseRoomEntityService } from '@rds-store/course-room/course-room-entity.service';
-import { UserEntityService } from '@rds-store/user/user-entity.service';
-import { moveIn } from '@rds-shared/animations/router.animations';
-import { User } from '@rds-auth/models/user.model';
-import { RoomService } from '@rds-rooms/services/room.service';
 @Component({
   selector: 'app-course-rooms',
   templateUrl: './course-rooms.component.html',
@@ -53,7 +62,7 @@ export class CourseRoomsComponent implements OnInit {
   coursesByGrade$: Observable<CourseRoom[]>[];
   periods$: Observable<string[]>;
   resCount: number;
-  selected = '20212022';
+  selected = '20202021';
   constructor(
     private fb: FormBuilder,
     private courseRoomES: CourseRoomEntityService,
@@ -72,7 +81,7 @@ export class CourseRoomsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.onSearch();
+    this.onSearch(this.selected);
   }
 
   initSearchForm() {
@@ -91,9 +100,9 @@ export class CourseRoomsComponent implements OnInit {
   get mainTeacherId() {
     return this.searchForm.get('mainTeacherId');
   }
-  onSearch() {
+  onSearch(period?: string) {
     let name: string = (this.name.value as string).toLocaleLowerCase();
-    let selectedCicle: string = this.selectedCicle.value as string;
+    let selectedCicle: string = period;
     let mainTeacherId: string = this.mainTeacherId.value as string;
     this.courses$ = this.courseRoomES.entities$.pipe(
       map((courses) => {
@@ -155,7 +164,7 @@ export class CourseRoomsComponent implements OnInit {
       minWidth: '400px',
       height: 'fit-content',
       data: course
-        ? { course, isNew: false }
+        ? { course, isNew: true }
         : { course: newCourse, isNew: true },
     });
     dialogRef.afterClosed().subscribe((result) => {
@@ -200,5 +209,23 @@ export class CourseRoomsComponent implements OnInit {
 
   handleCourseDelete(course: CourseRoom) {
     this.courseRoomES.delete(course);
+  }
+  copyCourses() {
+    const cicle = this.selectedCicle.value as string;
+    this.courses$.subscribe(courses => {
+      courses.forEach((course) =>
+        this.courseRoomES.add({
+          cicle: '20212022',
+          grade: course.grade,
+          id: '',
+          roomId: '',
+          mainTeacherId: course.mainTeacherId,
+          priority: course.priority,
+          name: course.name,
+          description: course.description,
+          courseType: course.courseType,
+        })
+      );
+    });
   }
 }

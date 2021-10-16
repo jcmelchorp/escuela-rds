@@ -1,6 +1,7 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
 import {
   faUserPlus,
@@ -8,18 +9,25 @@ import {
   faPlus,
   faUserEdit,
 } from '@fortawesome/free-solid-svg-icons';
+
 import { SchoolService } from '@rds-school/services/school.service';
+
+import { User } from '@rds-auth/models/user.model';
+
+import { CourseRoomEntityService } from '@rds-store/course-room/course-room-entity.service';
+import { UserEntityService } from '@rds-store/user/user-entity.service';
+
+import { CourseRoom, CourseType } from '@rds-subjects/models/course-room.model';
+
 import { ToastrService } from 'ngx-toastr';
+
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+
 import { RoomCourseDialogComponent } from '../room-course-dialog/room-course-dialog.component';
 import { UserRoomDialogComponent } from '../user-room-dialog/user-room-dialog.component';
 import { Room } from './../../models/room.model';
 import { RoomService } from '../../services/room.service';
-import { User } from '@rds-auth/models/user.model';
-import { CourseRoomEntityService } from '@rds-store/course-room/course-room-entity.service';
-import { UserEntityService } from '@rds-store/user/user-entity.service';
-import { CourseRoom, CourseType } from '@rds-subjects/models/course-room.model';
 @Component({
   selector: 'app-room',
   templateUrl: './room.component.html',
@@ -46,8 +54,8 @@ export class RoomComponent implements OnInit {
     private roomService: RoomService,
     private toastr: ToastrService,
     private dialog: MatDialog
-  ) {}
-  ngOnInit(): void {}
+  ) { }
+  ngOnInit(): void { }
 
   handleCourseDelete(course: CourseRoom): void {
     this.roomService.removeCourse(this.roomInput.id, course);
@@ -85,9 +93,11 @@ export class RoomComponent implements OnInit {
     this.courseRoomEntityService.entities$
       .pipe(
         map((courses) => {
-          const grade = room.grade.toString();
+          if (!courses) {
+            this.courseRoomEntityService.getWithQuery({})
+          }
           return courses
-            .filter((c) => c.grade)
+            .filter((c) => c.grade == room.grade)
             .map((course) => {
               return {
                 id: course.id,
@@ -142,11 +152,11 @@ export class RoomComponent implements OnInit {
       height: 'fit-content',
       data: student
         ? {
-            student: { ...student },
-            isNew: false,
-            roomId: this.roomInput.id,
-            idx,
-          }
+          student: { ...student },
+          isNew: false,
+          roomId: this.roomInput.id,
+          idx,
+        }
         : { student: { ...newStudent }, isNew: true },
     });
 
@@ -161,17 +171,17 @@ export class RoomComponent implements OnInit {
             )
             .subscribe(
               (user) =>
-                (result.student = {
-                  id: user.id,
-                  name: {
-                    fullName: user.name.fullName,
-                    givenName: user.name.givenName,
-                    familyName: user.name.familyName,
-                  },
-                  primaryEmail: user.primaryEmail,
-                  photoUrl: user.thumbnailPhotoUrl,
-                  label: result.student.label,
-                })
+              (result.student = {
+                id: user.id,
+                name: {
+                  fullName: user.name.fullName,
+                  givenName: user.name.givenName,
+                  familyName: user.name.familyName,
+                },
+                primaryEmail: user.primaryEmail,
+                photoUrl: user.thumbnailPhotoUrl,
+                label: result.student.label,
+              })
             );
           this.roomService.updateStudents(
             this.roomInput.id,

@@ -28,7 +28,7 @@
       </mat-form-field>
       <mat-form-field fxFlex="0 1 calc(33.3% - 2px)" appearance="outline">
         <mat-label>Ciclo escolar</mat-label>
-        <mat-select formControlName="selectedCicle" (selectionChange)="onSearch()">
+        <mat-select formControlName="selectedCicle" (selectionChange)="onSearch($event.value)">
           <mat-option *ngFor="let period of periods$|async" [value]="period.id">
             {{period.cicle}}
           </mat-option>
@@ -36,34 +36,32 @@
       </mat-form-field>
     </form>
     <div>Se encontraron {{resCount}} resultados en la búsqueda.</div>
-  </div>
+    <button mat-button (click)="copyCourses()">Copiar clases al próximo ciclo escolar</button>
 
-  <div class="card-body"
-    *ngIf="(loaded_users$|async) && (loaded_courses$|async) && courses$|async as courses;else spinner"
-    [@moveIn]="'moveIn'">
-    <mat-list role="list" dense *ngIf="courses.length==0">
-      <mat-list-item class="text-center"> No hay materias para mostrar.
-      </mat-list-item>
-    </mat-list>
-    <mat-list role="list" dense>
-      <!-- <div mat-subheader>{{skey}}</div> -->
-      <mat-list-item role="listitem" *ngFor="let course of courses">
-        <app-delete-button (delete)="handleCourseDelete(course)"></app-delete-button>
-        <button mat-icon-button (click)="openCourseRoomDialog(course)">
-          <mat-icon matListIcon>edit</mat-icon>
-        </button>
-        <img *ngIf="course.mainTeacher && (course.mainTeacher.photoUrl || course.mainTeacher.thumbnailPhotoUrl)"
-          matListAvatar
-          src="{{course.mainTeacher.photoUrl?course.mainTeacher.photoUrl:course.mainTeacher.thumbnailPhotoUrl}}">
-        <div *ngIf="course" matLine>{{course.name}}&nbsp;<span class="text-secondary">({{course.grade}})</span></div>
-        <div *ngIf="course" matLine>{{course.mainTeacher.name.fullName}}&nbsp;<span
-            class="badge bg-{{course.courseType=='formativo'?'primary':'warning'}} text-light">{{course.courseType}}</span>
-        </div>
+    <div *ngIf="(loaded_users$|async)  && courses$|async as courses;else spinner" [@moveIn]="'moveIn'">
+      <mat-list role="list" dense *ngIf="courses.length==0">
+        <mat-list-item class="text-center"> No hay materias para mostrar.
+        </mat-list-item>
+      </mat-list>
+      <mat-list role="list" dense>
+        <!-- <div mat-subheader>{{skey}}</div> -->
         <mat-divider></mat-divider>
-      </mat-list-item>
-    </mat-list>
+        <mat-list-item role="listitem" *ngFor="let course of courses">
+          <app-delete-button (delete)="handleCourseDelete(course)"></app-delete-button>
+          <button mat-icon-button (click)="openCourseRoomDialog(course)">
+            <mat-icon matListIcon>edit</mat-icon>
+          </button>
+          <img *ngIf="course.mainTeacher && (course.mainTeacher.photoUrl || course.mainTeacher.thumbnailPhotoUrl)"
+            matListAvatar
+            src="{{course.mainTeacher.photoUrl?course.mainTeacher.photoUrl:course.mainTeacher.thumbnailPhotoUrl}}">
+          <div *ngIf="course" matLine>{{course.name}}&nbsp;<span class="text-secondary">({{course.grade}})</span></div>
+          <div *ngIf="course" matLine>{{course.mainTeacher.name.fullName}}&nbsp;<span
+              class="badge bg-{{course.courseType=='formativo'?'primary':'warning'}} text-light">{{course.courseType}}</span>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </div>
-</div>
-<button mat-fab id="new-room-course" matTooltip="Nuevo curso" (click)="openCourseRoomDialog()">
-  <mat-icon>assignment_turned_in_outlined</mat-icon>
-</button>
+  <button mat-fab id="new-room-course" matTooltip="Nuevo curso" (click)="openCourseRoomDialog()">
+    <mat-icon>assignment_turned_in_outlined</mat-icon>
+  </button>
