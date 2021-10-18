@@ -45,11 +45,9 @@ export class RoomCourseService {
         () => console.log('Error creating user on Firestore')
       );
     this.afStore
-      .collection(this.periodCollection)
-      .doc(course.cicle)
       .collection<CourseRoom>(this.courseCollection).doc(dbKey).set({
         id: dbKey,
-        roomId: course.roomId,
+        grade: course.grade,
         mainTeacherId: course.mainTeacherId,
         priority: course.priority,
         description: course.description,
@@ -89,8 +87,6 @@ export class RoomCourseService {
   }
   list() {
     return this.afStore
-      .collection(this.periodCollection)
-      .doc(this.currentCicle)
       .collection<CourseRoom>(this.courseCollection, (ref) =>
         ref.orderBy('priority')
       )

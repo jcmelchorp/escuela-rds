@@ -24,8 +24,8 @@ export class AuthEffects {
               return {
                 id: res.user.providerData[0].uid,
                 primaryEmail: res.user.email,
-                authPhotoUrl: res.user.photoURL,
                 photoUrl: res.user.providerData[0].photoURL,
+                authPhotoUrl: res.user.photoURL,
                 displayName: res.user.displayName,
                 isNew: res.additionalUserInfo.isNewUser,
                 isVerified: res.user.emailVerified,
@@ -41,7 +41,7 @@ export class AuthEffects {
                   fromAuthActions.saveUser({ user }),
                 ];
               } else {
-                return [fromAuthActions.signInSuccess({ user })];
+                return [fromAuthActions.signInSuccess({ user })/* , fromAuthActions.saveUser({ user }) */];
               }
             }),
             catchError((err) => of(fromAuthActions.authError({ error: err })))
@@ -130,5 +130,5 @@ export class AuthEffects {
     private actions$: Actions,
     private authService: AuthService,
     private authFireService: AuthFireService
-  ) {}
+  ) { }
 }

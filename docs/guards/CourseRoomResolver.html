@@ -250,7 +250,7 @@ import { filter, tap, first } from &#x27;rxjs/operators&#x27;;
 
 @Injectable()
 export class CourseRoomResolver implements Resolve&lt;boolean&gt; {
-  constructor(private courseRoomEntityService: CourseRoomEntityService) {}
+  constructor(private courseRoomEntityService: CourseRoomEntityService) { }
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -259,11 +259,11 @@ export class CourseRoomResolver implements Resolve&lt;boolean&gt; {
       tap((loaded) &#x3D;&gt; {
         if (!loaded) {
           this.courseRoomEntityService.getAll();
-          /* .getWithQuery({
-              field: &#x27;cicle&#x27;,
-              operation: &#x27;&#x3D;&#x3D;&#x27;,
-              value: &#x27;20202021&#x27;,
-            }); */
+          /*  .getWithQuery({
+             field: &#x27;cicle&#x27;,
+             operation: &#x27;&#x3D;&#x3D;&#x27;,
+             value:&#x27;20212022&#x27; ,
+           }); */
         }
       }),
       filter((loaded) &#x3D;&gt; !!loaded),

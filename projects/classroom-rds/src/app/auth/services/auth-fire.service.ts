@@ -76,7 +76,7 @@ export class AuthFireService {
   createUser(user: Partial<User>) {
     const key = user.id;
     return this.afStore
-      .collection(`${this.userCollection}`)
+      .collection(this.userCollection)
       .doc(key)
       .set(
         {

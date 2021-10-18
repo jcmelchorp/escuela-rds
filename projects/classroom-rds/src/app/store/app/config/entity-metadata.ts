@@ -118,7 +118,11 @@ export const entityMetadata: EntityMetadataMap = {
   },
   [fromCourseRoom.entityCollectionName]: {
     sortComparer: sortByName,
-    filterFn: nameAndRoleFilter,
+    filterFn: (entities: CourseRoom[], { name, grade, mainTeacherId }: Partial<CourseRoom>) =>
+      entities
+        .filter((e) => name ? e.name.toLowerCase().includes(name) : true)
+        .filter((e) => grade ? e.grade === grade : true)
+        .filter((e) => mainTeacherId ? e.mainTeacherId === mainTeacherId : true),
     selectId: (courseRoom: CourseRoom) => courseRoom.id,
     entityDispatcherOptions: {
       optimisticDelete: false,

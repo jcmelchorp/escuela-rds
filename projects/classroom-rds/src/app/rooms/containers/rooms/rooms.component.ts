@@ -55,7 +55,7 @@ export class RoomsComponent implements OnInit {
         this.userEntityService.entities$.pipe(
           map((users: User[]) => {
             const allRooms = rooms.map((room: Room) => {
-              const courses = room.courses.map((course: CourseRoom) => {
+              const courses = room.courses.sort(this.sortByPriority).map((course: CourseRoom) => {
                 return {
                   ...course,
                   mainTeacher: users.find((u) => u.id == course.mainTeacherId),
@@ -83,7 +83,15 @@ export class RoomsComponent implements OnInit {
       )
     );
   }
-
+  sortByPriority = (a: CourseRoom, b: CourseRoom) => {
+    if (a.priority < b.priority) {
+      return -1;
+    } else if (a.priority > b.priority) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
   roomsDrop(event: CdkDragDrop<string[]>): void {
     moveItemInArray(this.rooms, event.previousIndex, event.currentIndex);
     this.rooms.forEach((room) =>
@@ -139,4 +147,5 @@ export class RoomsComponent implements OnInit {
       }
     });
   }
+
 }

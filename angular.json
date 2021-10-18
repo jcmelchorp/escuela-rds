@@ -2,6 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
+    "analytics": "0a65ea9d-741a-40a9-9659-df38e63c44d5",
     "packageManager": "yarn"
   },
   "newProjectRoot": "projects",
@@ -161,9 +162,7 @@
               "projects/envivo-rds/src/favicon.ico",
               "projects/envivo-rds/src/assets"
             ],
-            "styles": [
-              "projects/envivo-rds/src/styles.scss"
-            ],
+            "styles": ["projects/envivo-rds/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -229,9 +228,7 @@
               "projects/envivo-rds/src/favicon.ico",
               "projects/envivo-rds/src/assets"
             ],
-            "styles": [
-              "projects/envivo-rds/src/styles.scss"
-            ],
+            "styles": ["projects/envivo-rds/src/styles.scss"],
             "scripts": []
           }
         }
@@ -264,9 +261,7 @@
               "projects/sistema-rds/src/favicon.ico",
               "projects/sistema-rds/src/assets"
             ],
-            "styles": [
-              "projects/sistema-rds/src/styles.scss"
-            ],
+            "styles": ["projects/sistema-rds/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -332,9 +327,7 @@
               "projects/sistema-rds/src/favicon.ico",
               "projects/sistema-rds/src/assets"
             ],
-            "styles": [
-              "projects/sistema-rds/src/styles.scss"
-            ],
+            "styles": ["projects/sistema-rds/src/styles.scss"],
             "scripts": []
           }
         }
@@ -367,9 +360,7 @@
               "projects/sitio-rds/src/favicon.ico",
               "projects/sitio-rds/src/assets"
             ],
-            "styles": [
-              "projects/sitio-rds/src/styles.scss"
-            ],
+            "styles": ["projects/sitio-rds/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -435,9 +426,7 @@
               "projects/sitio-rds/src/favicon.ico",
               "projects/sitio-rds/src/assets"
             ],
-            "styles": [
-              "projects/sitio-rds/src/styles.scss"
-            ],
+            "styles": ["projects/sitio-rds/src/styles.scss"],
             "scripts": []
           }
         }

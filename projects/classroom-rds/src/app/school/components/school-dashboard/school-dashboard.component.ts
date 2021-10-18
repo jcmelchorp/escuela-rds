@@ -7,6 +7,7 @@ import {
   faIdCardAlt,
   faSchool,
   faBook,
+  faTools,
 } from '@fortawesome/free-solid-svg-icons';
 import { fadeInAnimation } from '@rds-shared/animations/fade-in.animation';
 
@@ -22,9 +23,10 @@ export class SchoolDashboardComponent implements OnInit {
   faIdCardAlt = faIdCardAlt;
   faUserTie = faUserTie;
   faUserPlus = faUserPlus;
+  faTools = faTools;
   raisedElev: number = 12;
   assigmentLinks: any[];
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     this.assigmentLinks = [
@@ -45,6 +47,12 @@ export class SchoolDashboardComponent implements OnInit {
         description: 'Materias y clases dentro de la institución',
         route: 'materias',
         icon: faBook,
+      },
+      {
+        title: 'Configuración',
+        description: 'Servicios de configuración y base de datos',
+        route: 'playground',
+        icon: faTools,
       },
     ];
   }

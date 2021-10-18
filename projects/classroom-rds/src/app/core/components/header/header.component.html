@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar class="bg-transparent">
   <mat-toolbar-row fxLayout="row warp" fxLayoutAlign="space-between center">
     <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
       <fa-icon *ngIf="isHandset && isOnline" [icon]="faBars" mat-icon-button (click)="toggleSidenavLeft($event)">
@@ -9,14 +9,14 @@
       <button mat-button [matMenuTriggerFor]="escuela">
         Escuela
       </button>
-      <button   mat-button [matMenuTriggerFor]="webapp">
+      <button mat-button [matMenuTriggerFor]="webapp">
         Aplicación
       </button>
     </div>
     <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="5px">
       <!-- <span>{{myDate|date:'full':'es-MX'}}</span> -->
       <button *ngIf="isOnline && user" mat-icon-button [matMenuTriggerFor]="userMenu">
-        <img class="img-fluid rounded-circle" src="{{user.photoUrl}}" />
+        <img class="img-fluid rounded-circle" [src]="user.photoUrl?user.photoUrl:user.thumbnailPhotoUrl" />
       </button>
       <div *ngIf="!isOnline" mat-raised-button fxLayout="column" fxLayoutAlign="space-around center">
         <fa-icon class="rds-icon" mat-icon-button (click)="onSignIn()" size="lg"

@@ -3,7 +3,7 @@ import { User } from '@rds-auth/models/user.model';
 
 export interface CourseRoom {
   id: string;
-  roomId: string;
+  roomId?: string;
   mainTeacherId: string;
   mainTeacher?: User;
   priority: number;

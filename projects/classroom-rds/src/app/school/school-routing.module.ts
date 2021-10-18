@@ -45,6 +45,11 @@ const routes: Routes = [
         canActivate: [AdminGuard],
         data: { breadcrumb: 'Materias' },
       },
+      {
+        path: 'playground', loadChildren: () => import('../playground/playground.module').then(m => m.PlaygroundModule),
+        canActivate: [AdminGuard],
+        data: { breadcrumb: 'Configuración' },
+      },
     ],
   },
 ];
@@ -54,4 +59,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [SchoolUsersResolver],
 })
-export class SchoolRoutingModule {}
+export class SchoolRoutingModule { }

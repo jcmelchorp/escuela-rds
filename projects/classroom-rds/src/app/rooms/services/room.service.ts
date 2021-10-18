@@ -89,10 +89,10 @@ export class RoomService {
     return this.afs
       .collection(this.periodCollection)
       .doc(cicle)
-      .collection<Room>(`${this.roomsCollection}`, (ref) =>
+      .collection<Room>(this.roomsCollection, (ref) =>
         ref.where('grade', '==', grade)
       )
-      .valueChanges()
+      .valueChanges({ idField: 'id' })
       .pipe(take(1));
   }
   /**

@@ -209,8 +209,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="35"
-                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:35</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="48"
+                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:48</a></div>
                 </td>
             </tr>
 
@@ -278,8 +278,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="46"
-                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:46</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="59"
+                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:59</a></div>
                 </td>
             </tr>
 
@@ -384,8 +384,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="32"
-                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:32</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="45"
+                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:45</a></div>
                 </td>
             </tr>
 
@@ -453,8 +453,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Definido en <a href="" data-line="29"
-                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:29</a></div>
+                    <div class="io-line">Definido en <a href="" data-line="42"
+                            class="link-to-prism">projects/classroom-rds/src/app/store/course-room/course-room-data.service.ts:42</a></div>
                 </td>
             </tr>
 
@@ -510,18 +510,18 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
+import { StringMap } from &#x27;@angular/compiler/src/compiler_facade_interface&#x27;;
 
 import { DefaultDataService, HttpUrlGenerator, QueryParams } from &#x27;@ngrx/data&#x27;;
-
-import { from, Observable } from &#x27;rxjs&#x27;;
+import { Update } from &#x27;@ngrx/entity&#x27;;
 
 import { CourseRoom } from &#x27;@rds-subjects/models/course-room.model&#x27;;
+import { RoomCourseService } from &#x27;@rds-subjects/services/room-course.service&#x27;;
+
+import { from, Observable, of } from &#x27;rxjs&#x27;;
+import { tap, concatMap, switchMap, mergeMap, map } from &#x27;rxjs/operators&#x27;;
 
 import * as fromClass from &#x27;.&#x27;;
-import { RoomCourseService } from &#x27;@rds-subjects/services/room-course.service&#x27;;
-import { Update } from &#x27;@ngrx/entity&#x27;;
-import { StringMap } from &#x27;@angular/compiler/src/compiler_facade_interface&#x27;;
-import { tap } from &#x27;rxjs/operators&#x27;;
 
 @Injectable()
 export class CourseRoomDataService extends DefaultDataService&lt;CourseRoom&gt; {
@@ -533,8 +533,21 @@ export class CourseRoomDataService extends DefaultDataService&lt;CourseRoom&gt; 
     super(fromClass.entityCollectionName, http, httpUrlGenerator);
   }
   getAll(): Observable&lt;CourseRoom[]&gt; {
-    return this.courseRoomService.list();
+    const cicles: string[] &#x3D; []
+    const allcourses: CourseRoom[] &#x3D; [];
+    this.courseRoomService.getPeriods().pipe(
+      switchMap((periods) &#x3D;&gt;
+        periods.map(cicle &#x3D;&gt; this.courseRoomService.getCoursesOnClicle(cicle)
+          .pipe(
+            map(courses &#x3D;&gt; allcourses.push(...courses))))
+      ));
+
+    console.log(allcourses.length)
+    return of(allcourses)
   }
+  /* getAll(cicle?: string): Observable&lt;CourseRoom[]&gt; {
+    return this.courseRoomService.getCoursesOnClicle(cicle);
+  } */
 
   getWithQuery(queryParams: QueryParams): Observable&lt;CourseRoom[]&gt; {
     return this.courseRoomService.getCoursesWithQuery(queryParams);

@@ -92,29 +92,23 @@ export class RoomComponent implements OnInit {
   fetchCourses(room: Room) {
     this.courseRoomEntityService.entities$
       .pipe(
-        map((courses) => {
-          if (!courses) {
-            this.courseRoomEntityService.getWithQuery({})
-          }
-          return courses
-            .filter((c) => c.grade == room.grade)
-            .map((course) => {
-              return {
-                id: course.id,
-                priority: course.priority,
-                name: course.name,
-                roomId: room.id,
-                courseType: course.courseType,
-                description: course.description,
-                mainTeacherId: course.mainTeacherId,
-              } as Partial<CourseRoom>;
-            });
-        })
+        map((courses) =>
+          courses.filter((c) => c.grade == room.grade).map((course) => {
+            return {
+              id: course.id,
+              priority: course.priority,
+              name: course.name,
+              courseType: course.courseType,
+              description: course.description,
+              mainTeacherId: course.mainTeacherId,
+            } as Partial<CourseRoom>;
+          })
+        )
       )
       .subscribe((courses) =>
         this.roomService.updateCourses(
-          this.roomInput.id,
-          this.roomInput.cicle,
+          room.id,
+          room.cicle,
           courses
         )
       )

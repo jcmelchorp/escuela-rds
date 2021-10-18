@@ -57,12 +57,11 @@ export class CourseRoomsComponent implements OnInit {
   slevels = SchoolLevel;
   states = RoomState;
   faChalkboardTeacher = faChalkboardTeacher;
-  searchForm: FormGroup;
+  filterValues: FormGroup;
+  filteredEntities$: Observable<CourseRoom[]>;
   courses$: Observable<CourseRoom[]>;
   coursesByGrade$: Observable<CourseRoom[]>[];
-  periods$: Observable<string[]>;
-  resCount: number;
-  selected = '20202021';
+  resCount$: Observable<number>;
   constructor(
     private fb: FormBuilder,
     private courseRoomES: CourseRoomEntityService,
@@ -71,7 +70,7 @@ export class CourseRoomsComponent implements OnInit {
     private dialog: MatDialog
   ) {
     this.initSearchForm();
-    this.periods$ = this.roomService.getPeriods();
+    this.resCount$ = this.courseRoomES.count$
     this.loaded_courses$ = this.courseRoomES.loaded$;
     this.loaded_users$ = this.userEntityService.loaded$;
     this.slevelKeys = Object.keys(this.slevels).filter((x) => x.length > 5);
@@ -81,45 +80,69 @@ export class CourseRoomsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.onSearch(this.selected);
   }
 
   initSearchForm() {
-    this.searchForm = this.fb.group({
+    this.filterValues = this.fb.group({
       name: new FormControl(''),
       mainTeacherId: new FormControl('', Validators.required),
-      selectedCicle: new FormControl(this.selected, Validators.required),
+      grade: new FormControl('', Validators.required),
     });
+    this.filterValues.valueChanges.subscribe((changes) => {
+      Object.keys(changes).forEach(
+        (key) => changes[key] == null && delete changes[key]
+      );
+      return this.courseRoomES.setFilter(changes);
+    });
+    this.filteredEntities$ = this.courseRoomES.filteredEntities$.pipe(
+      switchMap((courses) =>
+        this.teachers$.pipe(
+          map((users) =>
+            courses.map((course) => {
+              const teacher = users.find((u) => u.id == course.mainTeacherId);
+              return {
+                ...course, mainTeacher: {
+                  ...teacher,
+                  photoUrl: teacher.photoUrl ||
+                    teacher.authPhotoUrl ||
+                    '/assets/images/dummy-user.png'
+                }
+              };
+            })
+          )
+        )
+      ),
+    );
   }
-  get selectedCicle() {
-    return this.searchForm.get('selectedCicle');
-  }
-  get name() {
-    return this.searchForm.get('name');
-  }
-  get mainTeacherId() {
-    return this.searchForm.get('mainTeacherId');
-  }
-  onSearch(period?: string) {
-    let name: string = (this.name.value as string).toLocaleLowerCase();
-    let selectedCicle: string = period;
-    let mainTeacherId: string = this.mainTeacherId.value as string;
-    this.courses$ = this.courseRoomES.entities$.pipe(
+
+  applyFilterString() {
+    const nameForm: string = (this.filterValues.get('name').value as string);
+    const mainTeacherIdForm: string = this.filterValues.get('mainTeacherId').value as string;
+    const gradeForm: string = this.filterValues.get('grade').value as string;
+    const name = nameForm === undefined || nameForm == null || nameForm == '' ? '' : nameForm.toLocaleLowerCase();
+    const grade = gradeForm === undefined || gradeForm == null || gradeForm == '' ? '' : gradeForm;
+    const mainTeacherId = mainTeacherIdForm === undefined || mainTeacherIdForm == null || mainTeacherIdForm == '' ? '' : mainTeacherIdForm;
+
+    const filter = JSON.parse(
+      JSON.stringify({ name: name, grade: grade, mainTeacherId: mainTeacherId })
+    );
+    /* this.courses$ = this.courseRoomES.entities$.pipe(
       map((courses) => {
-        if (name == '' && mainTeacherId == '') return courses;
+        if (name == '' && mainTeacherId == '' && grade == '') return courses;
         if (name == '')
-          return courses.filter((c) => c.mainTeacherId == mainTeacherId);
+          return courses.filter((c) => c.mainTeacherId == mainTeacherId && c.grade.toString() == grade);
         if (mainTeacherId == '')
           return courses.filter((c) =>
-            c.name.toLocaleLowerCase().includes(name)
+            c.name.toLocaleLowerCase().includes(name) && c.grade.toString() == grade
           );
         return courses.filter(
           (c) =>
             c.name.toLocaleLowerCase().includes(name) &&
-            c.mainTeacherId == mainTeacherId
+            c.mainTeacherId == mainTeacherId &&
+            c.grade.toString() == grade
         );
       }),
-      switchMap((courses) =>
+       switchMap((courses) =>
         this.roomService.getRoomsOnCicle(selectedCicle).pipe(
           map((rooms) =>
             courses.map((course) => {
@@ -143,19 +166,16 @@ export class CourseRoomsComponent implements OnInit {
         )
       ),
       tap((courses) => (this.resCount = courses.length))
-    );
+    ); */
   }
 
   openCourseRoomDialog(course?: CourseRoom) {
-    let cicle: string = this.selectedCicle.value as string;
     const newCourse: CourseRoom = {
       id: '',
       priority: null,
       name: '',
-      roomId: '',
       mainTeacherId: '',
       description: '',
-      cicle: cicle,
       courseType: CourseType.formativo,
       secondaryTeachersId: [],
     };
@@ -197,7 +217,7 @@ export class CourseRoomsComponent implements OnInit {
             .subscribe((courses) =>
               this.roomService.updateCourses(
                 result.course.roomId,
-                cicle,
+                '',
                 courses
               )
             );
@@ -211,21 +231,18 @@ export class CourseRoomsComponent implements OnInit {
     this.courseRoomES.delete(course);
   }
   copyCourses() {
-    const cicle = this.selectedCicle.value as string;
     this.courses$.subscribe(courses => {
       courses.forEach((course) =>
         this.courseRoomES.add({
-          cicle: '20212022',
           grade: course.grade,
           id: '',
-          roomId: '',
           mainTeacherId: course.mainTeacherId,
           priority: course.priority,
           name: course.name,
           description: course.description,
           courseType: course.courseType,
         })
-      );
-    });
+      )
+    })
   }
 }

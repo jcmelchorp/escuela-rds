@@ -5,40 +5,41 @@
     <span>Buscando ...</span><br>
   </div>
 </ng-template>
-<div *ngIf="(periods$|async) && teachers$|async as teachers" class="card bg-transparent">
-  <div class="card-body">
+<div *ngIf="(loaded_users$|async) && (loaded_courses$|async)" class="card bg-transparent">
+  <div *ngIf="teachers$|async as teachers" class="card-body">
     <h2 class="card-title">
-      <span>Materias {{selectedCicle.value}}</span>
+      <span>Materias </span>
     </h2>
-    <form [formGroup]="searchForm" fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="2px">
+    <form [formGroup]="filterValues" fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="2px">
       <mat-form-field fxFlex="1 0 calc(33.3% - 2px)" appearance="outline">
         <mat-label>Nombre</mat-label>
-        <input type="text" placeholder="Nombre del curso" matInput formControlName="name" (keyup)="onSearch()">
+        <input type="text" placeholder="Nombre del curso" matInput formControlName="name" (keyup)="applyFilterString()">
       </mat-form-field>
       <mat-form-field fxFlex="1 0 calc(33.3% - 2px)" appearance="outline">
         <mat-label>Profesor</mat-label>
-        <mat-select formControlName="mainTeacherId" placeholder="Selecciona el profesor" (selectionChange)="onSearch()">
+        <mat-select formControlName="mainTeacherId" placeholder="Selecciona el profesor"
+          (selectionChange)="applyFilterString()">
           <mat-option value="">Todos los profesores</mat-option>
           <mat-option *ngFor="let teacher of teachers" [value]="teacher.id">
-            <img class="img-select rounded-circle"
-              src="{{teacher.photoUrl?teacher.photoId:teacher.thumbnailPhotoUrl}}">&nbsp;
+            <img class="img-select rounded-circle" [src]="teacher.thumbnailPhotoUrl">&nbsp;
             {{teacher.name.fullName}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field fxFlex="0 1 calc(33.3% - 2px)" appearance="outline">
-        <mat-label>Ciclo escolar</mat-label>
-        <mat-select formControlName="selectedCicle" (selectionChange)="onSearch($event.value)">
-          <mat-option *ngFor="let period of periods$|async" [value]="period.id">
-            {{period.cicle}}
+      <mat-form-field fxFlex="1 0 calc(33.3% - 2px)" appearance="outline">
+        <mat-label>Grado</mat-label>
+        <mat-select formControlName="grade" placeholder="Selecciona el grado" (selectionChange)="applyFilterString()">
+          <mat-option value="">Sin especificar</mat-option>
+          <mat-option *ngFor="let key of slevelKeys" [value]="key">
+            {{key}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </form>
-    <div>Se encontraron {{resCount}} resultados en la búsqueda.</div>
-    <button mat-button (click)="copyCourses()">Copiar clases al próximo ciclo escolar</button>
-
-    <div *ngIf="(loaded_users$|async)  && courses$|async as courses;else spinner" [@moveIn]="'moveIn'">
+    <div>Se encontraron {{resCount$|async}} resultados en la búsqueda.</div>
+    <!--     <button mat-button (click)="copyCourses()">Copiar clases al próximo ciclo escolar</button>
+ -->
+    <div *ngIf="(filteredEntities$|async) as courses;else spinner" [@moveIn]="'moveIn'">
       <mat-list role="list" dense *ngIf="courses.length==0">
         <mat-list-item class="text-center"> No hay materias para mostrar.
         </mat-list-item>
