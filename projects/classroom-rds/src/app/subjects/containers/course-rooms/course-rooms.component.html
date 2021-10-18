@@ -7,9 +7,8 @@
 </ng-template>
 <div *ngIf="(loaded_users$|async) && (loaded_courses$|async)" class="card bg-transparent">
   <div *ngIf="teachers$|async as teachers" class="card-body">
-    <h2 class="card-title">
-      <span>Materias </span>
-    </h2>
+    <h2 style="margin-top: -30px"><span [ngClass]="{'bg-white': !(isDarkTheme|async)}" class="mcard-title">Materias
+      </span></h2>
     <form [formGroup]="filterValues" fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="2px">
       <mat-form-field fxFlex="1 0 calc(33.3% - 2px)" appearance="outline">
         <mat-label>Nombre</mat-label>

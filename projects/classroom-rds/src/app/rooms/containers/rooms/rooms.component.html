@@ -5,40 +5,73 @@
     <span>Buscando ...</span><br>
   </div>
 </ng-template>
-  <div class="card bg-transparent">
-    <div class="card-body">
-      <div class="card-title" fxLayout="row" fxLayoutAlign="space-betweeen start">
-        <h2 fxFlex="0 1 calc(75% - 2px)">Salones ({{roomsCount}})</h2>
-        <mat-form-field fxFlex="0 1 calc(25% - 2px)" appearance="outline">
-          <mat-label>Ciclo escolar</mat-label>
-          <mat-select [(ngModel)]="selected" (selectionChange)="onCicleSelect($event.value)">
-            <mat-option *ngFor="let period of periods$|async" [value]="period.id">
-              {{period.cicle|lowercase}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+<div class="d-flex flex-row-reverse">
+  <mat-form-field appearance="outline">
+    <mat-label>Ciclo escolar</mat-label>
+    <mat-select [(ngModel)]="selected" (selectionChange)="onCicleSelect($event.value)">
+      <mat-option *ngFor="let period of periods$|async" [value]="period.id">
+        {{period.cicle|lowercase}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div *ngIf="(periods$|async) && (rooms$|async) as rooms; else spinner" fxLayout="column" fxLayoutAlign="space-between"
+  fxLayoutGap="50px">
+  <mat-card class="border" *ngFor="let count of ['Preescolar','Primaria','Secundaria'];let j=index" appMaterialElevation
+    raisedElevation="10" defaultElevation="4">
+    <mat-card-header style="margin-top: -30px">
+      <mat-card-title><span [ngClass]="{'bg-white': !(isDarkTheme|async)}" class="card-title">{{count}}</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="overflow-auto" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="start"
+      fxLayoutGap="10px" cdkDropList (cdkDropListDropped)="roomsDrop($event)" cdkDropListOrientation="horizontal">
+      <app-room *ngFor="let room of rooms[j];let i=index" cdkDrag class="rooms" [roomInput]="room"
+        fxFlex="0 1 calc(33.3% - 10px)" fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
+        <!-- <div name="roomButtons"> -->
+        <mat-icon class="text-success" mat-icon-button name="editRoom" (click)="openRoomDialog(room,i)">
+          mode_edit_outline
+        </mat-icon>
+        <!-- <fa-icon class="text-info" mat-icon-button (click)="createGrades(room)" [icon]="faUserGraduate" size="lg">
+        </fa-icon> -->
+        <!-- </div> -->
+      </app-room>
+      <div class="no-rooms text-center" fxFlex="100%" *ngIf="rooms.lenght==0">
+        <h3>No hay ningun grupo registrado</h3>
       </div>
-      <div *ngIf="(periods$|async) && (rooms$|async) as rooms; else spinner">
-        <div cdkDropList (cdkDropListDropped)="roomsDrop($event)" cdkDropListOrientation="horizontal"
-          fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2px" fxLayoutAlign="flex-start">
-          <app-room cdkDrag class="rooms" *ngFor="let room of rooms;let i=index" [roomInput]="room" class="mb-1"
-            fxFlex="0 1 calc(50% - 5px)" fxFlex.lt-md="100%">
-            <!-- <div name="roomButtons"> -->
-            <fa-icon class="text-success" mat-icon-button name="editRoom" (click)="openRoomDialog(room,i)"
-              [icon]="faEdit" size="lg">
-            </fa-icon>
-            <!-- <fa-icon class="text-info" mat-icon-button (click)="createGrades(room)" [icon]="faUserGraduate" size="lg">
-            </fa-icon> -->
-            <!-- </div> -->
-          </app-room>
-          <div class="no-rooms text-center" fxFlex="100%" *ngIf="rooms.lenght==0">
-            <h3>No hay ningun grupo registrado</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </mat-card-content>
+  </mat-card>
+  <!-- <mat-card appMaterialElevation raisedElevation="10" defaultElevation="4" fxLayout="row" fxLayout.lt-sm="column"
+    fxLayoutAlign="start" fxLayoutGap="10px" cdkDropList (cdkDropListDropped)="roomsDrop($event)"
+    cdkDropListOrientation="horizontal">
+    <app-room *ngFor="let room of rooms[1];let i=index" cdkDrag class="rooms" [roomInput]="room"
+      fxFlex="0 1 calc(33.3% - 10px)" fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
 
-  <button mat-fab id="new-room" matTooltip="Nuevo grupo" (click)="openRoomDialog()">
-    <mat-icon>post_add</mat-icon>
-  </button>
+  <mat-icon class="text-success" mat-icon-button name="editRoom" (click)="openRoomDialog(room,i)">
+    mode_edit_outline
+  </mat-icon>
+
+
+  </app-room>
+  <div class="no-rooms text-center" fxFlex="100%" *ngIf="rooms.lenght==0">
+    <h3>No hay ningun grupo registrado</h3>
+  </div>
+  </mat-card>
+  <mat-card appMaterialElevation raisedElevation="10" defaultElevation="4" fxLayout="row" fxLayout.lt-sm="column"
+    fxLayoutAlign="start" fxLayoutGap="10px" cdkDropList (cdkDropListDropped)="roomsDrop($event)"
+    cdkDropListOrientation="horizontal">
+    <app-room *ngFor="let room of rooms[0];let i=index" cdkDrag class="rooms" [roomInput]="room"
+      fxFlex="0 1 calc(33.3% - 10px)" fxFlex.lt-md="0 1 calc(50% - 10px)" fxFlex.lt-sm="100%">
+      <mat-icon class="text-success" mat-icon-button name="editRoom" (click)="openRoomDialog(room,i)">
+        mode_edit_outline
+      </mat-icon>
+
+    </app-room>
+    <div class="no-rooms text-center" fxFlex="100%" *ngIf="rooms.lenght==0">
+      <h3>No hay ningun grupo registrado</h3>
+    </div>
+  </mat-card> -->
+</div>
+
+<button mat-fab id="new-room" matTooltip="Nuevo grupo" (click)="openRoomDialog()">
+  <mat-icon>post_add</mat-icon>
+</button>

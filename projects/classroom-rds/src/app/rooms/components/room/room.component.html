@@ -1,83 +1,76 @@
-<!-- <ng-template #spinner>
-  <div style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
-    <mat-spinner strokeWidth="5" [diameter]="50">
-    </mat-spinner>
-    <span>Buscando ...</span><br>
+<div *ngIf="roomInput as room" class="card">
+  <div class="card-body">
+    <div class="float-end" fxLayout="row wrap" fxLayoutAlign="center center">
+      <ng-content #editRoom></ng-content>
+      <app-delete-button (delete)="handleDelete()"></app-delete-button>
+    </div>
+    <div class="header">
+      <div class="card-title title"> {{ room.name }}</div>
+      <div class="card-subtitle text-truncate"><small>{{ room.description}}</small></div>
+    </div>
   </div>
-</ng-template> -->
-<mat-card *ngIf="roomInput as room" class="mat-elevation-z0 card bg-transparent">
-  <div class="float-right">
-    <ng-content #editRoom></ng-content>
-    <app-delete-button (delete)="handleDelete()"></app-delete-button>
-  </div>
-  <mat-card-header class="header">
-    <mat-card-title class="title"> {{ room.name }}</mat-card-title>
-    <mat-card-subtitle>{{ room.description}}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-accordion>
-      <mat-expansion-panel class="mat-elevation-z0 bg-transparent">
-        <mat-expansion-panel-header>
-          <mat-panel-title fxLayout="row" fxLayoutAlign="space-between">
-            <div>Alumnos <span class="text-secondary">({{room.students.length}})</span></div>
-            <div>
-              <fa-icon class="px-2" mat-icon-button [icon]="faSync" (click)="fetchStudents(room)"
-                *ngIf="room.students.length==0"> </fa-icon>
-              <fa-icon class="px-2" mat-icon-button [icon]="faUserPlus" (click)="openDialog()"></fa-icon>
-            </div>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="drop-list" cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="studentDrop($event)"
-          dense>
-          <div class="p-3 drag-box text-center" *ngIf="room.students.length==0">No hay elementos para mostrar</div>
-          <div class="p-3 drag-box" cdkDrag *ngFor="let student of room.students; let i = index">
-            <div class="drag-custom-placeholder" *cdkDragPlaceholder></div>
-            <div class="float-right" fxLayout="row wrap" fxLayoutAlign="center center">
-              <app-delete-button matListIcon (delete)="handleStudentDelete(student)"></app-delete-button>
-              <mat-icon mat-icon-button size="lg" (click)="openDialog(student, i)">edit</mat-icon>
-            </div>
-            <p class="my-n1 text-truncate" [ngClass]="student.label"><strong> {{i+1}}. {{
-                student.name.fullName}}</strong>
-            </p>
-            <p class="my-n1">{{student.primaryEmail}} </p>
+  <mat-accordion class="p-0">
+    <mat-expansion-panel class="mat-elevation-z0" dense>
+      <mat-expansion-panel-header>
+        <mat-panel-title fxLayout="row" fxLayoutAlign="space-between">
+          <div>Alumnos <span class="text-secondary">({{room.students.length}})</span></div>
+          <div>
+            <fa-icon class="px-2" mat-icon-button [icon]="faSync" (click)="fetchStudents(room)"
+              *ngIf="room.students.length==0"> </fa-icon>
+            <fa-icon class="px-2" mat-icon-button [icon]="faUserPlus" (click)="openDialog()"></fa-icon>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="drop-list" cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="studentDrop($event)"
+        dense>
+        <div class="p-1 text-center" *ngIf="room.students.length==0">No hay elementos para mostrar</div>
+        <div class="p-1 drag-box" cdkDrag *ngFor="let student of room.students; let i = index">
+          <div class="drag-custom-placeholder" *cdkDragPlaceholder></div>
+          <div class="float-end" fxLayout="row wrap" fxLayoutAlign="center center">
+            <mat-icon class="text-primary" mat-icon-button (click)="openDialog(student, i)">edit</mat-icon>
+            <app-delete-button mat-icon-button (delete)="handleStudentDelete(student)"></app-delete-button>
+          </div>
+          <div class="text-truncate" [ngClass]="student.label"><strong> {{i+1}}. {{
+              student.name.fullName}}</strong>
+          </div>
+          <div class="text-truncate"><small>{{student.primaryEmail}}</small></div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mat-elevation-z0" dense>
+      <mat-expansion-panel-header>
+        <mat-panel-title fxLayout="row" fxLayoutAlign="space-between">
+          <div>Materias <span class="text-secondary">({{room.courses.length}})</span></div>
+          <div>
+            <fa-icon class="px-2" mat-icon-button [icon]="faSync" (click)="fetchCourses(room)"
+              *ngIf="room.courses.length==0"> </fa-icon>
+            <fa-icon class="px-2" mat-icon-button [icon]="faPlus" (click)="openCoursesDialog()">
+            </fa-icon>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="drop-list" cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="courseDrop($event)"
+        dense>
+        <div class="p-1 text-center" *ngIf="room.courses.length==0">No hay elementos para
+          mostrar</div>
+        <div class="p-1 drag-box" cdkDrag *ngFor="let course of room.courses; let j = index">
+          <div class="drag-custom-placeholder" *cdkDragPlaceholder></div>
+          <div class="mx-2 float-start">
+            <img class="img-select rounded-circle" *ngIf="course.mainTeacher.photoUrl"
+              src="{{course.mainTeacher.photoUrl}}">
+          </div>
+          <div class="float-end" fxLayout="row wrap" fxLayoutAlign="center center">
+            <app-delete-button mat-icon-button (delete)="handleCourseDelete(course)">
+            </app-delete-button>
+            <mat-icon mat-icon-button (click)="openCoursesDialog(course, j)">edit</mat-icon>
+          </div>
+          <div class="text-truncate"><strong>{{j+1}}. {{ course.name }}</strong></div>
+          <div class="text-truncate"><small>{{course.mainTeacher.name.fullName}}</small>
+            <span
+              class="badge badge-{{course.courseType=='formativo'?'info':'warning'}} text-wrap">&nbsp;{{course.courseType}}</span>
           </div>
         </div>
-      </mat-expansion-panel>
-      <mat-expansion-panel class="mat-elevation-z0 bg-transparent">
-        <mat-expansion-panel-header>
-          <mat-panel-title fxLayout="row" fxLayoutAlign="space-between">
-            <div>Materias <span class="text-secondary">({{room.courses.length}})</span></div>
-            <div>
-              <fa-icon class="px-2" mat-icon-button [icon]="faSync" (click)="fetchCourses(room)"
-                *ngIf="room.courses.length==0"> </fa-icon>
-              <fa-icon class="px-2" mat-icon-button [icon]="faPlus" (click)="openCoursesDialog()">
-              </fa-icon>
-            </div>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="drop-list" cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="courseDrop($event)"
-          dense>
-          <div class="p-3 drag-box text-center" *ngIf="room.courses.length==0">No hay elementos para
-            mostrar</div>
-          <div class="p-3 drag-box" cdkDrag *ngFor="let course of room.courses; let j = index">
-            <div class="drag-custom-placeholder" *cdkDragPlaceholder></div>
-            <div class="mr-2 float-left">
-              <img class="img-select rounded-circle" *ngIf="course.mainTeacher.photoUrl"
-                src="{{course.mainTeacher.photoUrl}}">
-            </div>
-            <div class="float-right" fxLayout="row wrap" fxLayoutAlign="center center">
-              <app-delete-button mat-icon-button (delete)="handleCourseDelete(course)">
-              </app-delete-button>
-              <mat-icon mat-icon-button (click)="openCoursesDialog(course, j)">edit</mat-icon>
-            </div>
-            <p class="my-n1 text-truncate"><strong>{{j+1}}. {{ course.name }}</strong></p>
-            <p class="my-n1">{{course.mainTeacher.name.fullName}}
-              <span
-                class="badge badge-{{course.courseType=='formativo'?'info':'warning'}} text-wrap">&nbsp;{{course.courseType}}</span>
-            </p>
-          </div>
-        </div>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </mat-card-content>
-</mat-card>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

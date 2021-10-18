@@ -1,8 +1,8 @@
-@import "./../../../../assets/themes/colors";
+@use "./../../../../assets/themes/colors" as colors;
 
 #new-room-course {
   color: white;
-  background-color: $rds-logo-color;
+  background-color: colors.$rds-logo-color;
   position: fixed;
   bottom: 190px;
   top: auto;

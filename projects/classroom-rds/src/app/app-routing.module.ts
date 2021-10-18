@@ -45,7 +45,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('@rds-school/school.module').then((m) => m.SchoolModule),
         canActivate: [AdminGuard],
-        data: { breadcrumb: 'Administración' },
+        data: { breadcrumb: 'Dirección' },
       },
       {
         path: 'gsuite',

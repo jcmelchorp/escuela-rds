@@ -47,8 +47,8 @@ export class DashboardComponent implements OnInit {
         access: this.isTeacher$ || this.isAdmin$,
       },
       {
-        title: 'Directivos',
-        description: 'Administra usuarios en la institución.',
+        title: 'Dirección',
+        description: 'Gestiona usuarios, grupos, clases y horarios en la institución.',
         route: 'escuela',
         imgUrl: 'assets/images/dashboard-image.png',
         access: this.isAdmin$,

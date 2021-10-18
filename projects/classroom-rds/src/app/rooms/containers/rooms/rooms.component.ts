@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, Subscription } from 'rxjs';
-import { map, mergeMap, tap } from 'rxjs/operators';
+import { map, mergeMap, tap, switchMap } from 'rxjs/operators';
 import { Room } from '../../models/room.model';
 import { RoomService } from '../../services/room.service';
 import { RoomDialogComponent } from '../../components/room-dialog/room-dialog.component';
@@ -25,7 +25,7 @@ import { User } from '@rds-auth/models/user.model';
 export class RoomsComponent implements OnInit {
   periodsForm: FormGroup;
   periods$: Observable<string[]>;
-  rooms$: Observable<Room[]>;
+  rooms$: Observable<Room[][]>;
   sub: Subscription;
   roomsCount: number;
   rooms: Room[];
@@ -60,7 +60,7 @@ export class RoomsComponent implements OnInit {
                   ...course,
                   mainTeacher: users.find((u) => u.id == course.mainTeacherId),
                   grade: room.grade,
-                };
+                } as CourseRoom;
               });
               const students = room.students.map((student) => {
                 const studentUser = users.find((u) => u.id == student.id);
@@ -75,13 +75,19 @@ export class RoomsComponent implements OnInit {
                 };
               });
               console.log(students);
-              return { ...room, courses: courses, students: students };
+              return { ...room, courses: courses, students: students } as Room;
             });
             return allRooms;
           })
         )
-      )
+      ),
+      map(rooms => [
+        rooms.filter(room => room.grade.toString().includes('Preescolar')),
+        rooms.filter(room => room.grade.toString().includes('Primaria')),
+        rooms.filter(room => room.grade.toString().includes('Secundaria')),
+      ])
     );
+
   }
   sortByPriority = (a: CourseRoom, b: CourseRoom) => {
     if (a.priority < b.priority) {

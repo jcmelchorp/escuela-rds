@@ -4,8 +4,7 @@
 * Fork at: https://materialtheme.arcsine.dev/?c=YHBhbGV0dGU$YHByaW1hcnk$YF48IzAwNjBhMCIsIj9lcjwjYjNjZmUzIiwiO2VyPCMwMDQ0ODR$LCIlPmBePCM4YmMzNGEiLCI~ZXI8I2RjZWRjOSIsIjtlcjwjNmVhZTMyfiwid2Fybj5gXjwjZDAwMDAwIiwiP2VyPCNmMWIzYjMiLCI7ZXI8I2JlMDAwMH4sIj9UZXh0PCMwMDAwMDAiLCI~PTwjZmFmYWZhIiwiO1RleHQ8I2ZmZmZmZiIsIjs9PCMyYzJjMmN$LCJmb250cz5bYEA8KC00IiwiZmFtaWx5PEZyZWRva2EgT25lfixgQDwoLTMiLCJmYW1pbHk8RnJlZG9rYSBPbmUiLCJ2YXJpYW50PD9$LGBAPCgtMiIsImZhbWlseTxGcmVkb2thIE9uZSIsInZhcmlhbnQ8P34sYEA8KC0xIiwiZmFtaWx5PEZyZWRva2EgT25lIiwidmFyaWFudDw~fixgQDxoZWFkbGluZSIsImZhbWlseTxDYWJpbiBTa2V0Y2giLCJ2YXJpYW50PD9$LGBAPHRpdGxlIiwiZmFtaWx5PEZyZWRva2EgT25lIiwidmFyaWFudDw~fixgQDxzdWIpLTIiLCJmYW1pbHk8UG9wcGlucyIsInZhcmlhbnQ8P34sYEA8c3ViKS0xIiwiZmFtaWx5PFBvcHBpbnMiLCJ2YXJpYW50PD9$LGBAPGJvZHktMiIsImZhbWlseTxQb3BwaW5zIiwidmFyaWFudDw~fixgQDxib2R5LTEiLCJmYW1pbHk8UG9wcGlucyIsInZhcmlhbnQ8P34sYEA8YnV0dG9uIiwiZmFtaWx5PENvbWZvcnRhYSIsInZhcmlhbnQ8cmVndWxhcn4sYEA8Y2FwdGlvbiIsImZhbWlseTxDb21mb3J0YWEiLCJ2YXJpYW50PD9$LGBAPGlucHV0IiwiZmFtaWx5PENvbWZvcnRhYSIsInNpemU$bnVsbH1dLCJpY29uczxPdXRsaW5lZCIsIj9uZXNzPnRydWUsInZlcnNpb24$MTJ9
 */
 
-@use '~@angular/material' as mat;
-
+@use "~@angular/material" as mat;
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 
@@ -14,12 +13,12 @@
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One:300,400,500");
 //@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:300,400,500");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500");
-/* @import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,500");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,500");
+/*@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 @import url("https://fonts.googleapis.com/css?family=Dosis:300,400,500");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,500");
 @import url("https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:300,400,500,600,700,800");
 
 $fontConfig: (
   display-4:
@@ -42,7 +41,7 @@ $fontConfig: (
   input: mat.define-typography-level(inherit, 1.125, 400, "Poppins", 1.5px),
 );
 // Foreground Elements
-
+$enable-negative-margins: true;
 // Light Theme Text
 $dark-text: #000000;
 $dark-primary-text: rgba($dark-text, 0.87);

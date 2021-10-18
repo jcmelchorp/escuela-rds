@@ -1,8 +1,14 @@
-@import "./../../../../assets/themes/colors";
+@use "./../../../../assets/themes/colors" as colors;
+.card-title {
+  color: colors.$william-color;
+  font-size: calc(1rem + 1vw);
+  font-weight: 700;
+  font-family: "comfortaa", cursive;
+}
 
 #new-room {
   color: white;
-  background-color: $rds-logo-color;
+  background-color: colors.$rds-logo-color;
   position: fixed;
   bottom: 190px;
   top: auto;
@@ -14,15 +20,15 @@
   border: 2px dashed #555555;
 }
 .rooms {
-  min-width: 200px;
-  /*padding: 24px;
+  min-width: 320px;
+  //padding: 24px;
   display: flex;
   flex-direction: row;
-  overflow-x: scroll; */
+  /*overflow-x: scroll;
   &::-webkit-scrollbar {
     height: 12px;
     width: 4px;
-  }
+  }*/
   &::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: rgb(240, 240, 240);

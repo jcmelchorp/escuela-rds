@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @use "assets/themes/_colors" as color;
-
 @import "assets/themes/rds_theme.scss";
 //@import "assets/themes/rds_theme.scss";
 html,
@@ -73,6 +72,16 @@ body {
   padding-left: 10px;
   margin-top: -10px;
   color: color.$text-shadow-color;
+}
+.img-select {
+  width: 30px;
+  height: auto;
+}
+.mcard-title {
+  color: color.$william-color;
+  font-size: calc(1rem + 1vw);
+  font-weight: 700;
+  font-family: "comfortaa", cursive;
 }
 .app-name {
   color: color.$rds-logo-color;
