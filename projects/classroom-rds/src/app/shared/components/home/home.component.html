@@ -8,6 +8,6 @@
   <a target="_blank" [href]='streaming.link' [innerHtml]="streaming.msg"></a>
 </alert> -->
 <app-parallax-space *ngIf="!(isOnline$|async)"></app-parallax-space>
-<app-dashboard *ngIf="(isOnline$|async) && (user$|async)" [user]="user$|async" [isTeacher$]="isTeacher$"
-  [isAdmin$]="isAdmin$" [isOnline$]="(isOnline$)">
+<app-dashboard *ngIf="(isOnline$|async) && (user$|async)" [isTeacher$]="isTeacher$" [isAdmin$]="isAdmin$"
+  [isOnline$]="(isOnline$)">
 </app-dashboard>

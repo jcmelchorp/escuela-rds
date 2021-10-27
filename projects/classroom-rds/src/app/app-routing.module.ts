@@ -32,7 +32,7 @@ const routes: Routes = [
     component: LayoutComponent,
     data: { breadcrumb: 'Home' },
     children: [
-      { path: '', component: HomeComponent, data: { breadcrumb: null } },
+      { path: '', component: HomeComponent, /* data: { breadcrumb: null } */ },
       {
         path: 'profesores',
         loadChildren: () =>

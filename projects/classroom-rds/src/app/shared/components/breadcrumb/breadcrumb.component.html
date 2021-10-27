@@ -1,7 +1,8 @@
 <ol class="breadcrumb d-print-none">
   <li *ngFor="let breadcrumb of breadcrumbs">
-    <span [routerLink]="breadcrumb.url" routerLinkActive="active">
-      {{ breadcrumb.label }}
-    </span>
+    <a [routerLink]="breadcrumb.url" routerLinkActive="active">
+      <span *ngIf="breadcrumb.label!=='Home'">{{ breadcrumb.label}}</span>
+    </a>
+    <mat-icon *ngIf="breadcrumb.label==='Home'">{{ breadcrumb.label|lowercase}}</mat-icon>
   </li>
 </ol>

@@ -20,7 +20,7 @@ import { fadeInAnimation } from '@rds-shared/animations/fade-in.animation';
 })
 export class DashboardComponent implements OnInit {
   //user$: Observable<User>;
-  @Input() user: User;
+  //@Input() user: User;
   isTeacher$: Observable<boolean>;
   isAdmin$: Observable<boolean>;
   isOnline$: Observable<boolean>;
