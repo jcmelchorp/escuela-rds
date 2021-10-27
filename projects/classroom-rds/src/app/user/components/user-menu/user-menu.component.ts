@@ -27,7 +27,7 @@ import { User } from '@rds-auth/models/user.model';
 })
 export class UserMenuComponent implements OnInit {
   @Input()
-  user!: User;
+  user: User;
   @Input()
   isOnline!: boolean;
   @Input()
@@ -41,9 +41,9 @@ export class UserMenuComponent implements OnInit {
   faUserCheck = faUserCheck;
   faUserTimes = faUserTimes;
   canLogout!: boolean;
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   onLogout(): void {
     this.logout.emit(this.user);
     this.canLogout = false;

@@ -7,7 +7,7 @@ export const teachersComponents: any[] = [
   TeachersDashboardComponent,
   ScoresEditComponent,
   TeacherCoursesComponent,
-  TeachersGradeComponent
+  // TeachersGradeComponent
 ]
 export * from './teachers-dashboard/teachers-dashboard.component';
 export * from './teacher-courses/teacher-courses.component';

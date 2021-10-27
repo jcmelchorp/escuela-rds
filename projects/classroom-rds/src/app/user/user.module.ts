@@ -14,11 +14,12 @@ import { ChartsModule } from 'ng2-charts';
 import { userComponents } from './components';
 import { UserRoutingModule } from './user-routing.module';
 import { UserResolver } from './services/user.resolver';
+import { ScoreService } from '../teachers/services/score.service';
 
 @NgModule({
   declarations: [...userComponents],
   imports: [SharedModule, UserRoutingModule, ChartsModule],
-  providers: [SchoolService, UserResolver, UserEntityService, UserDataService],
+  providers: [SchoolService, ScoreService, UserEntityService, UserDataService],
 })
 export class UserModule {
   constructor(

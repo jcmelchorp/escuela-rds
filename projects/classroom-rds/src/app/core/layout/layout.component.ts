@@ -18,6 +18,7 @@ import { User } from '@rds-auth/models/user.model';
 import { Observable } from 'rxjs';
 
 import { LayoutService, ThemeService } from '../services';
+import { loadConfig } from '../state/core.actions';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -47,7 +48,8 @@ export class LayoutComponent {
     if (user) {
       this.store.dispatch(signInSuccess({ user }));
     }
-    this.store.dispatch(loadApp());
+    //this.store.dispatch(loadApp());
+    // this.store.dispatch(loadConfig());
     this.isOnline$ = this.store.pipe(select(fromAuthSelectors.isLoggedIn));
     this.user$ = this.store.pipe(select(fromAuthSelectors.selectUser));
     this.isAdmin$ = this.store.pipe(select(fromAuthSelectors.isAdmin));

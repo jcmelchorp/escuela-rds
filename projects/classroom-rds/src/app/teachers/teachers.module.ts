@@ -16,12 +16,14 @@ import { CourseRoomDataService } from '@rds-store/course-room/course-room-data.s
 import * as fromCourseRoom from '@rds-store/course-room';
 import * as fromEntity from '@rds-store/app/config/entity-metadata';
 import { RoomCourseService } from '@rds-subjects/services/room-course.service';
+import { ScoreService } from './services/score.service';
 
 @NgModule({
   declarations: [...teachersComponents, ...teachersContainers],
   imports: [SharedModule, TeachersRoutingModule],
   providers: [
     RoomService,
+    ScoreService,
     SchoolService,
     RoomCourseService,
     TeachersCoursesService,

@@ -26,7 +26,7 @@ export class GradesTableComponent implements OnInit {
   extraData: Score[];
   avgData: Score;
   faComments = faComments;
-  displayedColumns = ['courseName', 'unit1', 'unit2', 'unit3', 'final'];
+  displayedColumns = ['courseName', 'unit1', 'unit2', 'unit3', 'prom_materia'];
   optative: ScoreDataSource;
   formative: ScoreDataSource;
   isExpansionDetailRow = (i: number, row: Object) => row.hasOwnProperty('detailRow');
@@ -51,7 +51,7 @@ export class GradesTableComponent implements OnInit {
       sum1 = + score.unit1 + sum1;
       sum2 = + score.unit2 + sum2;
       sum3 = + score.unit3 + sum3;
-      sum4 = + score.final + sum4;
+      sum4 = + score.prom_materia + sum4;
       count++;
     });
     const avg1 = (Math.trunc(10 * (sum1 / count)) / 10).toString();

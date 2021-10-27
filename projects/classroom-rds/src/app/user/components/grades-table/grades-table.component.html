@@ -35,10 +35,10 @@
       <mat-footer-cell *matFooterCellDef> {{getAverage()[2]==0?'-':getAverage()[2]|number}}</mat-footer-cell>
     </ng-container>
 
-    <ng-container matColumnDef="final">
+    <ng-container matColumnDef="prom_materia">
       <mat-header-cell *matHeaderCellDef>Final</mat-header-cell>
-      <mat-cell class="text-{{element.final<6?'danger':'dark'}}" *matCellDef="let element">
-        {{element.isCourseClosed?element.final:'-'}}</mat-cell>
+      <mat-cell class="text-{{element.prom_materia<6?'danger':'dark'}}" *matCellDef="let element">
+        {{element.isCourseClosed?element.prom_materia:'-'}}</mat-cell>
       <mat-footer-cell *matFooterCellDef> {{getAverage()[3]==0?'-':getAverage()[3]|number}}</mat-footer-cell>
     </ng-container>
 

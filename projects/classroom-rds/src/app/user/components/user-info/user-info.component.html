@@ -1,9 +1,11 @@
-<div *ngIf="!(user$|async)" style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
-  <mat-spinner strokeWidth="3" [diameter]="50">
-  </mat-spinner>
-  <span>Buscando ...</span><br>
-</div>
-<mat-card *ngIf="user$|async as user">
+<ng-template #spinner>
+  <div style="min-height: 300px;" fxLayout="column" fxLayoutAlign="center center">
+    <mat-spinner strokeWidth="5" [diameter]="50">
+    </mat-spinner>
+    <span>Buscando ...</span><br>
+  </div>
+</ng-template>
+<mat-card *ngIf="user$|async as user;else spinner">
   <mat-card-content class="card border-primary m-n2 bg-transparent">
     <h1 class="mat-h1 card-header text-light">Tus datos personales
     </h1>

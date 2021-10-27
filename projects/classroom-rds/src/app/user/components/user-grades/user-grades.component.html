@@ -7,11 +7,14 @@
 </ng-template>
 
 
-<!-- <div *ngIf="(loading$|async) || (user$|async) as user;else spinner">
+<div *ngIf="(user$|async) as user;else spinner">
   <div class="card bg-transparent">
     <h2 class="card-header" fxLayout="row wrap" fxLayoutAlign="space-between top">
       <div>
-        <span>Calificaciones&nbsp;&nbsp;<small class="font-weight-light">Ciclo escolar 2020-21</small>
+        <span>Calificaciones&nbsp;&nbsp;<small class="font-weight-light">Ciclo escolar
+            {{user.currentGrades.cicleId}}
+
+          </small>
         </span>
       </div>
       <div>{{today|date:'medium'}}</div>
@@ -25,7 +28,7 @@
       </button>
     </div>
     <div class="card-body">
-      <app-grades-table *ngIf="user.level='Preescolar'" [data]="user.currentGrades"></app-grades-table>
+      <app-grades-table *ngIf="user.level=='Preescolar'" [data]="user.currentGrades"></app-grades-table>
       <app-grades-list *ngIf="user.level=='Preescolar'" [data]="user.currentGrades"></app-grades-list>
     </div>
     <div *ngIf="user.level!='Preescolar'" class="card-footer ">
@@ -45,4 +48,3 @@
     </mat-card-header>
   </mat-card>
 </div>
- -->

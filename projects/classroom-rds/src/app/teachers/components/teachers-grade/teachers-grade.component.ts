@@ -161,7 +161,7 @@ export class TeachersGradeComponent implements OnInit {
       }
     });
     if (score.isCourseClosed)
-      score.final =
+      score.prom_materia =
         +Math.trunc((+(score.unit1! + score.unit2 + score.unit3) * 10) / 3) /
         10;
     this.teachersCoursesService
@@ -177,13 +177,13 @@ export class TeachersGradeComponent implements OnInit {
           partialUser = {
             id: user?.id,
             displayName: studentProps['studentName'],
-            currentGrades: {
+            /* currentGrades: {
               isFinished: user?.currentGrades!.scores.every(
                 (s: any) => s.final != null && s.isCourseClosed == true
               ),
               scores: [],
               //notes: user.currentGrades.notes
-            },
+            }, */
           };
           partialUser.currentGrades!.scores.push(...scores);
           return partialUser;

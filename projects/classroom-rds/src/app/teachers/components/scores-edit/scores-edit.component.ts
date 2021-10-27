@@ -17,15 +17,15 @@ import {
   withLatestFrom,
 } from 'rxjs/operators';
 import { TeachersCoursesService } from './../../services/teachers-courses.service';
-import { SubscriptionService } from './../../../shared/services/subscription.service';
+import { SubscriptionService } from '@rds-shared/services/subscription.service';
 import { User } from '@rds-auth/models/user.model';
 import { Room } from '@rds-rooms/models/room.model';
 import { RoomService } from '@rds-rooms/services/room.service';
 import { CourseRoom } from '@rds-subjects/models/course-room.model';
 import { Score } from '@rds-user/models/grade.model';
-import { CourseEntityService } from '../../../store/course/course-entity.service';
+import { CourseEntityService } from '@rds-store/course/course-entity.service';
 import { CourseRoomEntityService } from '@rds-store/course-room/course-room-entity.service';
-import { concatMap } from 'rxjs/operators';
+import { ScoreService } from '../../services/score.service';
 
 @Component({
   selector: 'app-scores-edit',
@@ -40,7 +40,7 @@ export class ScoresEditComponent implements OnInit, OnDestroy {
   room!: Room;
   course: CourseRoom | undefined = undefined;
   course$!: Observable<CourseRoom>;
-  students$!: Observable<Partial<User>[]>;
+  students$!: Observable<User[]>;
   faChevronLeft = faChevronLeft;
   faUserClock = faUserClock;
   faUserTag = faUserTag;
@@ -52,6 +52,7 @@ export class ScoresEditComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private teachersCourses: TeachersCoursesService,
+    private scoreService: ScoreService,
     private courseRoomES: CourseRoomEntityService,
     private roomService: RoomService,
     private formBuilder: FormBuilder,
@@ -72,99 +73,94 @@ export class ScoresEditComponent implements OnInit, OnDestroy {
         this.course = course;
       }),
       mergeMap((course) =>
-        this.roomService.getRoomById(course!.roomId, course!.cicle).pipe(
-          tap((room) => {
+        this.roomService.getRoomByGrade(course.grade.toString(), this.selectedCicle.id).pipe(
+          map((room) => {
             this.room = room;
-          })
-        )
-      ),
-      switchMap((room) =>
-        this.roomService.getStudents(room.grade.toString(), room.cicle).pipe(
-          map((students) => {
             this.currentGrades = this.formBuilder.group({
               scores: this.formBuilder.array(
-                students.map((student) => this.setScore(student))
+                room.students.map((student) => this.setScore(student))
               ),
             });
-            return students;
+            return room.students;
           })
         )
       )
-    );
+    )
   }
 
-  setScore(student: any): FormGroup {
+  async setScore(student: any): Promise<FormGroup> {
+    const currentGrades = await this.scoreService.getUserScores(student.id, this.selectedCicle.id)
     return this.formBuilder.group({
       studentId: [student.id, [Validators.required]],
       studentName: [student.name.fullName, Validators.required],
-      courseName: [this.course!.name, [Validators.required]],
+      courseName: [this.course.name, [Validators.required]],
       unit1: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).unit1
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).unit1
           : '',
       ],
       unit2: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).unit2
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).unit2
           : '',
       ],
       unit3: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).unit3
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).unit3
           : '',
       ],
       notes1: [
-        student.currentGrades.scores.find(
-          (s: any) => s.courseName == this.course!.name
+        currentGrades.scores.find(
+          (s: Score) => s.courseName == this.course!.name
         ).notes1,
       ],
       notes2: [
-        student.currentGrades.scores.find(
-          (s: any) => s.courseName == this.course!.name
+        currentGrades.scores.find(
+          (s: Score) => s.courseName == this.course.name
         ).notes2,
       ],
       notes3: [
-        student.currentGrades.scores.find(
-          (s: any) => s.courseName == this.course!.name
+        currentGrades.scores.find(
+          (s: Score) => s.courseName == this.course.name
         ).notes3,
       ],
       recover1: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).recover1
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).recover1
           : '',
       ],
       recover2: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).recover2
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).recover2
           : '',
       ],
       recover3: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).recover3
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).recover3
           : '',
       ],
-      final: [
+      prom_materia: [
         !this.isKinder
-          ? student.currentGrades.scores.find(
-              (s: any) => s.courseName == this.course!.name
-            ).final
+          ? currentGrades.scores.find(
+            (s: Score) => s.courseName == this.course.name
+          ).prom_materia
           : '',
       ],
       isCourseClosed: [
-        student.currentGrades.scores.find(
-          (s: any) => s.courseName == this.course!.name
+        currentGrades.scores.find(
+          (s: Score) => s.courseName == this.course.name
         ).isCourseClosed,
       ],
     });
@@ -200,28 +196,56 @@ export class ScoresEditComponent implements OnInit, OnDestroy {
     //this.userEntityService.update(postUser);
   } */
 
-  finalGrades(arrayItem: any) {
+  async finalGrades(arrayItem: any) {
     this.publishing$.next(true);
     let partialUser: Partial<User> = {};
+    const scores: Score[] = [];
     let score: Partial<Score> = {};
     let studentProps: any = {};
     arrayItem['_forEachChild']((control: any, name: any) => {
       if (name == 'studentId' || name == 'studentName') {
         studentProps[name] = control.value;
       } else {
-        //score[name] = control.value;
+        score[name] = control.value;
       }
     });
-    if (score.isCourseClosed)
-      score.final =
+    //this.scoreService.setUserScores({
+    //   cicleId: this.selectedCicle.id,
+    //  grade: this.course.grade,
+    //  isFinished?: (score.unit1 && score.unit2 && score.unit3 && score.prom_materia && score.isCourseClosed),
+    //  prom_final?: (score.unit1 && score.unit2 && score.unit3 && score.prom_materia && score.isCourseClosed) ?
+    //  +Math.trunc((+(score.unit1! + score.unit2 + score.unit3) * 10) / 3) /
+    //    10; : null,;
+    // scores: Score[];
+    // userId: studentProps['studentId']
+    // });
+    /* if (score.isCourseClosed)
+      score.prom_materia =
         +Math.trunc((+(score.unit1! + score.unit2 + score.unit3) * 10) / 3) /
-        10;
-    this.teachersCourses
-      .getUser(studentProps['studentId'])
+        10; */
+    const currentGrades = await this.scoreService.getUserScores(studentProps.studentId, this.selectedCicle.id)
+    let pos: number = currentGrades.scores.findIndex(
+      (s) => s.courseName == score.courseName
+    );
+    scores.push(...currentGrades.scores);
+    scores.splice(pos, 1, { ...(score as Score) });
+    let isFinished = (scores && scores.every((s) => s.isCourseClosed && s.prom_materia));
+    let prom_final = isFinished ?
+      scores.map((s) => s.prom_materia).reduce((a, b) => (a + b)) / scores.length : null;
+    this.scoreService.setUserScores({
+      cicleId: this.selectedCicle.id,
+      grade: this.course.grade,
+      isFinished: isFinished,
+      prom_final: prom_final,
+      scores: scores,
+      userId: studentProps.studentId,
+    });
+    /* this.teachersCourses
+      .getUser(studentProps.studentId)
       .pipe(
         map((user) => {
-          let pos: number | undefined = user.currentGrades?.scores.findIndex(
-            (s) => s.courseName == score['courseName']
+          let pos: number | undefined = currentGrades.scores.findIndex(
+            (s) => s.courseName == score.courseName
           );
           const scores: Score[] = [];
           scores.push(...user.currentGrades!.scores);
@@ -244,7 +268,7 @@ export class ScoresEditComponent implements OnInit, OnDestroy {
       .subscribe((user) => {
         this.teachersCourses.updateUser(user.id!, user);
         this.publishing$.next(false);
-      });
+      }); */
   }
 
   ngOnDestroy(): void {

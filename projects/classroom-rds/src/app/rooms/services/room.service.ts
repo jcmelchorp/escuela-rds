@@ -64,7 +64,7 @@ export class RoomService {
       .collection(this.periodCollection)
       .doc(cicle)
       .collection<Room>(this.roomsCollection, (ref) => ref.orderBy('priority'));
-    return roomsRef.valueChanges({ idField: 'id' }) /* .pipe(
+    return roomsRef.valueChanges() /* .pipe(
       map((rooms) => {
         rooms.forEach((room) =>
           this.afs
@@ -85,15 +85,15 @@ export class RoomService {
       .valueChanges()
       .pipe(take(1));
   }
-  getRoomByGrade(grade: string, cicle?: string): Observable<Room[]> {
+  getRoomByGrade(grade: string, cicle?: string): Observable<Room> {
     return this.afs
       .collection(this.periodCollection)
       .doc(cicle)
       .collection<Room>(this.roomsCollection, (ref) =>
         ref.where('grade', '==', grade)
       )
-      .valueChanges({ idField: 'id' })
-      .pipe(take(1));
+      .valueChanges()
+      .pipe(take(1), map(rooms => rooms[0]));
   }
   /**
    * Updates room
@@ -128,7 +128,7 @@ export class RoomService {
       .collection(this.roomsCollection)
       .doc<Room>(roomId)
       .collection('students')
-      .valueChanges({ idField: 'id' });
+      .valueChanges();
   }
 
   /**

@@ -52,13 +52,13 @@ export class GradesBarChartComponent implements OnInit {
     const data1: number[] = this.copyData.map(score => +score.unit1);
     const data2: number[] = this.copyData.map(score => +score.unit2);
     const data3: number[] = this.copyData.map(score => +score.unit3);
-    const final: number[] = this.copyData.map(score => +score.final);
+    const prom_materia: number[] = this.copyData.map(score => +score.prom_materia);
     this.barChartLabels = nameArray;
     this.barChartData = [
       { data: data1, label: 'Unidad 1' },
       { data: data2, label: 'Unidad 2' },
       { data: data3, label: 'Unidad 3' },
-      { data: final, label: 'Promedio final', type: 'line' },
+      { data: prom_materia, label: 'Promedio final', type: 'line' },
     ];
   }
   // events

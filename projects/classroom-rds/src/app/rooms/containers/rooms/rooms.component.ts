@@ -17,12 +17,16 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { UserEntityService } from '@rds-store/user/user-entity.service';
 import { CourseRoom } from '@rds-subjects/models/course-room.model';
 import { User } from '@rds-auth/models/user.model';
+import { defaultPeriod } from '../../../core/state/core.selectors';
+import { AppState } from '../../../store/app.state';
+import { select, Store } from '@ngrx/store';
+import { SubscriptionService } from '../../../shared/services/subscription.service';
 @Component({
   selector: 'app-rooms',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss'],
 })
-export class RoomsComponent implements OnInit {
+export class RoomsComponent implements OnInit, OnDestroy {
   periodsForm: FormGroup;
   periods$: Observable<string[]>;
   rooms$: Observable<Room[][]>;
@@ -33,23 +37,29 @@ export class RoomsComponent implements OnInit {
   faEdit = faEdit;
   faGripVertical = faGripVertical;
   faUserGraduate = faUserGraduate;
-  selected = '20202021';
-  periodControl: FormControl = new FormControl(this.selected);
+  selected: string;
+  selected$: Observable<string>;
   constructor(
     private toastr: ToastrService,
     private roomService: RoomService,
     private userEntityService: UserEntityService,
+    private store: Store<AppState>,
+    private subscription: SubscriptionService,
     public dialog: MatDialog
   ) {
+    this.store.pipe(select(defaultPeriod)).subscribe(selected => this.selected = selected.id);
     this.periods$ = this.roomService.getPeriods();
+
   }
 
   ngOnInit(): void {
     this.onCicleSelect(this.selected);
   }
-
-  onCicleSelect(period: string): void {
-    this.rooms$ = this.roomService.getRoomsOnCicle(period).pipe(
+  ngOnDestroy(): void {
+    this.subscription.unsubscribeComponent$;
+  }
+  onCicleSelect(event): void {
+    this.rooms$ = this.roomService.getRoomsOnCicle(event).pipe(
       tap((rooms) => (this.roomsCount = rooms.length)),
       mergeMap((rooms: Room[]) =>
         this.userEntityService.entities$.pipe(

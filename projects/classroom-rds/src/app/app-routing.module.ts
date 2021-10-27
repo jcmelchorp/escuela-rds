@@ -23,7 +23,7 @@ import { YoutubeComponent } from '@rds-shared/components/youtube/youtube.compone
 
 import { AdminGuard } from '@rds-admin/guards/admin.guard';
 
-import { ReopenningComponent } from '@rds-shared//components/reopenning/reopenning.component';
+import { ReopenningComponent } from '@rds-shared/components/reopenning/reopenning.component';
 
 import { TeachersGuard } from './teachers/guards/teachers.guard';
 const routes: Routes = [

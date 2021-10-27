@@ -1,7 +1,7 @@
 import { Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { selectUser } from '@rds-auth/state/auth.selectors';
 import { User } from '@rds-auth/models/user.model';
 import { AppState } from '@rds-store/app.state';
@@ -12,6 +12,7 @@ import { moveInLeft } from '@rds-shared/animations/router.animations';
 import { CourseRoom } from '@rds-root/app/subjects/models/course-room.model';
 import { RoomService } from '@rds-root/app/rooms/services/room.service';
 import { CourseRoomEntityService } from '@rds-store/course-room/course-room-entity.service';
+import { defaultPeriod, selectConfigState } from '@rds-core/state/core.selectors';
 
 @Component({
   selector: 'app-teacher-courses',
@@ -26,7 +27,7 @@ export class TeacherCoursesComponent implements OnInit {
   teachers$: Observable<User[]>;
   searchForm!: FormGroup;
   teacherSubscription: Subscription;
-  selectedCicle = { id: '20202021', cicle: '2020-2021' };
+  selectedCicle: Observable<{ id: string, cicle: string }>;
   loading_courses$: Observable<boolean>;
   constructor(
     private fb: FormBuilder,
@@ -37,6 +38,7 @@ export class TeacherCoursesComponent implements OnInit {
   ) {
     this.loading_courses$ = this.courseRoomES.loading$;
     this.initSearchForm();
+    this.selectedCicle = this.store.pipe(select(defaultPeriod));
     this.teacherSubscription = this.store
       .select(selectUser)
       .subscribe((user) => {
@@ -61,8 +63,8 @@ export class TeacherCoursesComponent implements OnInit {
   }
 
   onSearch() {
-    let name: string = this.searchString!.value.toLocaleLowerCase();
-    let mainTeacherId: string = this.mainTeacherId!.value;
+    let name: string = this.searchString.value.toLocaleLowerCase();
+    let mainTeacherId: string = this.mainTeacherId.value;
     this.courses$ = this.courseRoomES.entities$.pipe(
       map((courses) => {
         if (!courses) {
@@ -86,16 +88,16 @@ export class TeacherCoursesComponent implements OnInit {
             c.mainTeacherId == mainTeacherId
         );
       }),
-      switchMap((courses) =>
+      /* switchMap((courses) =>
         this.roomService.getRoomsOnCicle(this.selectedCicle.id).pipe(
           map((rooms) =>
             courses.map((course) => {
-              const room = rooms.find((r) => r.id == course.roomId);
-              return { ...course, grade: room!.grade } as CourseRoom;
+              //const room = rooms.find((r) => r.id == course.roomId);
+              return { ...course, grade: course.grade };
             })
           )
         )
-      ),
+      ), */
       switchMap((courses) =>
         this.teachers$.pipe(
           map((users) =>

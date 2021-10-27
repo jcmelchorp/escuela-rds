@@ -10,7 +10,7 @@
     <mat-label>Ciclo escolar</mat-label>
     <mat-select [(ngModel)]="selected" (selectionChange)="onCicleSelect($event.value)">
       <mat-option *ngFor="let period of periods$|async" [value]="period.id">
-        {{period.cicle|lowercase}}
+        {{period.cicle}}
       </mat-option>
     </mat-select>
   </mat-form-field>

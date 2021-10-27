@@ -30,13 +30,13 @@ import { map, take } from 'rxjs/operators';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit, OnDestroy {
-  user$!: Observable<any>;
-  isOnline$!: Observable<boolean>;
+  user$: Observable<User>;
+  isOnline$: Observable<boolean>;
   loading$: Observable<boolean>;
-  isAdmin$!: Observable<boolean>;
-  isTeacher$!: Observable<boolean>;
-  userDomain!: Observable<UserDomain>;
-  userSub!: Subscription;
+  isAdmin$: Observable<boolean>;
+  isTeacher$: Observable<boolean>;
+  userDomain: Observable<UserDomain>;
+  userSub: Subscription;
   constructor(
     private store: Store<AppState>,
     private subService: SubscriptionService,
@@ -45,18 +45,7 @@ export class UserComponent implements OnInit, OnDestroy {
     this.loading$ = this.userEntityService.loading$;
   }
   ngOnInit(): void {
-    this.user$ = this.store.pipe(
-      select(selectUser),
-      map((user) => {
-        if (user) {
-          return this.userEntityService.entities$.pipe(
-            map((users) => users.find((x) => x.id == user.id))
-          );
-        } else {
-          return null;
-        }
-      })
-    );
+    this.user$ = this.store.pipe(select(selectUser));
     this.isOnline$ = this.store.pipe(select(isLoggedIn));
     this.isAdmin$ = this.store.pipe(select(isAdmin));
     this.isTeacher$ = this.store.pipe(select(isTeacher));

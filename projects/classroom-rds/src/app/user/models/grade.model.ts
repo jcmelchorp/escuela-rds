@@ -1,3 +1,5 @@
+import { SchoolLevel } from "@rds-auth/models/user.enum";
+
 export interface Score {
   courseName: string;
   unit1: string;
@@ -9,11 +11,15 @@ export interface Score {
   recover1?: boolean;
   recover2?: boolean;
   recover3?: boolean;
-  final: number;
+  prom_materia: number;
   isCourseClosed: boolean;
 }
 export interface Grade {
-  isFinished?: boolean
+  cicleId: string;
+  grade: SchoolLevel;
+  isFinished?: boolean;
   notes?: string[];
+  prom_final?: number;
   scores: Score[];
+  userId: string;
 }

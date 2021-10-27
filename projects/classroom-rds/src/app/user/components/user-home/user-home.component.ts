@@ -13,8 +13,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user-home.component.scss'],
 })
 export class UserHomeComponent implements OnInit {
-  user$: Observable<User> | undefined;
-  constructor(private store: Store<AppState>) {}
+  user$: Observable<User>;
+  constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.user$ = this.store.pipe(select(fromAuthSelectors.selectUser));
